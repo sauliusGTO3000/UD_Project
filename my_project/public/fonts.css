@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "HeadlandOne-Regular";
+    src: url( fonts/HeadlandOne-Regular.ttf ); /* IE */
+    src: local("HeadlandOne-Regular"), url("fonts/HeadlandOne-Regular.ttf"); /*non-IE*/
+}
+
+body {
+    font-family: "HeadlandOne-Regular";
+}
+td {
+    font-family: "HeadlandOne-Regular";
+}

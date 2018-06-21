@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Author index{% endblock %}
+
+{% block body %}
+    <h1>Author index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Birthday</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>ProfilePicture</th>
+                <th>Password</th>
+                <th>Roles</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for author in authors %}
+            <tr>
+                <td>{{ author.id }}</td>
+                <td>{{ author.firstName }}</td>
+                <td>{{ author.lastName }}</td>
+                <td>{{ author.birthday ? author.birthday|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ author.username }}</td>
+                <td>{{ author.email }}</td>
+                <td>{{ author.profilePicture }}</td>
+                <td>{{ author.password }}</td>
+                <td>{{ author.roles ? author.roles|join(', ') : '' }}</td>
+                <td>
+                    <a href="{{ path('author_show', {'id': author.id}) }}">show</a>
+                    <a href="{{ path('author_edit', {'id': author.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('author_new') }}">Create new</a>
+{% endblock %}

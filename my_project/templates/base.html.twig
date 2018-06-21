@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}
+            <style>
+                @font-face {
+                    font-family: "HeadlandOne-Regular";
+                    src: url( /fonts/HeadlandOne-Regular.ttf ); /* IE */
+                    src: local("HeadlandOne-Regular"), url("/fonts/HeadlandOne-Regular.ttf"); /*non-IE*/
+                }
+                .post{
+                    font-family: "HeadlandOne-Regular";
+                }
+            </style>
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

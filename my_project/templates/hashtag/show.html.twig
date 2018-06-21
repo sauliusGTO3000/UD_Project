@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hashtag{% endblock %}
+
+{% block body %}
+    <h1>Hashtag</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ hashtag.id }}</td>
+            </tr>
+            <tr>
+                <th>HastagName</th>
+                <td>{{ hashtag.hastagName }}</td>
+            </tr>
+            <tr>
+                <th>ReadCount</th>
+                <td>{{ hashtag.readCount }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('hashtag_index') }}">back to list</a>
+
+    <a href="{{ path('hashtag_edit', {'id': hashtag.id}) }}">edit</a>
+
+    {{ include('hashtag/_delete_form.html.twig') }}
+{% endblock %}

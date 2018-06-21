@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Subscriber{% endblock %}
+
+{% block body %}
+    <h1>Subscriber</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ subscriber.id }}</td>
+            </tr>
+            <tr>
+                <th>FirstName</th>
+                <td>{{ subscriber.firstName }}</td>
+            </tr>
+            <tr>
+                <th>LastName</th>
+                <td>{{ subscriber.lastName }}</td>
+            </tr>
+            <tr>
+                <th>Birthday</th>
+                <td>{{ subscriber.birthday ? subscriber.birthday|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ subscriber.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('subscriber_index') }}">back to list</a>
+
+    <a href="{{ path('subscriber_edit', {'id': subscriber.id}) }}">edit</a>
+
+    {{ include('subscriber/_delete_form.html.twig') }}
+{% endblock %}
