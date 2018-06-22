@@ -20,7 +20,18 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class PostController extends Controller
 {
+    /**
+     * @Route("/browseImages", name="browseImages")
+     */
     public function browseImages(ImageRepository $imageRepository){
+        $listofimages = $imageRepository->findAll();
+        $imageArray = [];
+
+        foreach ($listofimages as $image){
+            $imageArray[]=["image"=>"/uploads/images/".$image->getFilename()];
+        }
+
+        return new JsonResponse($imageArray);
 
     }
     /**

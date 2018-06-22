@@ -23,7 +23,7 @@ CKEDITOR.editorConfig=function(config){
 
     config.extraPlugins = 'image,copyformatting,filebrowser,wordcount,notification,imagebrowser,youtube';
     config.filebrowserImageBrowseUrl = '/uploads/images';
-    config.imageBrowser_listUrl = "/post/imagesbrowse";
+    config.imageBrowser_listUrl = "/post/browseImages";
     config.youtube_privacy = false;
     config.toolbar='Custom';
     config.contentsCss = '/fonts.css';
