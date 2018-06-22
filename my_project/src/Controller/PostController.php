@@ -2,10 +2,15 @@
 
 namespace App\Controller;
 
+use App\Entity\Image;
 use App\Entity\Post;
 use App\Form\PostType;
+use App\Repository\ImageRepository;
 use App\Repository\PostRepository;
+use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -15,6 +20,9 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class PostController extends Controller
 {
+    public function browseImages(ImageRepository $imageRepository){
+
+    }
     /**
      * @Route("/", name="post_index", methods="GET")
      */
@@ -86,5 +94,41 @@ class PostController extends Controller
         }
 
         return $this->redirectToRoute('post_index');
+    }
+
+
+    /**
+     * @Route("/images", name="uploadImage")
+     */
+    public function uploadImage(Request $request, LoggerInterface $logger, ImageRepository $imageRepository){
+        $file=$request->files->get('upload');
+        /** @var UploadedFile $file */
+        $filename = $this->generateUniqueFileName().'.'.$file->guessClientExtension();
+
+        $file->move(
+            //moves the image to pre-determined uploaded_images_directory in config/services.yaml
+            $this->getParameter("uploaded_images_directory"),
+            $filename
+        );
+
+//        add filename to database
+        $em = $this->getDoctrine()->getManager();
+        $imageInDB = new Image();
+        $imageInDB->setFilename($filename);
+        $em->persist($imageInDB);
+        $em->flush();
+
+        $image_url = '/uploads/images/'.$filename;
+
+        return new JsonResponse(array(
+            'uploaded'=>true,
+            'url'=>$image_url,
+        ));
+    }
+
+
+    private function generateUniqueFileName(){
+
+        return md5(uniqid());
     }
 }
