@@ -6,7 +6,7 @@ security:
                 class: App\Entity\Author
                 property: username
     encoders:
-        App\Entity\Author: plaintext
+        App\Entity\Author: bcrypt
 
     firewalls:
         dev:
