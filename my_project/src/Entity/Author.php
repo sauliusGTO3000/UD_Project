@@ -3,12 +3,14 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AuthorRepository")
  */
-class Author
+class Author implements UserInterface
 {
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -181,6 +183,8 @@ class Author
         $this->roles[] = $role;
     }
 
+
+
     public function removeRole($role)
     {   $index = array_search($role,$this->roles);
 
@@ -190,6 +194,16 @@ class Author
         unset($this->roles[$index]);
         $this->roles=array_values($this->roles);
     }
-    
+
+    public function getSalt()
+    {
+        // TODO: Implement getSalt() method.
+    }
+
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
+    }
+
 
 }

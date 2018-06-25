@@ -1,14 +1,12 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        in_memory:
-            memory:
-                users:
-                    admin:
-                        password: Password
-                        roles: 'ROLE_AUTHOR'
+        in_database:
+            entity:
+                class: App\Entity\Author
+                property: username
     encoders:
-        Symfony\Component\Security\Core\User\User: plaintext
+        App\Entity\Author: plaintext
 
     firewalls:
         dev:
@@ -16,7 +14,13 @@ security:
             security: false
         main:
             anonymous: true
-            http_basic: ~
+            provider: in_database
+            form_login:
+                login_path: login
+                check_path: login
+            logout:
+                path: /logout
+                target: /
 
             # activate different ways to authenticate
 
