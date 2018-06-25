@@ -32,12 +32,12 @@ class Author
     private $birthday;
 
     /**
-     * @ORM\Column(type="string", length=50)
+     * @ORM\Column(type="string", length=50, unique=True)
      */
     private $username;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=180, unique=True)
      */
     private $email;
 
@@ -54,7 +54,28 @@ class Author
     /**
      * @ORM\Column(type="array")
      */
-    private $roles;
+    private $roles = ['ROLE_AUTHOR'];
+
+    /**
+     * @return mixed
+     */
+    public function getisActive()
+    {
+        return $this->isActive;
+    }
+
+    /**
+     * @param mixed $isActive
+     */
+    public function setIsActive($isActive): void
+    {
+        $this->isActive = $isActive;
+    }
+
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $isActive;
 
     public function getId()
     {
@@ -141,19 +162,34 @@ class Author
     public function setPassword(string $password): self
     {
         $this->password = $password;
-
         return $this;
     }
 
-    public function getRoles(): ?array
+
+    public function getRoles()
     {
         return $this->roles;
     }
 
-    public function setRoles(array $roles): self
+    public function addRole($role)
     {
-        $this->roles = $roles;
+        if (in_array($role, $this->roles))
+        {
+            return;
+        }
 
-        return $this;
+        $this->roles[] = $role;
     }
+
+    public function removeRole($role)
+    {   $index = array_search($role,$this->roles);
+
+        if($index==false){
+            return;
+        }
+        unset($this->roles[$index]);
+        $this->roles=array_values($this->roles);
+    }
+    
+
 }

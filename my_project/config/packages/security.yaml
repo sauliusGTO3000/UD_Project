@@ -1,13 +1,22 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     providers:
-        in_memory: { memory: ~ }
+        in_memory:
+            memory:
+                users:
+                    admin:
+                        password: Password
+                        roles: 'ROLE_AUTHOR'
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
             anonymous: true
+            http_basic: ~
 
             # activate different ways to authenticate
 
@@ -20,5 +29,5 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
+         - { path: ^/hashtag, roles: ROLE_AUTHOR }
         # - { path: ^/profile, roles: ROLE_USER }
