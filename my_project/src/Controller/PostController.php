@@ -50,7 +50,7 @@ class PostController extends Controller
     {
         $post = new Post();
 
-
+        $post->setDateCreated(new \DateTime());
         $post->setAuthor($author);
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);

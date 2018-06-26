@@ -3,10 +3,14 @@
 namespace App\Form;
 
 use App\Entity\Post;
+
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+
+
 
 class PostType extends AbstractType
 {
@@ -15,8 +19,10 @@ class PostType extends AbstractType
         $builder
             ->add('posted')
             ->add('dateCreated')
-            ->add('publishDate')
-
+            ->add('publishDate',DateTimeType::class,array(
+                'placeholder' => array(
+                    'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
+                    'hour' => 'Hour', 'minute' => 'Minute', 'second' => 'Second',)))
             ->add('coverImage')
             ->add('title')
             ->add('hashtags')
