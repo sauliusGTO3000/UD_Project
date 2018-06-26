@@ -40,7 +40,7 @@ class PostController extends Controller
      */
     public function index(PostRepository $postRepository): Response
     {
-        return $this->render('post/index.html.twig', ['posts' => $postRepository->findAll()]);
+        return $this->render('post/index.html.twig', ['posts' => $postRepository->findPosted()]);
     }
 
     /**
@@ -80,7 +80,7 @@ class PostController extends Controller
         $em = $this->getDoctrine()->getManager();
         $em->persist($post);
         $em->flush();
-                
+
         return $this->render('post/show.html.twig', ['post' => $post]);
     }
 

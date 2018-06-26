@@ -15,25 +15,32 @@ class Kernel extends BaseKernel
 
     const CONFIG_EXTS = '.{php,xml,yaml,yml}';
 
+    public function __construct(string $environment,bool $debug)
+    {
+    date_default_timezone_set('Europe/Vilnius');
+    parent::__construct($environment,$debug);
+    }
+
+
     public function getCacheDir()
-    {
-        return $this->getProjectDir().'/var/cache/'.$this->environment;
-    }
+        {
+            return $this->getProjectDir().'/var/cache/'.$this->environment;
+        }
 
-    public function getLogDir()
-    {
-        return $this->getProjectDir().'/var/log';
-    }
+        public function getLogDir()
+        {
+            return $this->getProjectDir().'/var/log';
+        }
 
-    public function registerBundles()
-    {
-        $contents = require $this->getProjectDir().'/config/bundles.php';
-        foreach ($contents as $class => $envs) {
-            if (isset($envs['all']) || isset($envs[$this->environment])) {
-                yield new $class();
+        public function registerBundles()
+        {
+            $contents = require $this->getProjectDir().'/config/bundles.php';
+            foreach ($contents as $class => $envs) {
+                if (isset($envs['all']) || isset($envs[$this->environment])) {
+                    yield new $class();
+                }
             }
         }
-    }
 
     protected function configureContainer(ContainerBuilder $container, LoaderInterface $loader)
     {
