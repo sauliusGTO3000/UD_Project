@@ -14,6 +14,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @Route("/post")
@@ -45,9 +46,12 @@ class PostController extends Controller
     /**
      * @Route("/new", name="post_new", methods="GET|POST")
      */
-    public function new(Request $request): Response
+    public function new(Request $request, UserInterface $author): Response
     {
         $post = new Post();
+
+
+        $post->setAuthor($author);
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
 

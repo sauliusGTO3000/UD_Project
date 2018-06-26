@@ -16,7 +16,7 @@ class PostType extends AbstractType
             ->add('posted')
             ->add('dateCreated')
             ->add('publishDate')
-            ->add('author')
+
             ->add('coverImage')
             ->add('title')
             ->add('hashtags')

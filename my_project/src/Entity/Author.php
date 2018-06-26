@@ -223,4 +223,5 @@ class Author implements UserInterface
         $this->plainPassword = $plainPassword;
     }
 
+
 }

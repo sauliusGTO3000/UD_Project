@@ -32,7 +32,8 @@ class Post
     private $publishDate;
 
     /**
-     * @ORM\Column(type="string", length=50)
+     * @ORM\ManyToOne(targetEntity="App\Entity\Author")
+     *
      */
     private $author;
 
@@ -102,12 +103,12 @@ class Post
         return $this;
     }
 
-    public function getAuthor(): ?string
+    public function getAuthor():?Author
     {
         return $this->author;
     }
 
-    public function setAuthor(string $author): self
+    public function setAuthor(Author $author): self
     {
         $this->author = $author;
 

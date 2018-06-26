@@ -28,7 +28,7 @@
                 <td>{{ post.posted ? 'Yes' : 'No' }}</td>
                 <td>{{ post.dateCreated ? post.dateCreated|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ post.publishDate ? post.publishDate|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ post.author }}</td>
+                <td>{{ post.author.username }}</td>
                 <td>{{ post.coverImage }}</td>
                 <td>{{ post.title }}</td>
                 <td class="post">{{ post.content|raw }}</td>
