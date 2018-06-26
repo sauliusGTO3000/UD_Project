@@ -165,7 +165,7 @@ class Post
 
     public function getReadCount(): ?int
     {
-        return $this->readCount;
+        return $this->readCount ;
     }
 
     public function setReadCount(?int $readCount): self

@@ -52,6 +52,7 @@ class PostController extends Controller
 
         $post->setDateCreated(new \DateTime());
         $post->setAuthor($author);
+        $post->setReadCount(0);
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
 
@@ -73,7 +74,13 @@ class PostController extends Controller
      * @Route("/{id}", name="post_show", methods="GET")
      */
     public function show(Post $post): Response
-    {
+    {   $readCount = $post->getReadCount();
+        $readCount++;
+        $post->setReadCount($readCount);
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($post);
+        $em->flush();
+                
         return $this->render('post/show.html.twig', ['post' => $post]);
     }
 

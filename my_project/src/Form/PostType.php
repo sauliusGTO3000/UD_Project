@@ -26,7 +26,6 @@ class PostType extends AbstractType
             ->add('coverImage')
             ->add('title')
             ->add('hashtags')
-            ->add('readCount')
             ->add('content', CKEditorType::class, array(
                 'config'=>array(
                     'filebrowserUploadRoute'=>'uploadImage',
