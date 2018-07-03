@@ -7,6 +7,7 @@ use App\Entity\Post;
 use App\Form\PostType;
 use App\Repository\ImageRepository;
 use App\Repository\PostRepository;
+use App\Service\ImageResizer;
 use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -119,7 +120,12 @@ class PostController extends Controller
 
         return $this->redirectToRoute('post_index');
     }
+    /**
+     * @Route("/uploadCoverImage", name="uploadCoverImage")
+     */
+    public function uploadCoverImage(){
 
+    }
 
     /**
      * @Route("/images", name="uploadImage")
@@ -127,6 +133,7 @@ class PostController extends Controller
     public function uploadImage(Request $request, LoggerInterface $logger, ImageRepository $imageRepository){
         $file=$request->files->get('upload');
         /** @var UploadedFile $file */
+
         $filename = $this->generateUniqueFileName().'.'.$file->guessClientExtension();
 
         $file->move(
@@ -134,6 +141,7 @@ class PostController extends Controller
             $this->getParameter("uploaded_images_directory"),
             $filename
         );
+
 
 //        add filename to database
         $em = $this->getDoctrine()->getManager();
@@ -143,6 +151,9 @@ class PostController extends Controller
         $em->flush();
 
         $image_url = '/uploads/images/'.$filename;
+
+//        $this->resizeImage('C:\xampp\htdocs\namu_darbai\Liepos3\UD_Project\my_project\public\uploads\images\\'.$filename);
+        $this->resizeImage($_SERVER["DOCUMENT_ROOT"].'\uploads\images\\'.$filename,700);
 
         return new JsonResponse(array(
             'uploaded'=>true,
@@ -216,5 +227,19 @@ class PostController extends Controller
         }
         $content = substr($content, 0, $wordCutMarker).$stringWithClosingTags;
         return $content;
+    }
+
+    public function resizeImage($imageURL, $maxWidth){
+
+        $resizedIMG = new ImageResizer($imageURL);
+        $imageWidth = $resizedIMG->getWidth();
+
+        if ($imageWidth<$maxWidth){
+            $resizedIMG->saveImage($imageURL);
+        }else{
+            $resizedIMG->resizeImage($maxWidth, 0, 'landscape');
+            $resizedIMG->saveImage($imageURL);
+        }
+        return;
     }
 }
