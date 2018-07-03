@@ -53,6 +53,27 @@ class Post
     private $content;
 
     /**
+     * @ORM\Column(type="text")
+     */
+    private $shortContent;
+
+    /**
+     * @return mixed
+     */
+    public function getShortContent()
+    {
+        return $this->shortContent;
+    }
+
+    /**
+     * @param mixed $shortContent
+     */
+    public function setShortContent($shortContent): void
+    {
+        $this->shortContent = $shortContent;
+    }
+
+    /**
      * @ORM\Column(type="array", nullable=true)
      */
     private $hashtags;

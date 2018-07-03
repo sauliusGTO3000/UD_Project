@@ -53,6 +53,7 @@ class PostController extends Controller
         $post->setDateCreated(new \DateTime());
         $post->setAuthor($author);
         $post->setReadCount(0);
+        $post->setShortContent($this->generateShortContent($post->getContent()));
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
 
@@ -93,6 +94,7 @@ class PostController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $post->setShortContent($this->generateShortContent($post->getContent()));
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('post_edit', ['id' => $post->getId()]);
@@ -152,5 +154,67 @@ class PostController extends Controller
     private function generateUniqueFileName(){
 
         return md5(uniqid());
+    }
+
+    private function generateShortContent($content, $wordsToKeep=200)
+    {
+        $length = mb_strlen($content);
+
+        $arrayOfTags = [];
+        $tag="";
+        $stringWithClosingTags="";
+        $wordCount=0;
+        $wordCutMarker=0;
+
+        for ($i=0; $i < $length; $i++) {
+            if ($content[$i]=="<") {
+
+                while ($content[$i]!=">") {
+                    $tag .= ($content[$i]);
+                    $i++;
+                }
+            }
+            if ($content[$i]==">") {
+                $tag .= (">");
+                $arrayOfTags[]=$tag;
+                $tag="";
+
+            }
+            if ($content[$i]==" " or $content[$i]=="&") {
+                $wordCount++;
+                if ($wordCount<=$wordsToKeep) {
+                    $wordCutMarker = $i;
+                }
+            }
+        }
+
+        for ($i=0; $i < count($arrayOfTags); $i++) {
+            $tagToBeChecked = $arrayOfTags[$i];
+
+            if ($tagToBeChecked[1]=="/") {
+                unset($arrayOfTags[$i]);
+                unset($arrayOfTags[$i-1]);
+                $arrayOfTags = array_values($arrayOfTags);
+                $i = $i-2;
+            }
+
+            if ($tagToBeChecked[1]=="a") {
+                unset($arrayOfTags[$i]);
+                $arrayOfTags = array_values($arrayOfTags);
+            }
+
+            if ($tagToBeChecked[(strlen($tagToBeChecked)-2)]=="/") {
+                unset($arrayOfTags[$i]);
+                $arrayOfTags = array_values($arrayOfTags);
+                $i = $i-1;
+            }
+
+        }
+
+        foreach ($arrayOfTags as $key => $value) {
+            $stringWithClosingTags.=substr_replace($value, "/", 1, 0);
+        }
+        $content = substr($content, 0, $wordCutMarker).$stringWithClosingTags;
+        return $content;
     }
 }

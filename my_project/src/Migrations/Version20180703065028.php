@@ -8,16 +8,14 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20180626104553 extends AbstractMigration
+final class Version20180703065028 extends AbstractMigration
 {
     public function up(Schema $schema) : void
     {
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE post ADD author_id INT DEFAULT NULL, DROP author');
-        $this->addSql('ALTER TABLE post ADD CONSTRAINT FK_5A8A6C8DF675F31B FOREIGN KEY (author_id) REFERENCES author (id)');
-        $this->addSql('CREATE INDEX IDX_5A8A6C8DF675F31B ON post (author_id)');
+        $this->addSql('ALTER TABLE post ADD short_content LONGTEXT NOT NULL');
     }
 
     public function down(Schema $schema) : void
@@ -25,8 +23,6 @@ final class Version20180626104553 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE post DROP FOREIGN KEY FK_5A8A6C8DF675F31B');
-        $this->addSql('DROP INDEX IDX_5A8A6C8DF675F31B ON post');
-        $this->addSql('ALTER TABLE post ADD author VARCHAR(50) NOT NULL COLLATE utf8mb4_unicode_ci, DROP author_id');
+        $this->addSql('ALTER TABLE post DROP short_content');
     }
 }

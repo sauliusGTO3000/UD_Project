@@ -31,7 +31,7 @@
                 <td>{{ post.author.username }}</td>
                 <td>{{ post.coverImage }}</td>
                 <td>{{ post.title }}</td>
-                <td class="post">{{ post.content|raw }}</td>
+                <td class="post">{{ post.shortcontent|raw }}</td>
                 <td>{{ post.hashtags ? post.hashtags|join(', ') : '' }}</td>
                 <td>{{ post.readCount }}</td>
                 <td>
