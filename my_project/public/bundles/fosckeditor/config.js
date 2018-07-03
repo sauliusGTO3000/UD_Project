@@ -12,7 +12,7 @@ CKEDITOR.editorConfig=function(config){
     config.toolbar_Custom=[
         {name:'custom',items:['Save','Undo','Redo','Replace','Maximize','Templates',
                 '-',
-                'Font','FontSize','TextColor','Format',
+                'Font','FontSize','TextColor','BGColor','Format',
                 '-',
                 'JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock',
                 '-',
