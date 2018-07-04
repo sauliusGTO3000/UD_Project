@@ -1,6 +1,6 @@
 First things first:
 
 1. Composer install
-2. .env file modifications
-3. Yarn install
-4. Yarn encore dev --watch
+2. Yarn install
+3. Yarn encore dev --watch
+4. .env file modifications
