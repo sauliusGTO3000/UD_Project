@@ -54,4 +54,9 @@ class Hashtag
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return $this->getHastagName();
+    }
 }
