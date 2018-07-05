@@ -2,9 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Hashtag;
 use App\Entity\Image;
 use App\Entity\Post;
 use App\Form\PostType;
+use App\Repository\HashtagRepository;
 use App\Repository\ImageRepository;
 use App\Repository\PostRepository;
 use App\Service\ImageResizer;
@@ -75,10 +77,20 @@ class PostController extends Controller
     /**
      * @Route("/{id}", name="post_show", methods="GET")
      */
-    public function show(Post $post): Response
+    public function show(Post $post, HashtagRepository $hashtagRepository): Response
     {   $readCount = $post->getReadCount();
         $readCount++;
         $post->setReadCount($readCount);
+
+        if ($post->getHashtags() !== null){
+            foreach ($post->getHashtags() as $hashtagitem){
+                $hashtagindb = $hashtagRepository->find($hashtagitem);
+                $hashtagReadCountInDb = $hashtagindb->getReadCount();
+                $hashtagReadCountInDb++;
+                $hashtagindb->setReadCount($hashtagReadCountInDb);
+            }
+        }
+
         $em = $this->getDoctrine()->getManager();
         $em->persist($post);
         $em->flush();
