@@ -6,6 +6,7 @@ use App\Entity\Hashtag;
 use App\Form\HashtagType;
 use App\Repository\HashtagRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -86,5 +87,20 @@ class HashtagController extends Controller
         }
 
         return $this->redirectToRoute('hashtag_index');
+    }
+
+    /**
+     * @Route("/newhashtag/{name}", name="newhashtag", methods="GET|POST")
+     */
+    public function newHashtag($name){
+        $hashtag = new Hashtag();
+        $hashtag->setHastagName($name);
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($hashtag);
+        $em->flush();
+        return new JsonResponse([
+            'id'=>$hashtag->getId(),
+            'name'=>$hashtag->getHastagName(),
+        ]);
     }
 }

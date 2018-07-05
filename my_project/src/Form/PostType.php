@@ -32,7 +32,6 @@ class PostType extends AbstractType
                 'class'=>Hashtag::class,
                 'attr'=>array(
                     'class'=>'js-example-basic-multiple',
-                    'tags'=>false,
                 ),
 
                 'multiple'=>true,
