@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -75,7 +76,7 @@ class Post
     }
 
     /**
-     * @ORM\Column(type="array", nullable=true)
+     * @ORM\ManyToMany(targetEntity="App\Entity\Hashtag")
      */
     private $hashtags;
 
@@ -173,16 +174,17 @@ class Post
         return $this;
     }
 
-    public function getHashtags(): ?array
+    public function getHashtags()
     {
         return $this->hashtags;
     }
 
-    public function setHashtags(?array $hashtags): self
-    {
-        $this->hashtags = $hashtags;
+    public function addHashtag($hashtag){
+        $this->hashtags[]=$hashtag;
+    }
 
-        return $this;
+    public function removeHashtag($hashtag){
+        $this->hashtags->removeElement($hashtag);
     }
 
     public function getReadCount(): ?int
@@ -195,5 +197,11 @@ class Post
         $this->readCount = $readCount;
 
         return $this;
+    }
+
+    public function __construct()
+    {
+        $this->publishDate=new \DateTime();
+        $this->hashtags= new ArrayCollection();
     }
 }

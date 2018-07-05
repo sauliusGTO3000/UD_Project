@@ -1,3 +1,4 @@
+@import "~select2/src/scss/core";
 body{
   background-color: burlywood;
 
@@ -5,4 +6,6 @@ body{
     background-color: antiquewhite;
   }
 }
-
+.select2{
+  width: 500px;
+}

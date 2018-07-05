@@ -2,9 +2,11 @@
 
 namespace App\Form;
 
+use App\Entity\Hashtag;
 use App\Entity\Post;
 
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -26,7 +28,15 @@ class PostType extends AbstractType
                     'hour' => 'Hour', 'minute' => 'Minute', 'second' => 'Second',)))
             ->add('coverImage')
             ->add('title')
-            ->add('hashtags')
+            ->add('hashtags', EntityType::class, array(
+                'class'=>Hashtag::class,
+                'attr'=>array(
+                    'class'=>'js-example-basic-multiple',
+                ),
+
+                'multiple'=>true,
+
+            ))
             ->add('content', CKEditorType::class, array(
                 'config'=>array(
                     'filebrowserUploadRoute'=>'uploadImage',
