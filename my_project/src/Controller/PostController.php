@@ -62,10 +62,22 @@ class PostController extends Controller
         $post->setAuthor($author);
         $post->setReadCount(0);
         $post->setShortContent($this->generateShortContent($post->getContent()));
+
+
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $coverImageFile = $post->getCoverImageFile();
+            $coverImageFileName = $this->generateUniqueFileName().'.'. $coverImageFile->guessClientExtension();
+            $coverImageFile->move(
+                $this->getParameter("uploaded_images_directory"),
+                $coverImageFileName
+            );
+
+            $post->setCoverImage($coverImageFileName);
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($post);
             $em->flush();
@@ -112,6 +124,15 @@ class PostController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $coverImageFile = $post->getCoverImageFile();
+            $coverImageFileName = $this->generateUniqueFileName().'.'. $coverImageFile->guessClientExtension();
+            $coverImageFile->move(
+                $this->getParameter("uploaded_images_directory"),
+                $coverImageFileName
+            );
+
+            $post->setCoverImage($coverImageFileName);
+
             $post->setShortContent($this->generateShortContent($post->getContent()));
             $this->getDoctrine()->getManager()->flush();
 
@@ -137,17 +158,14 @@ class PostController extends Controller
 
         return $this->redirectToRoute('post_index');
     }
-    /**
-     * @Route("/uploadCoverImage", name="uploadCoverImage")
-     */
-    public function uploadCoverImage(){
 
-    }
+
+
 
     /**
      * @Route("/images", name="uploadImage")
      */
-    public function uploadImage(Request $request, LoggerInterface $logger, ImageRepository $imageRepository){
+    public function uploadImage(Request $request){
         $file=$request->files->get('upload');
         /** @var UploadedFile $file */
 

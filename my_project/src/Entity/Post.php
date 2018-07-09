@@ -59,6 +59,25 @@ class Post
      */
     private $shortContent;
 
+    private $CoverImageFile;
+
+    /**
+     * @return mixed
+     */
+    public function getCoverImageFile()
+    {
+        return $this->CoverImageFile;
+    }
+
+    /**
+     * @param mixed $CoverImageFile
+     */
+    public function setCoverImageFile($CoverImageFile): void
+    {
+        $this->CoverImageFile = $CoverImageFile;
+    }
+
+
     /**
      * @return mixed
      */
@@ -76,7 +95,7 @@ class Post
     }
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Hashtag", mappedBy="posts")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Hashtag", inversedBy="posts")
      */
     private $hashtags;
 

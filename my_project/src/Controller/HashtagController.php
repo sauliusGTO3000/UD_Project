@@ -95,13 +95,13 @@ class HashtagController extends Controller
      */
     public function newHashtag($name){
         $hashtag = new Hashtag();
-        $hashtag->setHastagName($name);
+        $hashtag->setHashtagName($name);
         $em = $this->getDoctrine()->getManager();
         $em->persist($hashtag);
         $em->flush();
         return new JsonResponse([
             'id'=>$hashtag->getId(),
-            'name'=>$hashtag->getHastagName(),
+            'name'=>$hashtag->getHashtagName(),
         ]);
     }
     /**

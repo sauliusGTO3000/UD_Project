@@ -27,6 +27,7 @@ class PostType extends AbstractType
                     'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
                     'hour' => 'Hour', 'minute' => 'Minute', 'second' => 'Second',)))
             ->add('coverImage')
+            ->add('CoverImageFile', FileType::class)
             ->add('title')
             ->add('hashtags', EntityType::class, array(
                 'class'=>Hashtag::class,

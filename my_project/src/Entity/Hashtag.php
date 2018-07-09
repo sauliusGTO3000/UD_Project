@@ -20,11 +20,11 @@ class Hashtag
     /**
      * @ORM\Column(type="string", length=50)
      */
-    private $hastagName;
+    private $hashtagName;
 
 
     /**
-    * @ORM\ManyToMany(targetEntity="App\Entity\Post", inversedBy="hashtags")
+    * @ORM\ManyToMany(targetEntity="App\Entity\Post", mappedBy="hashtags")
     * @ORM\JoinTable(name="post_hashtag")
      * */
     private $posts;
@@ -48,14 +48,14 @@ class Hashtag
         return $this->id;
     }
 
-    public function getHastagName(): ?string
+    public function getHashtagName(): ?string
     {
-        return $this->hastagName;
+        return $this->hashtagName;
     }
 
-    public function setHastagName(string $hastagName): self
+    public function setHashtagName(string $hashtagName): self
     {
-        $this->hastagName = $hastagName;
+        $this->hashtagName = $hashtagName;
 
         return $this;
     }
@@ -74,7 +74,7 @@ class Hashtag
 
     public function __toString()
     {
-        return $this->getHastagName();
+        return $this->getHashtagName();
     }
 
 
