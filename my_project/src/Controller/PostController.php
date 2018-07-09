@@ -32,9 +32,14 @@ class PostController extends Controller
         $imageArray = [];
 
         foreach ($listofimages as $image){
-            $imageArray[]=["image"=>"/uploads/images/".$image->getFilename()];
-        }
+//            $imageURL= $_SERVER["HTTP_HOST"]."/uploads/images/".$image->getFilename();
+            $imageURL= $_SERVER["DOCUMENT_ROOT"].'\uploads\images\\'.$image->getFilename();
+//            echo $imageURL;
+            if (file_exists($imageURL)){
+                $imageArray[]=["image"=>"/uploads/images/".$image->getFilename()];
+            }
 
+        }
         return new JsonResponse($imageArray);
 
     }

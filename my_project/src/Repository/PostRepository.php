@@ -26,7 +26,20 @@ class PostRepository extends ServiceEntityRepository
             ->setParameter('val', true)
             ->setParameter('now', new \DateTime() )
             ->orderBy('p.publishDate', 'ASC')
-            ->setMaxResults(10)
+            ->getQuery()
+            ->getResult();
+    }
+//
+    public function findByTags($tagID){
+        return $this->createQueryBuilder('p')
+            ->join("p.hashtags",'h')
+            ->andWhere('p.posted = :val')
+            ->andWhere('p.publishDate<:now')
+            ->andWhere('h.id=:id')
+            ->setParameter('id', $tagID)
+            ->setParameter('val', true)
+            ->setParameter('now', new \DateTime() )
+            ->orderBy('p.publishDate', 'ASC')
             ->getQuery()
             ->getResult();
     }

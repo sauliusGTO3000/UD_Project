@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Hashtag
 {
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -20,6 +21,22 @@ class Hashtag
      * @ORM\Column(type="string", length=50)
      */
     private $hastagName;
+
+
+    /**
+    * @ORM\ManyToMany(targetEntity="App\Entity\Post", inversedBy="hashtags")
+    * @ORM\JoinTable(name="post_hashtag")
+     * */
+    private $posts;
+
+    /**
+     * @return mixed
+     */
+    public function getPosts()
+    {
+        return $this->posts;
+    }
+
 
     /**
      * @ORM\Column(type="smallint", nullable=true)
@@ -59,4 +76,6 @@ class Hashtag
     {
         return $this->getHastagName();
     }
+
+
 }

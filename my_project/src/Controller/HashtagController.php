@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Hashtag;
 use App\Form\HashtagType;
 use App\Repository\HashtagRepository;
+use App\Repository\PostRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -102,5 +103,14 @@ class HashtagController extends Controller
             'id'=>$hashtag->getId(),
             'name'=>$hashtag->getHastagName(),
         ]);
+    }
+    /**
+     * @Route("/posts/{hashtagid}", name="postsByTitle", methods="GET")
+     */
+    public function showPostsByHashtag($hashtagid, HashtagRepository $hashtagRepository,PostRepository $postRepository){
+//        $hashtagtobeshown = $hashtagRepository->find($hashtagid);
+
+        return $this->render('post/index.html.twig', ['posts' => $postRepository->findByTags($hashtagid)]);
+
     }
 }

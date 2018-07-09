@@ -76,7 +76,7 @@ class Post
     }
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Hashtag")
+     * @ORM\ManyToMany(targetEntity="App\Entity\Hashtag", mappedBy="posts")
      */
     private $hashtags;
 

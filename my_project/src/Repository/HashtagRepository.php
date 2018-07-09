@@ -47,4 +47,11 @@ class HashtagRepository extends ServiceEntityRepository
         ;
     }
     */
+//    public function findByHashtag($id){
+//        return $this->createQueryBuilder('h')
+//            ->andWhere('h.id =:val')
+//            ->setParameter('val', $id)
+//            ->getQuery()
+//            ->getResult();
+//    }
 }
