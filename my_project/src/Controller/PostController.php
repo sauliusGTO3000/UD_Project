@@ -69,16 +69,29 @@ class PostController extends Controller
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $coverImageFile = $post->getCoverImageFile();
-            $coverImageFileName = $this->generateUniqueFileName().'.'. $coverImageFile->guessClientExtension();
-            $coverImageFile->move(
-                $this->getParameter("uploaded_images_directory"),
-                $coverImageFileName
-            );
+            if ($post->getCoverImageFile() !== null)
+            {
+                $coverImageFile = $post->getCoverImageFile();
+                $coverImageFileName = $this->generateUniqueFileName().'.'. $coverImageFile->guessClientExtension();
+                $coverImageFile->move(
+                    $this->getParameter("uploaded_images_directory"),
+                    $coverImageFileName
 
-            $post->setCoverImage($coverImageFileName);
+                );
+                $post->setCoverImage($coverImageFileName);
+                $coverImageInDB = new Image();
+                $coverImageInDB->setFilename($coverImageFileName);
+                $post->setCoverImage($coverImageFileName);
+                $this->resizeImage($_SERVER["DOCUMENT_ROOT"].'\uploads\images\\'.$coverImageFileName,620);
+
+            }
+            if ($post->getCoverImage() == null)
+            {
+                $post->setCoverImage("default cover image");
+            }
 
             $em = $this->getDoctrine()->getManager();
+
             $em->persist($post);
             $em->flush();
 
@@ -124,18 +137,31 @@ class PostController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $coverImageFile = $post->getCoverImageFile();
-            $coverImageFileName = $this->generateUniqueFileName().'.'. $coverImageFile->guessClientExtension();
-            $coverImageFile->move(
-                $this->getParameter("uploaded_images_directory"),
-                $coverImageFileName
-            );
+            if ($post->getCoverImageFile() !== null)
+            {
 
-            $post->setCoverImage($coverImageFileName);
+                $coverImageFile = $post->getCoverImageFile();
+                $coverImageFileName = $this->generateUniqueFileName().'.'. $coverImageFile->guessClientExtension();
+                $coverImageFile->move(
+                    $this->getParameter("uploaded_images_directory"),
+                    $coverImageFileName
+
+                );
+                $post->setCoverImage($coverImageFileName);
+                $coverImageInDB = new Image();
+                $coverImageInDB->setFilename($coverImageFileName);
+                $this->resizeImage($_SERVER["DOCUMENT_ROOT"].'\uploads\images\\'.$coverImageFileName,620);
+            }
+            if ($post->getCoverImage() == null)
+            {
+                $post->setCoverImage("default cover image");
+            }
+
 
             $post->setShortContent($this->generateShortContent($post->getContent()));
-            $this->getDoctrine()->getManager()->flush();
 
+
+            $this->getDoctrine()->getManager()->flush();
             return $this->redirectToRoute('post_edit', ['id' => $post->getId()]);
         }
 
@@ -188,7 +214,7 @@ class PostController extends Controller
         $image_url = '/uploads/images/'.$filename;
 
 //        $this->resizeImage('C:\xampp\htdocs\namu_darbai\Liepos3\UD_Project\my_project\public\uploads\images\\'.$filename);
-        $this->resizeImage($_SERVER["DOCUMENT_ROOT"].'\uploads\images\\'.$filename,700);
+        $this->resizeImage($_SERVER["DOCUMENT_ROOT"].'\uploads\images\\'.$filename,620);
 
         return new JsonResponse(array(
             'uploaded'=>true,
