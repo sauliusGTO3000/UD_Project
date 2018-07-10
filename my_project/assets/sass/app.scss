@@ -19,3 +19,12 @@ body{
   text-align:center;
   z-index: 1000;
 }
+
+.images-thumbnails{
+  background-color: whitesmoke;
+  img{
+    display: block;
+    margin: 15px;
+    max-height: 150px;
+  }
+}

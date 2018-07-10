@@ -1,7 +1,7 @@
 function browseImages() {
-   console.log("lets make it work");
+   console.log(window.location.host);
 
-   var imagesJsonURL =  "http://127.0.0.1:8000/post/browseImages";
+   var imagesJsonURL =  "http://"+window.location.host+"/post/browseImages";
    var imagesJSON=[];
    var imageURL;
 
@@ -12,8 +12,8 @@ function browseImages() {
                 item.folder = 'Images';
             }
             if (typeof(item.thumb) === 'undefined') {
-                imageURL = "http://127.0.0.1:8000" + item.image;
-                console.log(imageURL);
+                imageURL = "http://" + window.location.host+item.image;
+
                 $( ".images-thumbnails" ).append( '<img src='+imageURL+'>' );
             }
         });
@@ -21,6 +21,8 @@ function browseImages() {
             // alert($(this).attr('src'));
             $(window.parent.document).find('#post_coverImage')["0"].value=$(this).attr('src');
             overlay();
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
         });
     });
 

@@ -29,7 +29,7 @@
                 <td>{{ post.dateCreated ? post.dateCreated|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ post.publishDate ? post.publishDate|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ post.author.username }}</td>
-                <td>{{ post.coverImage }}</td>
+                <td><img src="{{ post.coverImage }}"></td>
                 <td>{{ post.title }}</td>
                 <td class="post">{{ post.shortcontent|raw }}</td>
                 <td>{{ post.hashtags ? post.hashtags|join(', ') : '' }}</td>
