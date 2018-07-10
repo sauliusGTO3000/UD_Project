@@ -1,6 +1,30 @@
 {{ form_start(form) }}
     {{ form_widget(form) }}
 {{ form_end(form) }}
+<script type="text/javascript" src="{{ asset("build/js/coverImageBrowser.js") }}"></script>
+<button onclick="window.open('http://127.0.0.1:8000/post/coverimagebrowser')">Open cover images</button>
+
+<div id="overlay">
+    <div>
+        <div class="images-thumbnails">
+            <img src="http://127.0.0.1:8000/uploads/images/894198bcc41fde8654f8b1d16d691ab3.jpeg">
+        </div>
+
+        <a href='#' onclick='overlay()'>Click here to show the overlay</a>
+    </div>
+</div>
+<a href='#' onclick='overlay()'>Click here to show the overlay</a>
+
+
+
 
 <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
+
 </select>
+
+<script>
+    function overlay() {
+        el = document.getElementById("overlay");
+        el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+    }
+</script>

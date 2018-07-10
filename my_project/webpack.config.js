@@ -12,7 +12,9 @@ Encore
 
     // uncomment to define the assets of the project
     .addEntry('js/app', './assets/js/app.js')
+    .addEntry('js/coverImageBrowser', './assets/js/coverImageBrowser.js')
     .addStyleEntry('css/app', './assets/sass/app.scss')
+    .addStyleEntry('css/coverImageBrowser', './assets/sass/coverImageBrowser.scss')
 
     // uncomment if you use Sass/SCSS files
     .enableSassLoader()

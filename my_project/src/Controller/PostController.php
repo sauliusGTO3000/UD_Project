@@ -24,6 +24,9 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 class PostController extends Controller
 {
+
+
+
     /**
      * @Route("/browseImages", name="browseImages")
      */
@@ -43,6 +46,15 @@ class PostController extends Controller
         return new JsonResponse($imageArray);
 
     }
+
+
+    /**
+     * @Route("/coverimagebrowser", name="coverImageBrowser", methods="GET|POST")
+     */
+    public function coverImageBrowser(){
+        return $this->render('post/coverImageBrowser.html.twig');
+    }
+
     /**
      * @Route("/", name="post_index", methods="GET")
      */
@@ -303,4 +315,6 @@ class PostController extends Controller
         }
         return;
     }
+
+
 }
