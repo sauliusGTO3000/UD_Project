@@ -27,7 +27,7 @@ $(document).ready(function() {
                 tags:true,
 
             });
-            // $(".js-example-basic-multiple").select2()
+            $(".js-example-basic-multiple").select2()
         }else {console.log("this is old");}
 
     });
