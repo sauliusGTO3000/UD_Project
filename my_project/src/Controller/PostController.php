@@ -94,7 +94,12 @@ class PostController extends Controller
                 $coverImageInDB = new Image();
                 $coverImageInDB->setFilename($coverImageFileName);
                 $post->setCoverImage($coverImageFileName);
-                $this->resizeImage($_SERVER["DOCUMENT_ROOT"].'\uploads\images\\'.$coverImageFileName,620);
+                $coverimageURL = $_SERVER["DOCUMENT_ROOT"].'\uploads\images\\'.$coverImageFileName;
+                $this->resizeImage($coverimageURL,620);
+
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($coverImageInDB);
+                $em->flush();
 
             }
             if ($post->getCoverImage() == null)
@@ -162,7 +167,14 @@ class PostController extends Controller
                 $post->setCoverImage($coverImageFileName);
                 $coverImageInDB = new Image();
                 $coverImageInDB->setFilename($coverImageFileName);
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($coverImageInDB);
+                $em->flush();
+
                 $this->resizeImage($_SERVER["DOCUMENT_ROOT"].'\uploads\images\\'.$coverImageFileName,620);
+
+
+
             }
             if ($post->getCoverImage() == null)
             {
