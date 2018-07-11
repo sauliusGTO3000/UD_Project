@@ -60,12 +60,14 @@ class AuthorController extends Controller
     /**
      * @Route("/{id}/edit", name="author_edit", methods="GET|POST")
      */
-    public function edit(Request $request, Author $author): Response
+    public function edit(Request $request, Author $author, UserPasswordEncoderInterface $passwordEncoder): Response
     {
         $form = $this->createForm(AuthorType::class, $author);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $password = $passwordEncoder->encodePassword($author,$author->getPassword());
+            $author->setPassword($password);
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('author_edit', ['id' => $author->getId()]);

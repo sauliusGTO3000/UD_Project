@@ -58,6 +58,29 @@ class Author implements UserInterface
      */
     private $roles = ['ROLE_AUTHOR'];
 
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $bio;
+
+    /**
+     * @return mixed
+     */
+    public function getBio()
+    {
+        return $this->bio;
+    }
+
+    /**
+     * @param mixed $bio
+     */
+    public function setBio($bio): void
+    {
+        $this->bio = $bio;
+    }
+
+
     /**
      * @return mixed
      */
