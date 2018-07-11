@@ -186,7 +186,7 @@ class PostController extends Controller
         $image_url = '/uploads/images/'.$filename;
 
 //        $this->resizeImage('C:\xampp\htdocs\namu_darbai\Liepos3\UD_Project\my_project\public\uploads\images\\'.$filename);
-        $this->resizeImage($this->getParameter("uploaded_images_directory")."/".$filename,620);
+        $this->resizeImage($this->getParameter("uploaded_images_directory")."/".$filename,800);
 
         return new JsonResponse(array(
             'uploaded'=>true,
@@ -307,7 +307,7 @@ class PostController extends Controller
         $em->persist($coverImageInDB);
         $em->flush();
 
-        $this->resizeImage($this->getParameter("uploaded_images_directory")."/".$coverImageFileName,620);
+        $this->resizeImage($this->getParameter("uploaded_images_directory")."/".$coverImageFileName,800);
     }
 
 }
