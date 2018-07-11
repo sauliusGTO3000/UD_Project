@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Author;
 use App\Form\AuthorType;
 use App\Repository\AuthorRepository;
+use App\Service\ImageResizer;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -68,8 +69,8 @@ class AuthorController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $password = $passwordEncoder->encodePassword($author,$author->getPassword());
             $author->setPassword($password);
+            $this->uploadAuthorImage($author);
             $this->getDoctrine()->getManager()->flush();
-
             return $this->redirectToRoute('author_edit', ['id' => $author->getId()]);
         }
 
@@ -91,5 +92,36 @@ class AuthorController extends Controller
         }
 
         return $this->redirectToRoute('author_index');
+    }
+
+    public function uploadAuthorImage(Author $author){
+        $file = $author->getProfilePictureFile();
+        $filename = $author->getId().'.'.$file->guessClientExtension();;
+
+        $file->move(
+        //moves the image to pre-determined uploaded_images_directory in config/services.yaml
+            $this->getParameter("uploaded_author_images_directory"),
+            $filename
+        );
+        $image_url = '/uploads/authorprofileimages/'.$filename;
+
+        $author->setProfilePicture($image_url);
+        $this->resizeAuthorImage($this->getParameter("uploaded_author_images_directory")."/".$filename,100);
+
+    }
+
+    public function resizeAuthorImage($imageURL, $maxWidth){
+
+        $resizedIMG = new ImageResizer($imageURL);
+        $imageWidth = $resizedIMG->getWidth();
+
+        if ($imageWidth<$maxWidth){
+            $resizedIMG->saveImage($imageURL);
+        }else{
+            $resizedIMG->resizeImage($maxWidth, 100, 'crop');
+            $resizedIMG->greyScale();
+            $resizedIMG->saveImage($imageURL);
+        }
+        return;
     }
 }

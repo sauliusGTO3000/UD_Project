@@ -25,7 +25,7 @@ class PostRepository extends ServiceEntityRepository
             ->andWhere('p.publishDate<:now')
             ->setParameter('val', true)
             ->setParameter('now', new \DateTime() )
-            ->orderBy('p.publishDate', 'ASC')
+            ->orderBy('p.publishDate', 'DESC')
             ->getQuery()
             ->getResult();
     }

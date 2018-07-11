@@ -3,6 +3,7 @@
 parameters:
     locale: 'en'
     uploaded_images_directory: '%kernel.project_dir%/public/uploads/images'
+    uploaded_author_images_directory: '%kernel.project_dir%/public/uploads/authorprofileimages'
 
 services:
     # default configuration for services in *this* file

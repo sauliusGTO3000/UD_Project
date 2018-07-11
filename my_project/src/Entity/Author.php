@@ -64,6 +64,25 @@ class Author implements UserInterface
      */
     private $bio;
 
+
+    private $profilePictureFile;
+
+    /**
+     * @return mixed
+     */
+    public function getProfilePictureFile()
+    {
+        return $this->profilePictureFile;
+    }
+
+    /**
+     * @param mixed $profilePictureFile
+     */
+    public function setProfilePictureFile($profilePictureFile): void
+    {
+        $this->profilePictureFile = $profilePictureFile;
+    }
+
     /**
      * @return mixed
      */

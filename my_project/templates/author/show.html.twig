@@ -33,7 +33,7 @@
             </tr>
             <tr>
                 <th>ProfilePicture</th>
-                <td>{{ author.profilePicture }}</td>
+                <td><img src="{{ author.profilePicture }}" style="border-radius:50px"></td>
             </tr>
             <tr>
                 <th>Password</th>
@@ -42,6 +42,10 @@
             <tr>
                 <th>Roles</th>
                 <td>{{ author.roles ? author.roles|join(', ') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Bio</th>
+                <td>{{ author.bio }}</td>
             </tr>
         </tbody>
     </table>
