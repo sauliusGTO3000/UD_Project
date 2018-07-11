@@ -4,30 +4,15 @@
 
 {% block body %}
     <div class="post">
-    <h1>Post</h1>
+
 
     <table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ post.id }}</td>
-            </tr>
-            <tr>
-                <th>Posted</th>
-                <td>{{ post.posted ? 'Yes' : 'No' }}</td>
-            </tr>
-            <tr>
-                <th>DateCreated</th>
-                <td>{{ post.dateCreated ? post.dateCreated|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
                 <th>PublishDate</th>
-                <td>{{ post.publishDate ? post.publishDate|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ post.publishDate ? post.publishDate|date('Y-m-d ') : '' }}</td>
             </tr>
-            <tr>
-                <th>Author</th>
-                <td>{{ post.author.username }}</td>
-            </tr>
+
             <tr>
                 <th>CoverImage</th>
                 <td><img src="{{ post.coverImage }}"></td>
@@ -44,11 +29,12 @@
                 <th>Hashtags</th>
                 <td>{{ post.hashtags ? post.hashtags|join(', ') : '' }}</td>
             </tr>
+
             <tr>
-                <th>ReadCount</th>
-                <td>{{ post.readCount }}</td>
+            <tr>
+                <th>Author</th>
+                <td>{{ post.author.username }}</td>
             </tr>
-            <tr>
                 <th>Author Image</th>
                 <td><img src="{{ post.author.profilePicture }}", style="border-radius:50px"></td>
             </tr>

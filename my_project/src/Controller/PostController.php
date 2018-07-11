@@ -54,7 +54,47 @@ class PostController extends Controller
      */
     public function index(PostRepository $postRepository): Response
     {
+
         return $this->render('post/index.html.twig', ['posts' => $postRepository->findPosted()]);
+    }
+
+    /**
+     * @Route("/infiniteScrollJSON", name="infiniteScrollJSON", methods="GET")
+     */
+    public function postsNow(Request $request, PostRepository $postRepository){
+
+//            $em    = $this->get('doctrine.orm.entity_manager');
+//            $dql   = "SELECT p FROM App\Entity\Post p WHERE p.publishedDate < NOW";
+            $query = $postRepository->findPosted();
+            $items = [];
+
+            $paginator  = $this->get('knp_paginator');
+            $pagination = $paginator->paginate(
+                $query, /* query NOT result */
+                $request->query->getInt('page', 1)/*page number*/,
+                10/*limit per page*/
+            );
+            /** @var Post  $post */
+        foreach ($pagination as $post){
+                $items[]=array(
+                    'id' => $post->getId(),
+                    'coverImage'=> $post->getCoverImage(),
+                    'title' => $post->getTitle(),
+                    'shortContent' => $post->getShortContent(),
+                    'publishedDate' => $post->getPublishDate(),
+                );
+            }
+
+            // parameters to template
+            return new JsonResponse($items);
+
+    }
+
+    /**
+     * @Route("/homepage", name="homepage", methods="GET")
+     */
+    public function Homepage(){
+        return $this->render('post/homepage.html.twig');
     }
 
     /**
