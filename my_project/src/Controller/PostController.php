@@ -68,12 +68,15 @@ class PostController extends Controller
             $query = $postRepository->findPosted();
             $items = [];
 
+
             $paginator  = $this->get('knp_paginator');
             $pagination = $paginator->paginate(
                 $query, /* query NOT result */
                 $request->query->getInt('page', 1)/*page number*/,
                 10/*limit per page*/
             );
+//            var_dump($maxLoadCount);
+
             /** @var Post  $post */
         foreach ($pagination as $post){
                 $items[]=array(
@@ -83,10 +86,11 @@ class PostController extends Controller
                     'shortContent' => $post->getShortContent(),
                     'publishedDate' => $post->getPublishDate(),
                 );
-            }
 
+            }
+        $maxLoadCount = ceil(count($query)/10);
             // parameters to template
-            return new JsonResponse($items);
+            return new JsonResponse(['pages' => $items,'maxLoadCount' => $maxLoadCount]);
 
     }
 
