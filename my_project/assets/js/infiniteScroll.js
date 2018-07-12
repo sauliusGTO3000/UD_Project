@@ -5,7 +5,7 @@ console.log("infinite scroll js works?");
 
 $(document).ready(function () {
     // var data = JSON.parse( response );
-    var maxloadcount = 1;
+    var maxloadcount = 2;
     // console.log(data);
     // json('/post/infiniteScrollJSON');
     // var maxcount = JSON.parse('/post/infiniteScrollJSON');
@@ -33,7 +33,9 @@ $(document).ready(function () {
 
     });
     infScroll.on( 'last', function( response, path ) {
-        console.log("last page reached");
+        $( ".loader-ellips").hide();
+        $( ".last-page" ).show();
+
     });
 
     infScroll.on( 'load', function(response ) {

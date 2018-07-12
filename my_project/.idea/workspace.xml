@@ -7,9 +7,6 @@
     <list default="true" id="11f4dc39-0f3c-4450-9c70-e7c5fc077701" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/assets/js/infiniteScroll.js" afterPath="$PROJECT_DIR$/assets/js/infiniteScroll.js" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/app.scss" afterPath="$PROJECT_DIR$/assets/sass/app.scss" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PostController.php" afterPath="$PROJECT_DIR$/src/Controller/PostController.php" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" afterPath="$PROJECT_DIR$/symfony.lock" />
       <change beforePath="$PROJECT_DIR$/templates/post/homepage.html.twig" afterPath="$PROJECT_DIR$/templates/post/homepage.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,25 +49,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="infiniteScroll.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="infiniteScroll.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/infiniteScroll.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="420">
+              <caret line="36" column="31" lean-forward="false" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
               <folding>
-                <marker date="1531382147849" expanded="true" signature="1426:1445" ph="..." />
+                <marker date="1531384149530" expanded="true" signature="1456:1475" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homepage.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="homepage.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/post/homepage.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="400">
+              <caret line="20" column="47" lean-forward="false" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
               <folding>
                 <element signature="e#12#26#0#Twig" expanded="true" />
+                <element signature="e#691#712#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -196,9 +194,9 @@
         <option value="$PROJECT_DIR$/templates/post/now.html.twig" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/src/Controller/PostController.php" />
-        <option value="$PROJECT_DIR$/templates/post/homepage.html.twig" />
         <option value="$PROJECT_DIR$/assets/sass/app.scss" />
         <option value="$PROJECT_DIR$/assets/js/infiniteScroll.js" />
+        <option value="$PROJECT_DIR$/templates/post/homepage.html.twig" />
       </list>
     </option>
   </component>
@@ -533,12 +531,12 @@
       <workItem from="1531148964391" duration="18421000" />
       <workItem from="1531206554823" duration="16882000" />
       <workItem from="1531285675707" duration="20087000" />
-      <workItem from="1531375977447" duration="6197000" />
+      <workItem from="1531375977447" duration="8134000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131596000" />
+    <option name="totallyTimeSpent" value="133533000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -627,6 +625,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1220">
           <caret line="61" column="1" lean-forward="false" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -937,22 +936,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/post/homepage.html.twig">
+    <entry file="file://$PROJECT_DIR$/assets/js/infiniteScroll.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="420">
+          <caret line="36" column="31" lean-forward="false" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
           <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
+            <marker date="1531384149530" expanded="true" signature="1456:1475" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/infiniteScroll.js">
+    <entry file="file://$PROJECT_DIR$/templates/post/homepage.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state relative-caret-position="400">
+          <caret line="20" column="47" lean-forward="false" selection-start-line="20" selection-start-column="47" selection-end-line="20" selection-end-column="47" />
           <folding>
-            <marker date="1531382147849" expanded="true" signature="1426:1445" ph="..." />
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#691#712#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
