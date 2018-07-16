@@ -108,22 +108,22 @@ class PostController extends Controller
     {
         $post = new Post();
 
+
         $post->setDateCreated(new \DateTime());
         $post->setAuthor($author);
         $post->setReadCount(0);
-        $post->setShortContent($this->generateShortContent($post->getContent()));
+
 
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
 
+        if ($form->isSubmitted() && $form->isValid()) {
             //cover image function starts here
             $this->addCoverImageToPost($post);
             //cover image function ends here
-
+            $post->setShortContent($this->generateShortContent($post->getContent()));
             $em = $this->getDoctrine()->getManager();
-
             $em->persist($post);
             $em->flush();
 
@@ -175,7 +175,6 @@ class PostController extends Controller
             //cover image function ends here
 
             $post->setShortContent($this->generateShortContent($post->getContent()));
-
 
             $this->getDoctrine()->getManager()->flush();
             return $this->redirectToRoute('post_edit', ['id' => $post->getId()]);
@@ -246,6 +245,7 @@ class PostController extends Controller
 
     private function generateShortContent($content, $wordsToKeep=200)
     {
+//        problema kazkur cia
         $length = mb_strlen($content);
 
         $arrayOfTags = [];
@@ -302,8 +302,18 @@ class PostController extends Controller
         foreach ($arrayOfTags as $key => $value) {
             $stringWithClosingTags.=substr_replace($value, "/", 1, 0);
         }
-        $content = substr($content, 0, $wordCutMarker).$stringWithClosingTags;
+        $content = substr($content, 0, $wordCutMarker)."...".$stringWithClosingTags;
         return $content;
+    }
+
+    public function stretchCoverImage($imageURL, $stretchedWidth){
+        $resizedIMG = new ImageResizer($imageURL);
+        $imageWidth = $resizedIMG->getWidth();
+
+            $resizedIMG->resizeImage($stretchedWidth, 400, 'crop');
+            $resizedIMG->saveImage($imageURL);
+
+        return;
     }
 
     public function resizeImage($imageURL, $maxWidth){
@@ -334,11 +344,13 @@ class PostController extends Controller
             );
 
             $post->setCoverImage("/uploads/images/".$coverImageFileName);
+
             $this->addCoverImageToDB($coverImageFileName);
+            $this->stretchCoverImage($this->getParameter("uploaded_images_directory")."/".$coverImageFileName,800);
         }
         if ($post->getCoverImage() == null)
         {
-            $post->setCoverImage("default cover image");
+            $post->setCoverImage("/uploads/images/".$stockImageNumber."");
         }
 
     }
@@ -353,5 +365,9 @@ class PostController extends Controller
 
         $this->resizeImage($this->getParameter("uploaded_images_directory")."/".$coverImageFileName,800);
     }
+
+
+
+
 
 }

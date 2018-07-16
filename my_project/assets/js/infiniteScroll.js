@@ -44,11 +44,14 @@ $(document).ready(function () {
         var data = JSON.parse( response );
         // console.log(data);
         var post = 0;
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         for (post=0;post<data['pages'].length;post++){
             $( ".container" ).append( '<img src="'+ data['pages'][post].coverImage +'">');
             $( ".container" ).append( "<div style='font-size: xx-large'> Post Title: "+data['pages'][post].title +"</div>");
-            $( ".container" ).append( "<div> Published Date: "+data['pages'][post].publishedDate.date +"</div>");
-            $( ".container" ).append( "<div> Short Content: "+data['pages'][post].shortContent +"</div>");
+            var date = new Date(data['pages'][post].publishedDate.date);
+            date = date.toLocaleDateString('lt-LT', options);
+            $( ".container" ).append( "<div>"+ date +"</div>");
+            $( ".container" ).append( "<div>"+data['pages'][post].shortContent +"</div>");
             $( ".container" ).append( '<a href="/post/'+data['pages'][post].id+'">read more</a>');
             $( ".container" ).append( "<hr>");
         }

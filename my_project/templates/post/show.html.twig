@@ -27,7 +27,15 @@
             </tr>
             <tr>
                 <th>Hashtags</th>
-                <td>{{ post.hashtags ? post.hashtags|join(', ') : '' }}</td>
+                <td>
+                {% if post.hashtags != null %}
+                    {% for hashtag in post.hashtags %}
+                         <a href="/hashtag/posts/{{ hashtag.id}}"> #{{ hashtag}}</a>
+                        <span> </span>
+                    {% endfor %}
+                {% endif %}
+
+                </td>
             </tr>
 
             <tr>

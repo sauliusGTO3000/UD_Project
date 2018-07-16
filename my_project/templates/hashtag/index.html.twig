@@ -18,7 +18,7 @@
         {% for hashtag in hashtags %}
             <tr>
                 <td>{{ hashtag.id }}</td>
-                <td>{{ hashtag.hastagName }}</td>
+                <td>{{ hashtag.hashtagName }}</td>
                 <td>{{ hashtag.readCount }}</td>
                 <td>
                     <a href="{{ path('hashtag_show', {'id': hashtag.id}) }}">show</a>
