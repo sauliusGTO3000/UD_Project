@@ -3,6 +3,8 @@
 namespace App\Controller;
 
 use App\Entity\Author;
+use App\Form\AuthorFrontType;
+use App\Form\AuthorPasswordType;
 use App\Form\AuthorType;
 use App\Repository\AuthorRepository;
 use App\Service\ImageResizer;
@@ -11,6 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @Route("/author")
@@ -24,6 +27,70 @@ class AuthorController extends Controller
     {
         return $this->render('author/index.html.twig', ['authors' => $authorRepository->findAll()]);
     }
+
+    /**
+     * @Route("/editauthorpassword", name="editauthorpassword", methods="GET|POST")
+     * @param Request $request
+     * @param UserInterface $author
+     * @param UserPasswordEncoderInterface $passwordEncoder
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     */
+    public function editAuthorPassword(Request $request, UserInterface $author, UserPasswordEncoderInterface $passwordEncoder){
+        $form = $this->createForm(AuthorPasswordType::class, $author);
+
+//        var_dump($author->getPassword());
+
+        $form->handleRequest($request);
+//        var_dump($author->getPassword());
+
+
+
+        if ($form->isSubmitted() && $form->isValid())
+        {
+            if($passwordEncoder->isPasswordValid($author,$author->getOldPassword()))
+            {
+            $password = $passwordEncoder->encodePassword($author,$author->getPlainPassword());
+            $author->setPassword($password);
+            $this->getDoctrine()->getManager()->flush();
+            return $this->redirectToRoute('homepage');
+            }
+            echo "please enter correct old password";
+
+        }
+
+        return $this->render('author/editauthorpassword.html.twig', [
+            'author' => $author,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/editauthordetails", name="editauthordetails", methods="GET|POST")
+     * @param Request $request
+     * @param Author $author
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     */
+    public function editAuthorFront(Request $request, UserInterface $author){
+        $form = $this->createForm(AuthorFrontType::class, $author);
+        $form->handleRequest($request);
+
+
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            if ($author->getProfilePictureFile() != null){
+                $this->uploadAuthorImage($author);
+            }
+
+            $this->getDoctrine()->getManager()->flush();
+            return $this->redirectToRoute('homepage');
+        }
+
+        return $this->render('author/editauthordetails.html.twig', [
+            'author' => $author,
+            'form' => $form->createView(),
+        ]);
+    }
+
 
     /**
      * @Route("/new", name="author_new", methods="GET|POST")

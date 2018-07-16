@@ -53,6 +53,25 @@ class Author implements UserInterface
      */
     private $password;
 
+
+    private $oldPassword;
+
+    /**
+     * @return mixed
+     */
+    public function getOldPassword()
+    {
+        return $this->oldPassword;
+    }
+
+    /**
+     * @param mixed $oldPassword
+     */
+    public function setOldPassword($oldPassword): void
+    {
+        $this->oldPassword = $oldPassword;
+    }
+
     /**
      * @ORM\Column(type="array")
      */
