@@ -245,9 +245,11 @@ class PostController extends Controller
 
     private function generateShortContent($content, $wordsToKeep=200)
     {
-//        problema kazkur cia
-        $length = mb_strlen($content);
 
+        $length = mb_strlen($content);
+        if ($length < $wordsToKeep){
+            return $content;
+        }
         $arrayOfTags = [];
         $tag="";
         $stringWithClosingTags="";
@@ -350,7 +352,8 @@ class PostController extends Controller
         }
         if ($post->getCoverImage() == null)
         {
-            $post->setCoverImage("/uploads/images/".$stockImageNumber."");
+            $stockImageNumber=rand(1,20);
+            $post->setCoverImage("/uploads/images/".$stockImageNumber.".png");
         }
 
     }
