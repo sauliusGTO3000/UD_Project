@@ -74,11 +74,19 @@ class AuthorController extends Controller
         $form = $this->createForm(AuthorFrontType::class, $author);
         $form->handleRequest($request);
 
-
-
         if ($form->isSubmitted() && $form->isValid()) {
             if ($author->getProfilePictureFile() != null){
-                $this->uploadAuthorImage($author);
+                $file = $author->getProfilePictureFile();
+                $filename = $author->getId().'.'.$file->guessClientExtension();;
+                $file->move(
+                //moves the image to pre-determined uploaded_images_directory in config/services.yaml
+                    $this->getParameter("uploaded_author_images_directory"),
+                    $filename
+                );
+                $image_url = '/uploads/authorprofileimages/'.$filename;
+                $author->setProfilePicture($image_url);
+                $author->setProfilePictureFile($image_url);
+                $this->resizeAuthorImage($this->getParameter("uploaded_author_images_directory")."/".$filename,200);
             }
 
             $this->getDoctrine()->getManager()->flush();
@@ -104,6 +112,20 @@ class AuthorController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $password = $passwordEncoder->encodePassword($author,$author->getPassword());
             $author->setPassword($password);
+            if ($author->getProfilePictureFile() != null){
+                $file = $author->getProfilePictureFile();
+                $filename = $author->getId().'.'.$file->guessClientExtension();;
+                $file->move(
+                //moves the image to pre-determined uploaded_images_directory in config/services.yaml
+                    $this->getParameter("uploaded_author_images_directory"),
+                    $filename
+                );
+                $image_url = '/uploads/authorprofileimages/'.$filename;
+                $author->setProfilePicture($image_url);
+                $author->setProfilePictureFile($image_url);
+                $this->resizeAuthorImage($this->getParameter("uploaded_author_images_directory")."/".$filename,200);
+            }
+
             $em = $this->getDoctrine()->getManager();
             $em->persist($author);
             $em->flush();
@@ -173,7 +195,7 @@ class AuthorController extends Controller
         $image_url = '/uploads/authorprofileimages/'.$filename;
 
         $author->setProfilePicture($image_url);
-        $this->resizeAuthorImage($this->getParameter("uploaded_author_images_directory")."/".$filename,100);
+        $this->resizeAuthorImage($this->getParameter("uploaded_author_images_directory")."/".$filename,200);
 
     }
 
@@ -184,8 +206,9 @@ class AuthorController extends Controller
 
         if ($imageWidth<$maxWidth){
             $resizedIMG->saveImage($imageURL);
+            $resizedIMG->resizeImage($maxWidth, 200, 'crop');
         }else{
-            $resizedIMG->resizeImage($maxWidth, 100, 'crop');
+            $resizedIMG->resizeImage($maxWidth, 200, 'crop');
             $resizedIMG->greyScale();
             $resizedIMG->saveImage($imageURL);
         }
