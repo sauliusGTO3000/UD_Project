@@ -41,10 +41,10 @@
             <tr>
             <tr>
                 <th>Author</th>
-                <td>{{ post.author.username }}</td>
+                <td><a href="/author/{{ post.author.id}}"> {{ post.author.username }}</a></td>
             </tr>
                 <th>Author Image</th>
-                <td><img src="{{ post.author.profilePicture }}", style="border-radius:50px"></td>
+                <td><img src="{{ post.author.profilePicture }}", style="border-radius:100px"></td>
             </tr>
         </tbody>
     </table>

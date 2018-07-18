@@ -7,6 +7,7 @@ use App\Form\AuthorFrontType;
 use App\Form\AuthorPasswordType;
 use App\Form\AuthorType;
 use App\Repository\AuthorRepository;
+use App\Repository\PostRepository;
 use App\Service\ImageResizer;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -142,9 +143,13 @@ class AuthorController extends Controller
     /**
      * @Route("/{id}", name="author_show", methods="GET")
      */
-    public function show(Author $author): Response
+    public function show(Author $author, PostRepository $postRepository): Response
     {
-        return $this->render('author/show.html.twig', ['author' => $author]);
+        $posts = $postRepository->findByAuthor($author);
+        return $this->render('author/show.html.twig', [
+            'author' => $author,
+            'posts' => $posts
+        ]);
     }
 
     /**
