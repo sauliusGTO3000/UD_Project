@@ -163,7 +163,11 @@ class AuthorController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $password = $passwordEncoder->encodePassword($author,$author->getPassword());
             $author->setPassword($password);
-            $this->uploadAuthorImage($author);
+            if($author->getProfilePictureFile()!= null){
+                $this->uploadAuthorImage($author);
+            }
+
+
             $this->getDoctrine()->getManager()->flush();
             return $this->redirectToRoute('author_edit', ['id' => $author->getId()]);
         }
