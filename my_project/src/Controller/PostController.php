@@ -18,12 +18,15 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\User\UserInterface;
+use App\Service\ArchiveBuilder;
 
 /**
  * @Route("/post")
  */
 class PostController extends Controller
 {
+
+
 
     /**
      * @Route("/browseImages", name="browseImages")
@@ -48,6 +51,23 @@ class PostController extends Controller
         return $this->render('post/coverImageBrowser.html.twig');
     }
 
+    /**
+     * @Route("/archive", name="archive", methods="GET")
+     */
+    public function generateArchive(ArchiveBuilder $archiveBuilder){
+
+       $archiveBuilder->getArchiveData();
+       exit();
+
+    }
+
+    /**
+     * @Route("/topfive", name="topfive", methods="GET")
+     */
+    public function findTopFive(PostRepository $postRepository){
+
+        return $this->render('post/topfive.html.twig', ['posts' => $postRepository->findTopFive()]);
+    }
 
     /**
      * @Route("/", name="post_index", methods="GET")
@@ -368,6 +388,9 @@ class PostController extends Controller
 
         $this->resizeImage($this->getParameter("uploaded_images_directory")."/".$coverImageFileName,800);
     }
+
+
+
 
 
 

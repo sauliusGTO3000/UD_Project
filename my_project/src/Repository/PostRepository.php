@@ -29,6 +29,18 @@ class PostRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+
+    public function findTopFive(){
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.posted = :val')
+            ->andWhere('p.publishDate<:now')
+            ->setParameter('val', true)
+            ->setParameter('now', new \DateTime() )
+            ->orderBy('p.readCount', 'DESC')
+            ->setMaxResults('5')
+            ->getQuery()
+            ->getResult();
+    }
 //
     public function findByTags($tagID){
         return $this->createQueryBuilder('p')

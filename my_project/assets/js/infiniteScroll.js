@@ -1,6 +1,6 @@
 import InfiniteScroll from 'infinite-scroll';
 
-console.log("infinite scroll js works?");
+
 
 
 $(document).ready(function () {
