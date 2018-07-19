@@ -1,0 +1,12 @@
+{% for year,month in posts %}
+    {{ year }}
+    <br>
+    {% for month,post in month %}
+        {{ month }}
+        <br>
+        {% for title in post %}
+            {{ title|raw }}
+            <br>
+        {% endfor %}
+    {% endfor %}
+{% endfor %}

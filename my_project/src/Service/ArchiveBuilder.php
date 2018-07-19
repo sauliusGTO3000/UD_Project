@@ -8,7 +8,6 @@
 
 namespace App\Service;
 
-
 use App\Repository\PostRepository;
 
 class ArchiveBuilder
@@ -21,30 +20,40 @@ class ArchiveBuilder
     }
 
     public function getArchiveData(){
+        $calendar = [
+            '01'=>'Sausis',
+            '02'=>'Vasaris',
+            '03'=>'Kovas',
+            '04'=>'Balandis',
+            '05'=>'Gegužė',
+            '06'=>'Birželis',
+            '07'=>'Liepa',
+            '08'=>'Rugpjūtis',
+            '09'=>'Rugsėjis',
+            '10'=>'Spalis',
+            '11'=>'Lapkritis',
+            '12'=>'Gruodis'
+            ];
         $yeartoPrint = "";
         $monthToPrint = "";
+        $archiveOfPosts = [];
         $allPosts =  $this->postRepository->findPosted();
         foreach($allPosts as $post){
             $publishedDate = $post->getPublishDate();
             $publishedYear = $publishedDate->format('Y');
-            while ($yeartoPrint != $publishedYear){
-                echo '<div class = "publishedYear">'.$publishedDate->format('Y');
+            if ($yeartoPrint != $publishedYear){
+                $archiveOfPosts[$publishedYear]=[];
                 $yeartoPrint = $publishedYear;
-                echo "<br>";
+                $monthToPrint="";
             }
             $publishedMonth = $publishedDate->format('m');
-            while ($monthToPrint != $publishedMonth){
-                echo '<div class = "publishedYear">'.$publishedDate->format('m');
+
+            if ($monthToPrint != $publishedMonth){
+                $archiveOfPosts[$publishedYear][$calendar[$publishedMonth]]=[];
                 $monthToPrint = $publishedMonth;
-                echo "<br>";
             }
-            echo '<a href="'.$post->getId().'">'.$post->getTitle().'</a>';
-            echo "<br>";
-            echo "</div>";
-            echo "</div>";
+            $archiveOfPosts[$publishedYear][$calendar[$publishedMonth]][]='<a href="'.$post->getId().'">'.$post->getTitle().'</a>';
         }
-
+        return($archiveOfPosts);
     }
-
-
 }

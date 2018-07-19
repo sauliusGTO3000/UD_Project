@@ -56,9 +56,7 @@ class PostController extends Controller
      */
     public function generateArchive(ArchiveBuilder $archiveBuilder){
 
-       $archiveBuilder->getArchiveData();
-       exit();
-
+        return $this->render('post/archive.html.twig', ['posts' => $archiveBuilder->getArchiveData()]);
     }
 
     /**

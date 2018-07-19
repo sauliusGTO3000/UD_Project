@@ -141,6 +141,15 @@ class AuthorController extends Controller
     }
 
     /**
+     * @Route("/list", name="author_list", methods="GET")
+     */
+    public function showAllAuthors(AuthorRepository $authorRepository){
+        return $this->render('author/list.html.twig', ['authors' => $authorRepository->findAll()]);
+
+    }
+
+
+    /**
      * @Route("/{id}", name="author_show", methods="GET")
      */
     public function show(Author $author, PostRepository $postRepository): Response
@@ -223,4 +232,6 @@ class AuthorController extends Controller
         }
         return;
     }
+
+
 }
