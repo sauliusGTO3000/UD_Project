@@ -19,26 +19,26 @@ class ArchiveBuilder
         $this->postRepository = $postRepository;
     }
 
-    public function getArchiveData($maxResults = 0){
+    public function getArchiveData($maxResults = null){
         $counter =0;
         $calendar = [
-            '01'=>'Sausis',
-            '02'=>'Vasaris',
-            '03'=>'Kovas',
-            '04'=>'Balandis',
-            '05'=>'Gegužė',
-            '06'=>'Birželis',
-            '07'=>'Liepa',
-            '08'=>'Rugpjūtis',
-            '09'=>'Rugsėjis',
-            '10'=>'Spalis',
-            '11'=>'Lapkritis',
-            '12'=>'Gruodis'
+            '01'=>'sausis',
+            '02'=>'vasaris',
+            '03'=>'kovas',
+            '04'=>'balandis',
+            '05'=>'gegužė',
+            '06'=>'birželis',
+            '07'=>'liepa',
+            '08'=>'rugpjūtis',
+            '09'=>'rugsėjis',
+            '10'=>'spalis',
+            '11'=>'lapkritis',
+            '12'=>'gruodis'
             ];
         $yeartoPrint = "";
         $monthToPrint = "";
         $archiveOfPosts = [];
-        $allPosts =  $this->postRepository->findPosted();
+        $allPosts =  $this->postRepository->findPosted($maxResults);
         foreach($allPosts as $post){
             $publishedDate = $post->getPublishDate();
             $publishedYear = $publishedDate->format('Y');
@@ -54,12 +54,6 @@ class ArchiveBuilder
                 $monthToPrint = $publishedMonth;
             }
             $archiveOfPosts[$publishedYear][$calendar[$publishedMonth]][]='<a href="'.$post->getId().'">'.$post->getTitle().'</a>';
-            if ($maxResults != 0){
-                $counter++;
-                if($counter == $maxResults){
-                    return($archiveOfPosts);
-                }
-            }
         }
         return($archiveOfPosts);
     }

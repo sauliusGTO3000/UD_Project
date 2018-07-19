@@ -1,20 +1,42 @@
 security:
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
-    providers:
-        in_database:
-            entity:
-                class: App\Entity\Author
-                property: username
+#    providers:
+#        chain_provider:
+#            chain:
+#                providers: [in_memory, in_database]
+#        in_database:
+#            entity:
+#                class: App\Entity\Author
+#                property: username
+#        in_memory:
+#            memory:
+#            users:
+#                superadmin:
+#                    password: 123
+#                    roles: 'ROLE_AUTHOR'
     encoders:
         App\Entity\Author: bcrypt
+        Symfony\Component\Security\Core\User\User: bcrypt
 
+    providers:
+        chain_provider:
+            chain:
+                providers: [in_memory, in_database]
+        in_memory:
+            memory:
+                users:
+                    superadmin:
+                        password: $2y$13$OcWnyf.cnL3HYS3nooAHs.GTIV8cpGjEp.1StDZrgV.G5jUnoQ6RO
+                        roles: 'ROLE_AUTHOR'
+        in_database:
+            entity: { class: App\Entity\Author, property: username }
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
             anonymous: true
-            provider: in_database
+            provider: chain_provider
             form_login:
                 login_path: login
                 check_path: login
