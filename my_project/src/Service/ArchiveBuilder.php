@@ -19,7 +19,8 @@ class ArchiveBuilder
         $this->postRepository = $postRepository;
     }
 
-    public function getArchiveData(){
+    public function getArchiveData($maxResults = 0){
+        $counter =0;
         $calendar = [
             '01'=>'Sausis',
             '02'=>'Vasaris',
@@ -53,7 +54,14 @@ class ArchiveBuilder
                 $monthToPrint = $publishedMonth;
             }
             $archiveOfPosts[$publishedYear][$calendar[$publishedMonth]][]='<a href="'.$post->getId().'">'.$post->getTitle().'</a>';
+            if ($maxResults != 0){
+                $counter++;
+                if($counter == $maxResults){
+                    return($archiveOfPosts);
+                }
+            }
         }
         return($archiveOfPosts);
     }
+
 }

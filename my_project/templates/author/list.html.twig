@@ -1,5 +1,6 @@
 {% block body %}
 {% for author in authors %}
     <a href="{{ path('author_show', {'id': author.id}) }}">{{ author.username }}</a>
+    <br>
 {% endfor %}
 {% endblock %}

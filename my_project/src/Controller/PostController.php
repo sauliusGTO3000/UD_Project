@@ -60,6 +60,14 @@ class PostController extends Controller
     }
 
     /**
+     * @Route("/archivesmall", name="archivesmall", methods="GET")
+     */
+    public function generateSmallArchive(ArchiveBuilder $archiveBuilder){
+
+        return $this->render('post/archive.html.twig', ['posts' => $archiveBuilder->getArchiveData(10)]);
+    }
+
+    /**
      * @Route("/topfive", name="topfive", methods="GET")
      */
     public function findTopFive(PostRepository $postRepository){
