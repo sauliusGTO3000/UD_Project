@@ -23,6 +23,7 @@ class PostType extends AbstractType
             ->add('posted')
             ->add('dateCreated')
             ->add('publishDate',DateTimeType::class,array(
+                
                 'placeholder' => array(
                     'year' => 'Year', 'month' => 'Month', 'day' => 'Day',
                     'hour' => 'Hour', 'minute' => 'Minute', 'second' => 'Second',)))

@@ -9,6 +9,7 @@ CKEDITOR.editorConfig=function(config){
 //config.uiColor='#AADC6E';
 //config.toolbar=['bold','italic','|','undo','redo'];
     config.height="500px";
+    config.width="816px";
     config.toolbar_Custom=[
         {name:'custom',items:['Save','Undo','Redo','Replace','Maximize','Templates',
                 '-',

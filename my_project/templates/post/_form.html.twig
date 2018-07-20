@@ -1,4 +1,9 @@
 {{ form_start(form) }}
+    {{ form_row(form.posted) }}
+    {{ form_row(form.publishDate) }}
+    {{ form_row(form.coverImage) }}
+    {{ form_row(form.CoverImageFile) }}
+    <div><a href='#' onclick='overlay()'>Click here to show uploaded pictures</a></div>
     {{ form_widget(form) }}
 {{ form_end(form) }}
 <script type="text/javascript" src="{{ asset("build/js/coverImageBrowser.js") }}"></script>
@@ -12,7 +17,11 @@
         <a href='#' onclick='overlay()'>Click here to show the overlay</a>
     </div>
 </div>
-<a href='#' onclick='overlay()'>Click here to show the overlay</a>
+{% if post.coverImage is null %}
+    <img src="/uploads/images/noCover.png" style="border: 8px solid rgb(248,248,248)">
+{% endif %}
+<img src="{{ post.coverImage }}" style="border: 8px solid rgb(248,248,248)">
+
 
 
 
