@@ -14,8 +14,11 @@ Encore
     .addEntry('js/app', './assets/js/app.js')
     .addEntry('js/coverImageBrowser', './assets/js/coverImageBrowser.js')
     .addEntry('js/infiniteScroll', './assets/js/infiniteScroll.js')
+    .addEntry('js/navbar', './assets/js/navbar.js')
     .addStyleEntry('css/app', './assets/sass/app.scss')
     .addStyleEntry('css/coverImageBrowser', './assets/sass/coverImageBrowser.scss')
+    .addStyleEntry('css/parallax', './assets/sass/parallax.scss')
+    .addStyleEntry('css/navbar', './assets/sass/navbar.scss')
 
     // uncomment if you use Sass/SCSS files
     .enableSassLoader()

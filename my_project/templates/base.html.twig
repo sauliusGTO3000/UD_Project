@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html>
     <head>
+        {% block head %}
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}
-            <link rel="stylesheet" type="text/css" href="{{ asset("build/css/app.css") }}">
-            <style>
-                @font-face {
-                    font-family: "HeadlandOne-Regular";
-                    src: url( /fonts/HeadlandOne-Regular.ttf ); /* IE */
-                    src: local("HeadlandOne-Regular"), url("/fonts/HeadlandOne-Regular.ttf"); /*non-IE*/
-                }
-                .post{
-                    font-family: "HeadlandOne-Regular";
-                }
-                .container{
-                    font-family: "HeadlandOne-Regular";
-                    width: 800px;
-                }
-            </style>
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}
+        <link rel="icon" href="styleelements/favicon.png">
+        <title>
+
+            {% block title %}
+                Ubago Duona
+            {% endblock %}
+
+        </title>
+
+            {% block stylesheets %}
+                <style>
+                    body{
+                        margin: 0 !important;
+                        padding: 0 !important;
+                    }
+                </style>
+                <link rel="stylesheet" type="text/css" href="{{ asset("build/css/parallax.css") }}">
+                <link rel="stylesheet" type="text/css" href="{{ asset("build/css/app.css") }}">
+                <link rel="stylesheet" type="text/css" href="{{ asset("build/css/navbar.css") }}">
+
+            {% endblock %}
 
         {% endblock %}
+    </head>
+
+    <body>
+
+        {% block parallax %}
+        {% endblock %}
+        <div class="after-parallax">
+            {% block navbar %}
+                {#<script src="{{ asset('build/js/navbar.js') }}"></script>#}
+                {% include 'navbar.html.twig' %}
+            {% endblock %}
+
+            {% block sidebar %}
+            {% endblock %}
+
+            {% block body %}
+            {% endblock %}
+        </div>
+        {% block footer %}
+        {% endblock %}
+
         {% block javascripts %}
-        <script src="{{ asset('build/js/app.js') }}"></script>
-        {#<script src="{{ asset('build/js/functions.js') }}"></script>#}
+
+            <script src="{{ asset('build/js/app.js') }}"></script>
+
         {% endblock %}
     </body>
 </html>

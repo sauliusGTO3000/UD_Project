@@ -1,11 +1,60 @@
 @import "~select2/src/scss/core";
-body{
-  background-color: burlywood;
 
-  div{
-    background-color: antiquewhite;
-  }
+
+
+@font-face {
+  font-family: "HeadlandOne-Regular";
+  src: url( /fonts/HeadlandOne-Regular.ttf ); /* IE */
+  src: local("HeadlandOne-Regular"), url("/fonts/HeadlandOne-Regular.ttf"); /*non-IE*/
 }
+.after-parallax{
+  background-color: white;
+  z-index: 999;
+  word-wrap: break-word;
+}
+.post{
+  font-family: "HeadlandOne-Regular";
+}
+.container{
+  font-family: "HeadlandOne-Regular";
+  width: 800px;
+  img{
+    margin-bottom:-40px;
+  }
+  .post-title{
+    background-color: black;
+    color: white;
+    margin: 5px;
+
+    position: relative;
+    display: table;
+    padding: 15px;
+    max-width: 600px;
+  }
+  .post-date{
+    padding-left: 15px;
+  }
+  .post-shortcontent{
+    p {
+      padding-left: 15px;
+    }
+    }
+  .post-readMore{
+      padding-left:15px;
+      font-family: 'HeadlandOne-Regular';
+
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    a:hover{
+      color: #ff2800;
+    }
+
+  }
+
+}
+
 .select2{
   width: 500px;
 }
@@ -77,4 +126,101 @@ body{
 .loader-ellips__dot:nth-child(4) {
   animation-name: reveal;
   animation-direction: reverse;
+}
+
+.page-body{
+  background-color: white;
+  width: 800px;
+  display: block;
+  margin: auto;
+  @media screen and (max-width: 800px){
+    max-width:100%;
+    .container{
+      width: auto;
+    }
+    img{
+      width: 100%;
+    }
+  }
+
+}
+
+
+.fadeIn{
+  -webkit-animation: fadeIn 3s;
+  -moz-animation: fadeIn 3s;
+  -ms-animation: fadeIn 3s;
+  -o-animation: fadeIn 3s;
+  animation: fadeIn 3s;
+
+  @keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+  }
+}
+
+.fadeInlong{
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  animation: fadeIn 5s;
+
+  @keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+  }
+}
+
+.nav{
+  // display:none;
+  z-index:998;
+  position: fixed;
+  top:0;
+  font-size: 20px;
+  margin: 0 !important;
+  padding: 0 !important;
+  width:100%;
+  height:80px;
+  background-color:red;
+  border-bottom: 1px solid black;
+  // opacity:0.1;
+  //background-color:white;
+  overflow:hidden;
+  a{
+    font-family: 'HeadlandOne-Regular' !important;
+    color: black;
+
+  }
+  a:hover{
+    cursor:pointer;
+    color: #ff2800 !important;
+  }
+.navbar-bottom{
+  height: 50px;
+  background-color: #5eb5e0;
+  margin-top: 50px;
+}
+
+  .navRight{
+    float:left;
+    li{
+      display: inline-block;
+      a{
+        text-decoration: none;
+        margin-right:20px;
+        color: black;
+      }
+    }
+  }
+
+  .smallLogo{
+    height:50px;
+    // width:50px;
+    float:left;
+    display: inline-block;
+    margin-left:20px;
+    // background-color:white;
+    // background-image:url("img/logoTop.svg");
+  }
 }

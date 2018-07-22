@@ -1,7 +1,44 @@
 import InfiniteScroll from 'infinite-scroll';
 
+var todaysDateOptions = { weekday: 'long', month: 'long', day: 'numeric' };
+var todaysDate = new Date();
+todaysDate = todaysDate.toLocaleDateString('lt-LT', todaysDateOptions);
+$( ".todays-date" ).append( "<p>"+ todaysDate +"</p>");
+$('a[href*="#"]')
 
-
+    .not('[href="#"]')
+    .not('[href="#0"]')
+    .click(function(event) {
+        // On-page links
+        if (
+            location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+            &&
+            location.hostname == this.hostname
+        ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            // Does a scroll target exist?
+            if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: target.offset().top-50
+                }, 1000, function() {
+                    // Callback after animation
+                    // Must change focus!
+                    var $target = $(target);
+                    // $target.focus();
+                    if ($target.is(":focus")) { // Checking if the target was focused
+                        return false;
+                    } else {
+                        $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                        // $target.focus(); // Set focus again
+                    };
+                });
+            }
+        }
+    });
 
 $(document).ready(function () {
     // var data = JSON.parse( response );
@@ -45,14 +82,19 @@ $(document).ready(function () {
         // console.log(data);
         var post = 0;
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
         for (post=0;post<data['pages'].length;post++){
             $( ".container" ).append( '<img src="'+ data['pages'][post].coverImage +'">');
-            $( ".container" ).append( "<div style='font-size: xx-large'> Post Title: "+data['pages'][post].title +"</div>");
+            $( ".container" ).append( "<div class='post-title' style='font-size: xx-large'>"+data['pages'][post].title +"</div>");
             var date = new Date(data['pages'][post].publishedDate.date);
             date = date.toLocaleDateString('lt-LT', options);
-            $( ".container" ).append( "<div>"+ date +"</div>");
-            $( ".container" ).append( "<div>"+data['pages'][post].shortContent +"</div>");
-            $( ".container" ).append( '<a href="/post/'+data['pages'][post].id+'">read more</a>');
+
+
+
+
+            $( ".container" ).append( "<div class='post-date'>"+ date +"</div>");
+            $( ".container" ).append( "<div class='post-shortcontent'>"+data['pages'][post].shortContent +"</div>");
+            $( ".container" ).append( '<div class="post-readMore"><a href="/post/'+data['pages'][post].id+'" >skaityti</a></div>');
             $( ".container" ).append( "<hr>");
         }
     });

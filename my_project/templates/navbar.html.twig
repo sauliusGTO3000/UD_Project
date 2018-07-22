@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+{% block navbar %}
+
+    <div class="navbar-block">
+        <div class="logo-block"><img src="styleelements/logo-small.png"></div>
+
+        <div class="menu-block">
+            <ul id="menu-list">
+                <li><a href="#WebProjects">dabar</a></li>
+                <li><a href="#Blog">archyvas</a></li>
+                <li><a href="#">kiti dalykai</a></li>
+            </ul>
+
+        </div>
+
+        <div class="ending-block">
+            <button onclick="dropdownMenu()">meniu</button>
+        </div>
+    </div>
+    <div class="dropdown-menu" id="dropdown-menu" hidden >
+        <a href="{{ path('homepage') }}">dabar</a>
+        <hr>
+        <a href="{{ path('archive') }}">archyvas</a>
+        <hr>
+        <a href="{{ path('login') }}">kiti daykai</a>
+        <hr>
+    </div>
+    <script>
+        function dropdownMenu() {
+            console.log("commencing");
+            if (document.getElementById("dropdown-menu").hidden == false){
+                document.getElementById("dropdown-menu").hidden = true;
+
+            }else {
+                document.getElementById("dropdown-menu").hidden = false;
+            }
+
+        }
+    </script>
+
+{% endblock %}

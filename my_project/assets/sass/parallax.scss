@@ -1,0 +1,84 @@
+.logoSection{
+  height:100vh;
+  background-image:url("styleelements/logoTop.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 40%;
+
+  @media screen and (max-width: 320px){
+    background-size: 40%;
+  };
+
+  .subtitle{
+
+    z-index: -9999999;
+    position:fixed;
+    bottom:30%;
+    left:50%;
+    margin-left:-100px;
+
+    color:black;
+    line-height:0px;
+    display:block;
+    p{
+      font-family: "HeadlandOne-Regular";
+      font-weight: bold;
+      @media screen and (max-height: 730px){
+        visibility: hidden;
+      };
+    }
+  }
+
+  .todays-date{
+
+    z-index: -9999999;
+    position:fixed;
+
+    bottom:27%;
+
+    left:50%;
+    margin-left:-75px;
+
+    color:black;
+    line-height:0px;
+    display:block;
+    p{
+      font-family: "HeadlandOne-Regular";
+      @media screen and (max-height: 730px){
+        visibility: hidden;
+      };
+    }
+  }
+  .scrollDownInstruction{
+    position:absolute;
+    width:100%;
+    bottom:0%;
+    text-align:center;
+    line-height:0px;
+    display:block;
+    padding: auto;
+    background-color: white;
+    padding-bottom: 20px;
+
+
+    img{
+      width:20px;
+    }
+
+    p{
+      font-family: "HeadlandOne-Regular";
+
+    }
+    a{
+      text-decoration:none;
+      color: black;
+
+    }
+    a:hover{
+      cursor:pointer;
+      color: #ff2800 !important;;
+
+    }
+  }
+}
