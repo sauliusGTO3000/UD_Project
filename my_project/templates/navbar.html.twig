@@ -2,12 +2,12 @@
 {% block navbar %}
 
     <div class="navbar-block">
-        <div class="logo-block"><img src="styleelements/logo-small.png"></div>
+        <div class="logo-block"><img src="/styleelements/logo-small.png"></div>
 
         <div class="menu-block">
             <ul id="menu-list">
-                <li><a href="#WebProjects">dabar</a></li>
-                <li><a href="#Blog">archyvas</a></li>
+                <li><a href="{{ path('homepage') }}#mainHomepage">dabar</a></li>
+                <li><a href="{{ path('archive') }}">archyvas</a></li>
                 <li><a href="#">kiti dalykai</a></li>
             </ul>
 

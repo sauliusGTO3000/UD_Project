@@ -1,0 +1,40 @@
+.archive-body{
+
+  font-family: 'HeadlandOne-Regular';
+  text-align: center;
+
+  background-color: white;
+  width: 800px;
+  display: block;
+  margin: auto;
+  margin-top: 141px;
+  @media screen and (max-width: 800px) {
+    max-width: 100%;
+  }
+}
+.archive-year{
+  font-size: 40px;
+  background-color: black;
+  color: white;
+
+  margin-top: 60px;
+  margin: auto;
+  display: table;
+
+}
+.archive-month{
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.archive-title{
+  margin-top: -5px;
+  margin-bottom: -5px;
+  a{
+    color: black;
+    text-decoration: none;
+  }
+  a:hover{
+    color: #ff2800;
+  }
+}
