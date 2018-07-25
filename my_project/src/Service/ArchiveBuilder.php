@@ -53,7 +53,7 @@ class ArchiveBuilder
                 $archiveOfPosts[$publishedYear][$calendar[$publishedMonth]]=[];
                 $monthToPrint = $publishedMonth;
             }
-            $archiveOfPosts[$publishedYear][$calendar[$publishedMonth]][]='<a href="'.$post->getId().'">'.$post->getTitle().'</a>';
+            $archiveOfPosts[$publishedYear][$calendar[$publishedMonth]][]='<a href="/post/'.$post->getId().'">'.$post->getTitle().'</a>';
         }
         return($archiveOfPosts);
     }

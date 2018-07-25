@@ -1,24 +1,22 @@
 {%  block sidebar %}
     <div class="sidebar-section fadeInlong" style="display: none;" id="sidebar-section">
-        <p>Tautos skaitomiausi: </p>
+        <p class="sidebar-title">skaitomiausi </p>
         {% include 'post/topfive.html.twig' %}
 
+        <p class="sidebar-title">mažasis arhcyvas</p>
+        <div class="small-archive-body">
+            {% for year,month in archiveBuilder.getArchiveData(10) %}
+                <div class="small-archive-year">{{ year }}</div>
 
-            <h1>small archive</h1>
-            <div class="small-archive-body">
-                {% for year,month in archiveBuilder.getArchiveData(5) %}
-
-                    <div class="small-archive-year">{{ year }}</div>
-                    <br>
-                    {% for month,post in month %}
-                        <div class="small-archive-month">{{ month }}</div>
-                        <br>
-                        {% for title in post %}
-                            <div class="small-archive-title">{{ title|raw }}</div>
-                            <br>
-                        {% endfor %}
+                {% for month,post in month %}
+                    <div class="small-archive-month">{{ month }}</div>
+                    {% for title in post %}
+                       <p>{{ title|raw }}</p>
                     {% endfor %}
                 {% endfor %}
-            </div>
+            {% endfor %}
+        </div>
+        <br>
+        <a href="/post/archive" class="link-to-archive">didysis archyvas</a>
     </div>
 {% endblock %}

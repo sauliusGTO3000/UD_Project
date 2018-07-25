@@ -1,8 +1,54 @@
 .sidebar-section{
 
-  background-color: orange;
+  width: 250px ;
+  background-color: white;
   float: left;
   position: fixed;
-  top:100px
+  top:100px;
+  text-align: center;
+  font-family: 'HeadlandOne-Regular';
 
+  @media screen and (max-width: 1320px){
+    display: none!important;
+  }
+}
+
+.sidebar-title{
+  margin-top: 45px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+a{
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+a:hover{
+  color: #ff2800;
+}
+
+.small-archive-year{
+  background-color: black;
+  color: white;
+  display: table;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.small-archive-month{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.small-archive-body{
+  p{
+    margin: 0;
+    font-size: 14px;
+  }
+}
+.link-to-archive{
+ margin-top: 10px;
+  font-weight: bold;
+  font-size: 14px;
 }

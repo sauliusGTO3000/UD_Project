@@ -2,18 +2,18 @@
 
 {% block body %}
     <div class="archive-body">
-{% for year,month in postRepository.() %}
+        {% for year,month in posts %}
 
-    <div class="archive-year">{{ year }}</div>
-    <br>
-    {% for month,post in month %}
-        <div class="archive-month">{{ month }}</div>
-        <br>
-        {% for title in post %}
-            <div class="archive-title">{{ title|raw }}</div>
+            <div class="archive-year">{{ year }}</div>
             <br>
+            {% for month,post in month %}
+                <div class="archive-month">{{ month }}</div>
+                <br>
+                {% for title in post %}
+                    <div class="archive-title">{{ title|raw }}</div>
+                    <br>
+                {% endfor %}
+            {% endfor %}
         {% endfor %}
-    {% endfor %}
-{% endfor %}
     </div>
 {% endblock %}
