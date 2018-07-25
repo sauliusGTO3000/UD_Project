@@ -1,5 +1,31 @@
 import 'select2';
+var parallax_height = $('.logoSection').css('height');
+console.log(parallax_height);
+if (parallax_height == null){
+    document.getElementById("sidebar-section").classList.remove('fadeInlong');
 
+    // $('.sidebar-section').classList.remove('fadeInlong');
+    $('.sidebar-section').css('display','block');
+}else{$(window).scroll(function() {
+    parallax_height= parseInt(parallax_height)
+    console.log(parallax_height);
+    var windscroll = $(window).scrollTop();
+
+    if (windscroll >= parallax_height-150) {
+        $('.sidebar-section').css('display','block');
+        console.log("scrolled");
+
+    } else {
+
+        $('.sidebar-section').css('display','none');
+    }
+
+})}
+
+
+
+
+;
 
 
 // In your Javascript (external .js resource or <script> tag)
@@ -33,6 +59,10 @@ $(document).ready(function() {
         }else {console.log("this is old");}
 
     });
+
+
 });
+
+
 
 

@@ -2,7 +2,7 @@
 
 {% block body %}
     <div class="archive-body">
-{% for year,month in posts %}
+{% for year,month in postRepository.() %}
 
     <div class="archive-year">{{ year }}</div>
     <br>

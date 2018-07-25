@@ -20,6 +20,7 @@ Encore
     .addStyleEntry('css/parallax', './assets/sass/parallax.scss')
     .addStyleEntry('css/navbar', './assets/sass/navbar.scss')
     .addStyleEntry('css/archive', './assets/sass/archive.scss')
+    .addStyleEntry('css/sidebar', './assets/sass/sidebar.scss')
 
     // uncomment if you use Sass/SCSS files
     .enableSassLoader()

@@ -1,0 +1,24 @@
+{%  block sidebar %}
+    <div class="sidebar-section fadeInlong" style="display: none;" id="sidebar-section">
+        <p>Tautos skaitomiausi: </p>
+        {% include 'post/topfive.html.twig' %}
+
+
+            <h1>small archive</h1>
+            <div class="small-archive-body">
+                {% for year,month in archiveBuilder.getArchiveData(5) %}
+
+                    <div class="small-archive-year">{{ year }}</div>
+                    <br>
+                    {% for month,post in month %}
+                        <div class="small-archive-month">{{ month }}</div>
+                        <br>
+                        {% for title in post %}
+                            <div class="small-archive-title">{{ title|raw }}</div>
+                            <br>
+                        {% endfor %}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+    </div>
+{% endblock %}

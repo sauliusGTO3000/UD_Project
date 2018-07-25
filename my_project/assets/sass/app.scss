@@ -225,3 +225,44 @@
   }
 }
 
+.login-body{
+  font-family: 'HeadlandOne-Regular';
+  background-image: none;
+  margin-top: 80px;
+  text-align: center;
+  -webkit-appearance: none;
+  .login-section{
+
+    -webkit-appearance: none;
+    margin-top: 50vh;
+    .label{
+      font-size: 25px;
+      color: black;
+    }
+
+    input{
+      text-align: center;
+      font-size: 25px;
+      -webkit-appearance: none;
+      background-color: white;
+      border: 0;
+      border-bottom: 2px solid black;
+      font-family: 'HeadlandOne-Regular';
+    }
+    input:-webkit-autofill{
+      -webkit-box-shadow: 0 0 0 100px white inset;
+    }
+    input:focus{
+      background-color: white;
+    }
+    input:-o-prefocus{
+      background-color: teal;
+    }
+
+    @media screen and (max-width: 500px){
+      width: 200px;
+      font-size: 15px;
+    }
+
+  }}
+

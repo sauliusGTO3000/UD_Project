@@ -23,6 +23,7 @@
                 <link rel="stylesheet" type="text/css" href="{{ asset("build/css/app.css") }}">
                 <link rel="stylesheet" type="text/css" href="{{ asset("build/css/navbar.css") }}">
                 <link rel="stylesheet" type="text/css" href="{{ asset("build/css/archive.css") }}">
+                <link rel="stylesheet" type="text/css" href="{{ asset("build/css/sidebar.css") }}">
 
             {% endblock %}
 
@@ -40,6 +41,7 @@
             {% endblock %}
 
             {% block sidebar %}
+                {% include 'sidebar.html.twig' %}
             {% endblock %}
 
             {% block body %}

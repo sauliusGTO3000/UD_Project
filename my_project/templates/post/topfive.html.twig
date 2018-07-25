@@ -1,6 +1,6 @@
 {% block body %}
-    {% for post in posts %}
-        <a href="{{ post.id }}">{{ post.title }}</a>
+    {% for post in postRepository.findTopFive() %}
+        <a href="post/{{ post.id }}">{{ post.title }}</a>
         <br>
     {% endfor %}
 {% endblock %}
