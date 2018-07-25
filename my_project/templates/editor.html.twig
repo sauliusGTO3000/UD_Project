@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+        <meta charset="UTF-8">
+        <link rel="icon" href="styleelements/favicon.png">
+
+        {% block stylesheets %}
+            <style>
+                body{
+                    margin: 0 !important;
+                    padding: 0 !important;
+                }
+            </style>
+            <link rel="stylesheet" type="text/css" href="{{ asset("build/css/parallax.css") }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset("build/css/app.css") }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset("build/css/navbar.css") }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset("build/css/archive.css") }}">
+
+        {% endblock %}
+
+
+    {% endblock %}
+</head>
+{% block navbar %}
+    {% include 'navbar.html.twig' %}
+{% endblock %}
+{% block body %}
+{% endblock %}
+
+{% block javascripts %}
+
+    <script src="{{ asset('build/js/app.js') }}"></script>
+
+{% endblock %}
+</body>
+</html>
