@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="author-show-body">
+        {% for author in authors %}
+            <img src="{{ author.profilePicture }}">
+            <div>{{ author.username }}</div>
+        {% endfor %}
+    </div>
+{% endblock %}

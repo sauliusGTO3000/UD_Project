@@ -9,7 +9,14 @@
         <img src="{{ post.coverImage }}" class="post-cover-image">
         <div class='post-title' style='font-size: xx-large'>{{ post.title }}</div>
         <div class="post-date" id="post-date">fuck you</div>
+        <div class="hashtags">
+            {% for hashtag in post.hashtags %}
+                <a href="/hashtag/posts/{{ hashtag.getID }}"> #{{ hashtag }}</a>
+            {% endfor %}
+        </div>
         <div class="post-content">{{ post.content|raw }}</div>
+
+
         <div class="author-image-holder"><a href="/author/{{ post.author.id }}"><img src="{{ post.author.profilePicture }}" class="author-image"></a></div>
         <div class="author-name"><a href="/author/{{ post.author.id }}">{{ post.author.username }}</a> </div>
         <div class="back-button"><a href="{{ path('homepage') }}" style="font-size: 14px, margin-bottom:20px">atgal</a></div>
@@ -24,50 +31,7 @@
             date = date.toLocaleDateString('lt-LT', options);
             document.getElementById('post-date').innerHTML = date;
         </script>
-
-    {#<table class="table">#}
-        {#<tbody>#}
-            {#<tr>#}
-                {#<th>PublishDate</th>#}
-                {#<td>{{ post.publishDate ? post.publishDate|date('Y-m-d ') : '' }}</td>#}
-            {#</tr>#}
-
-            {#<tr>#}
-                {#<th>CoverImage</th>#}
-                {#<td><img src="{{ post.coverImage }}"></td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>Title</th>#}
-                {#<td>{{ post.title }}</td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>Content</th>#}
-                {#<td>{{ post.content|raw }}</td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>Hashtags</th>#}
-                {#<td>#}
-                {#{% if post.hashtags != null %}#}
-                    {#{% for hashtag in post.hashtags %}#}
-                         {#<a href="/hashtag/posts/{{ hashtag.id}}"> #{{ hashtag}}</a>#}
-                        {#<span> </span>#}
-                    {#{% endfor %}#}
-                {#{% endif %}#}
-
-                {#</td>#}
-            {#</tr>#}
-
-            {#<tr>#}
-            {#<tr>#}
-                {#<th>Author</th>#}
-                {#<td><a href="/author/{{ post.author.id}}"> {{ post.author.username }}</a></td>#}
-            {#</tr>#}
-                {#<th>Author Image</th>#}
-                {#<td><img src="{{ post.author.profilePicture }}", style="border-radius:100px"></td>#}
-            {#</tr>#}
-        {#</tbody>#}
-    {#</table>#}
-        {% if app.user %}
+          {% if app.user %}
             <hr>
             <div class="post-author-section">
                 <a href="{{ path('post_edit', {'id': post.id}) }}">redaguoti</a>

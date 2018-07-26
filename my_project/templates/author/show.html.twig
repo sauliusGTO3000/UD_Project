@@ -3,57 +3,80 @@
 {% block title %}Author{% endblock %}
 
 {% block body %}
-    <h1>Author</h1>
+    <div class="author-show-body">
+        <button onclick="goBack()" class="back-button">atgal</button>
+        <div class="author-picture"><img class="author-picture" src="{{ author.profilePicture }}" style="border-radius: 100px"> </div>
+        <div class="author-name">{{ author.username }}</div>
+        <div class="author-real-name">{{ author.firstName }} {{ author.lastName }}</div>
+        <div class="author-bio">{{ author.bio }}</div>
+        <br>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ author.id }}</td>
-            </tr>
-            <tr>
-                <th>FirstName</th>
-                <td>{{ author.firstName }}</td>
-            </tr>
-            <tr>
-                <th>LastName</th>
-                <td>{{ author.lastName }}</td>
-            </tr>
-            <tr>
-                <th>Birthday</th>
-                <td>{{ author.birthday ? author.birthday|date('Y-m-d H:i:s') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Username</th>
-                <td>{{ author.username }}</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>{{ author.email }}</td>
-            </tr>
-            <tr>
-                <th>ProfilePicture</th>
-                <td><img src="{{ author.profilePicture }}" style="border-radius:100px"></td>
-            </tr>
-            <tr>
-                <th>Password</th>
-                <td>{{ author.password }}</td>
-            </tr>
-            <tr>
-                <th>Roles</th>
-                <td>{{ author.roles ? author.roles|join(', ') : '' }}</td>
-            </tr>
-            <tr>
-                <th>Bio</th>
-                <td>{{ author.bio }}</td>
-            </tr>
-        </tbody>
-    </table>
+        <div class="author-posts">
+            <div style="font-weight: bold">{{ author.username }} straipsniai: </div>
+            {% for post in posts %}
+                <a href="/post/{{ post.id }}">{{ post.title }}</a>
+                <br>
+            {% endfor %}
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+
+
+    {#<h1>Author</h1>#}
+
+    {#<table class="table">#}
+        {#<tbody>#}
+            {#<tr>#}
+                {#<th>Id</th>#}
+                {#<td>{{ author.id }}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>FirstName</th>#}
+                {#<td>{{ author.firstName }}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>LastName</th>#}
+                {#<td>{{ author.lastName }}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>Birthday</th>#}
+                {#<td>{{ author.birthday ? author.birthday|date('Y-m-d H:i:s') : '' }}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>Username</th>#}
+                {#<td>{{ author.username }}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>Email</th>#}
+                {#<td>{{ author.email }}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>ProfilePicture</th>#}
+                {#<td><img src="{{ author.profilePicture }}" style="border-radius:100px"></td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>Password</th>#}
+                {#<td>{{ author.password }}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>Roles</th>#}
+                {#<td>{{ author.roles ? author.roles|join(', ') : '' }}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>Bio</th>#}
+                {#<td>{{ author.bio }}</td>#}
+            {#</tr>#}
+        {#</tbody>#}
+    {#</table>#}
 
     <a href="{{ path('author_index') }}">back to list</a>
 
     <a href="{{ path('author_edit', {'id': author.id}) }}">edit</a>
 
     {{ include('author/_delete_form.html.twig') }}
-    {{ include('post/homepage.html.twig') }}
 {% endblock %}

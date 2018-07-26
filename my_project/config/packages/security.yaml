@@ -59,4 +59,7 @@ security:
          - { path: ^/post/new, roles: ROLE_AUTHOR }
          - { path: ^/author/editauthordetails, roles: ROLE_AUTHOR }
          - { path: ^/author/editauthorpassword, roles: ROLE_AUTHOR }
-         - { path: ^/author, roles: ROLE_SUPERUSER }
+         - { path: ^/author/new, roles: ROLE_SUPERUSER }
+         - { path: ^/author/edit, roles: ROLE_SUPERUSER }
+         - { path: ^/author/list, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+

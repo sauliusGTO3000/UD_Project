@@ -33,6 +33,7 @@
     max-width: 100px;
   }
   .author-name{
+    margin-top: 0px;
     text-align: center;
   }
   .back-button{
@@ -49,6 +50,13 @@
     a{
       font-size: 18px;
       margin-bottom: 5px;
+    }
+  }
+
+  .hashtags{
+    margin-left: 15px;
+    a:hover{
+      cursor: pointer;
     }
   }
 

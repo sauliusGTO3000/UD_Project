@@ -146,9 +146,10 @@ class AuthorController extends Controller
      * @Route("/list", name="author_list", methods="GET")
      */
     public function showAllAuthors(AuthorRepository $authorRepository){
-        return $this->render('author/list.html.twig', ['authors' => $authorRepository->findAll()]);
+        return $this->render('author/showAll.html.twig', ['authors' => $authorRepository->findAll()]);
 
     }
+
 
 
     /**
@@ -156,15 +157,15 @@ class AuthorController extends Controller
      */
     public function show(Author $author, PostRepository $postRepository): Response
     {
-        $posts = $postRepository->findByAuthor($author);
+
         return $this->render('author/show.html.twig', [
             'author' => $author,
-            'posts' => $posts
+            'posts' => $postRepository->findByAuthor($author),
         ]);
     }
 
     /**
-     * @Route("/{id}/edit", name="author_edit", methods="GET|POST")
+     * @Route("/edit/{id}", name="author_edit", methods="GET|POST")
      */
     public function edit(Request $request, Author $author, UserPasswordEncoderInterface $passwordEncoder): Response
     {

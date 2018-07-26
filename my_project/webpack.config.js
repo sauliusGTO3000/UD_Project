@@ -21,6 +21,8 @@ Encore
     .addStyleEntry('css/archive', './assets/sass/archive.scss')
     .addStyleEntry('css/sidebar', './assets/sass/sidebar.scss')
     .addStyleEntry('css/showPost', './assets/sass/showPost.scss')
+    .addStyleEntry('css/authorShow', './assets/sass/authorShow.scss')
+    .addStyleEntry('css/authorShowAll', './assets/sass/authorShowAll.scss')
 
     // uncomment if you use Sass/SCSS files
     .enableSassLoader()
