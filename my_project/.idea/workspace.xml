@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11f4dc39-0f3c-4450-9c70-e7c5fc077701" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/assets/sass/showPost.scss" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/js/infiniteScroll.js" afterPath="$PROJECT_DIR$/assets/js/infiniteScroll.js" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/sidebar.scss" afterPath="$PROJECT_DIR$/assets/sass/sidebar.scss" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" afterPath="$PROJECT_DIR$/templates/base.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/post/index.html.twig" afterPath="$PROJECT_DIR$/templates/post/index.html.twig" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/showPost.scss" afterPath="$PROJECT_DIR$/assets/sass/showPost.scss" />
+      <change beforePath="$PROJECT_DIR$/templates/post/_delete_form.html.twig" afterPath="$PROJECT_DIR$/templates/post/_delete_form.html.twig" />
       <change beforePath="$PROJECT_DIR$/templates/post/show.html.twig" afterPath="$PROJECT_DIR$/templates/post/show.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/sidebar.html.twig" afterPath="$PROJECT_DIR$/templates/sidebar.html.twig" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,24 +35,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/post/show.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="31" />
+            <state relative-caret-position="380">
+              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
               <folding>
                 <element signature="e#207#250#0#HTML" expanded="true" />
-                <element signature="e#341#368#0#HTML" expanded="true" />
+                <element signature="e#366#393#0#HTML" expanded="true" />
+                <element signature="e#873#916#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showPost.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_delete_form.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/post/_delete_form.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showPost.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sass/showPost.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            <state relative-caret-position="520">
+              <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -69,16 +74,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
               <caret line="22" column="3" lean-forward="false" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -153,7 +148,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ar</find>
       <find>body</find>
       <find>dev</find>
       <find>after</find>
@@ -183,6 +177,7 @@
       <find>content</find>
       <find>img</find>
       <find>wrap</find>
+      <find>post-content</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -191,7 +186,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/post/editauthordetails.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/AuthorType.php" />
         <option value="$PROJECT_DIR$/templates/author/editauthordetails.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/AuthorFrontType.php" />
@@ -240,8 +234,9 @@
         <option value="$PROJECT_DIR$/assets/sass/sidebar.scss" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/assets/js/infiniteScroll.js" />
-        <option value="$PROJECT_DIR$/templates/post/show.html.twig" />
+        <option value="$PROJECT_DIR$/templates/post/_delete_form.html.twig" />
         <option value="$PROJECT_DIR$/assets/sass/showPost.scss" />
+        <option value="$PROJECT_DIR$/templates/post/show.html.twig" />
       </list>
     </option>
   </component>
@@ -587,12 +582,12 @@
       <workItem from="1532470169920" duration="542000" />
       <workItem from="1532508474950" duration="15065000" />
       <workItem from="1532552856959" duration="7800000" />
-      <workItem from="1532600085561" duration="8970000" />
+      <workItem from="1532600085561" duration="10646000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="264267000" />
+    <option name="totallyTimeSpent" value="265943000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -663,13 +658,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Controller/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/bundles/fosckeditor/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -997,22 +985,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/post/show.html.twig">
+    <entry file="file://$PROJECT_DIR$/templates/post/_delete_form.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="31" />
-          <folding>
-            <element signature="e#207#250#0#HTML" expanded="true" />
-            <element signature="e#341#368#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="80">
+          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/showPost.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        <state relative-caret-position="520">
+          <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/post/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding>
+            <element signature="e#207#250#0#HTML" expanded="true" />
+            <element signature="e#366#393#0#HTML" expanded="true" />
+            <element signature="e#873#916#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

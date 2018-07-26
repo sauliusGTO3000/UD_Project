@@ -6,13 +6,13 @@
 
     <div class="show-post">
         <div class="back-button"><a href="{{ path('homepage') }}" style="font-size: 14px, margin-bottom:20px">atgal</a></div>
-        <img src="{{ post.coverImage }}">
+        <img src="{{ post.coverImage }}" class="post-cover-image">
         <div class='post-title' style='font-size: xx-large'>{{ post.title }}</div>
         <div class="post-date" id="post-date">fuck you</div>
         <div class="post-content">{{ post.content|raw }}</div>
-        <div class="author-image-holder"><img src="{{ post.author.profilePicture }}" class="author-image"></div>
+        <div class="author-image-holder"><a href="/author/{{ post.author.id }}"><img src="{{ post.author.profilePicture }}" class="author-image"></a></div>
         <div class="author-name"><a href="/author/{{ post.author.id }}">{{ post.author.username }}</a> </div>
-
+        <div class="back-button"><a href="{{ path('homepage') }}" style="font-size: 14px, margin-bottom:20px">atgal</a></div>
         <script>
             var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
             var day = ({{ post.publishDate|date('d') }});
@@ -68,11 +68,14 @@
         {#</tbody>#}
     {#</table>#}
         {% if app.user %}
-            <a href="{{ path('post_index') }}">back to list</a>
+            <hr>
+            <div class="post-author-section">
+                <a href="{{ path('post_edit', {'id': post.id}) }}">redaguoti</a>
+                <br>
+                <a href="{{ path('post_edit', {'id': post.id}) }}">straipsnių lentelė</a>
+                <div class="delete-post">{{ include('post/_delete_form.html.twig') }}</div>
 
-            <a href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
-
-            {{ include('post/_delete_form.html.twig') }}
+            </div>
         {% endif %}
 
     </div>
