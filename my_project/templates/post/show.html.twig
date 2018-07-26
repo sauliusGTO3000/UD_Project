@@ -1,58 +1,79 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Post{% endblock %}
+{% block title %}{{ post.title }} | Ubago Duona{% endblock %}
 
 {% block body %}
-    <div class="post">
 
+    <div class="show-post">
+        <div class="back-button"><a href="{{ path('homepage') }}" style="font-size: 14px, margin-bottom:20px">atgal</a></div>
+        <img src="{{ post.coverImage }}">
+        <div class='post-title' style='font-size: xx-large'>{{ post.title }}</div>
+        <div class="post-date" id="post-date">fuck you</div>
+        <div class="post-content">{{ post.content|raw }}</div>
+        <div class="author-image-holder"><img src="{{ post.author.profilePicture }}" class="author-image"></div>
+        <div class="author-name"><a href="/author/{{ post.author.id }}">{{ post.author.username }}</a> </div>
 
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>PublishDate</th>
-                <td>{{ post.publishDate ? post.publishDate|date('Y-m-d ') : '' }}</td>
-            </tr>
+        <script>
+            var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var day = ({{ post.publishDate|date('d') }});
+            var month = ({{ post.publishDate|date('m') }})-1;
+            console.log(month)
+            var year = ({{ post.publishDate|date('Y') }});
+            var date = new Date(Date.UTC(year, month, day));;
 
-            <tr>
-                <th>CoverImage</th>
-                <td><img src="{{ post.coverImage }}"></td>
-            </tr>
-            <tr>
-                <th>Title</th>
-                <td>{{ post.title }}</td>
-            </tr>
-            <tr>
-                <th>Content</th>
-                <td>{{ post.content|raw }}</td>
-            </tr>
-            <tr>
-                <th>Hashtags</th>
-                <td>
-                {% if post.hashtags != null %}
-                    {% for hashtag in post.hashtags %}
-                         <a href="/hashtag/posts/{{ hashtag.id}}"> #{{ hashtag}}</a>
-                        <span> </span>
-                    {% endfor %}
-                {% endif %}
+            date = date.toLocaleDateString('lt-LT', options);
+            document.getElementById('post-date').innerHTML = date;
+        </script>
 
-                </td>
-            </tr>
+    {#<table class="table">#}
+        {#<tbody>#}
+            {#<tr>#}
+                {#<th>PublishDate</th>#}
+                {#<td>{{ post.publishDate ? post.publishDate|date('Y-m-d ') : '' }}</td>#}
+            {#</tr>#}
 
-            <tr>
-            <tr>
-                <th>Author</th>
-                <td><a href="/author/{{ post.author.id}}"> {{ post.author.username }}</a></td>
-            </tr>
-                <th>Author Image</th>
-                <td><img src="{{ post.author.profilePicture }}", style="border-radius:100px"></td>
-            </tr>
-        </tbody>
-    </table>
+            {#<tr>#}
+                {#<th>CoverImage</th>#}
+                {#<td><img src="{{ post.coverImage }}"></td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>Title</th>#}
+                {#<td>{{ post.title }}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>Content</th>#}
+                {#<td>{{ post.content|raw }}</td>#}
+            {#</tr>#}
+            {#<tr>#}
+                {#<th>Hashtags</th>#}
+                {#<td>#}
+                {#{% if post.hashtags != null %}#}
+                    {#{% for hashtag in post.hashtags %}#}
+                         {#<a href="/hashtag/posts/{{ hashtag.id}}"> #{{ hashtag}}</a>#}
+                        {#<span> </span>#}
+                    {#{% endfor %}#}
+                {#{% endif %}#}
 
-    <a href="{{ path('post_index') }}">back to list</a>
+                {#</td>#}
+            {#</tr>#}
 
-    <a href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
+            {#<tr>#}
+            {#<tr>#}
+                {#<th>Author</th>#}
+                {#<td><a href="/author/{{ post.author.id}}"> {{ post.author.username }}</a></td>#}
+            {#</tr>#}
+                {#<th>Author Image</th>#}
+                {#<td><img src="{{ post.author.profilePicture }}", style="border-radius:100px"></td>#}
+            {#</tr>#}
+        {#</tbody>#}
+    {#</table>#}
+        {% if app.user %}
+            <a href="{{ path('post_index') }}">back to list</a>
 
-    {{ include('post/_delete_form.html.twig') }}
+            <a href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
+
+            {{ include('post/_delete_form.html.twig') }}
+        {% endif %}
+
     </div>
 {% endblock %}

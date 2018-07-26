@@ -1,0 +1,30 @@
+.show-post{
+  max-width: 800px;
+  margin: auto;
+  margin-top:100px;
+  font-family: "HeadlandOne-Regular";
+  word-wrap: break-word;
+  img{
+    width: 100%;
+  }
+
+  .author-image-holder{
+    margin: auto;
+    display: table;
+  }
+  .author-image{
+    border-radius:100px;
+    max-width: 100px;
+  }
+  .author-name{
+    text-align: center;
+  }
+  .back-button{
+    margin-bottom: 10px;
+    a{
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+  }
+}

@@ -86,7 +86,9 @@ $(document).ready(function () {
         for (post=0;post<data['pages'].length;post++){
             $( ".container" ).append( '<img src="'+ data['pages'][post].coverImage +'">');
             $( ".container" ).append( "<div class='post-title' style='font-size: xx-large'>"+data['pages'][post].title +"</div>");
+
             var date = new Date(data['pages'][post].publishedDate.date);
+
             date = date.toLocaleDateString('lt-LT', options);
 
 

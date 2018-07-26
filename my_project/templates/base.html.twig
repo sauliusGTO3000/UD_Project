@@ -3,7 +3,7 @@
     <head>
         {% block head %}
         <meta charset="UTF-8">
-        <link rel="icon" href="styleelements/favicon.png">
+        <link rel="icon" href="/styleelements/favicon.png">
         <title>
 
             {% block title %}
@@ -24,6 +24,7 @@
                 <link rel="stylesheet" type="text/css" href="{{ asset("build/css/navbar.css") }}">
                 <link rel="stylesheet" type="text/css" href="{{ asset("build/css/archive.css") }}">
                 <link rel="stylesheet" type="text/css" href="{{ asset("build/css/sidebar.css") }}">
+                <link rel="stylesheet" type="text/css" href="{{ asset("build/css/showPost.css") }}">
 
             {% endblock %}
 
@@ -52,9 +53,7 @@
         {% endblock %}
 
         {% block javascripts %}
-
             <script src="{{ asset('build/js/app.js') }}"></script>
-
         {% endblock %}
     </body>
 </html>
