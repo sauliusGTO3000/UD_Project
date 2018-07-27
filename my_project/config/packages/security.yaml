@@ -26,7 +26,7 @@ security:
             memory:
                 users:
                     superadmin:
-                        password: $2y$13$OcWnyf.cnL3HYS3nooAHs.GTIV8cpGjEp.1StDZrgV.G5jUnoQ6RO
+                        password: $2y$13$.oijcpRtMmS68Z.Xsi1pcOEa0IzvfHo2c6o5zj4As.EyNBzRdhvU6
                         roles: ['ROLE_AUTHOR ROLE_SUPERUSER']
         in_database:
             entity: { class: App\Entity\Author, property: username }
