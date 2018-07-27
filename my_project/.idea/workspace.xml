@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11f4dc39-0f3c-4450-9c70-e7c5fc077701" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/parallax.scss" afterPath="$PROJECT_DIR$/assets/sass/parallax.scss" />
       <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" afterPath="$PROJECT_DIR$/config/packages/security.yaml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,8 +66,8 @@
       <file leaf-file-name="security.yaml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="28" column="94" lean-forward="false" selection-start-line="28" selection-start-column="94" selection-end-line="28" selection-end-column="94" />
+            <state relative-caret-position="132">
+              <caret line="29" column="48" lean-forward="false" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -532,12 +530,12 @@
       <workItem from="1532508474950" duration="15065000" />
       <workItem from="1532552856959" duration="7800000" />
       <workItem from="1532600085561" duration="17777000" />
-      <workItem from="1532680927966" duration="5912000" />
+      <workItem from="1532680927966" duration="6240000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278986000" />
+    <option name="totallyTimeSpent" value="279314000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -969,8 +967,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="28" column="94" lean-forward="false" selection-start-line="28" selection-start-column="94" selection-end-line="28" selection-end-column="94" />
+        <state relative-caret-position="132">
+          <caret line="29" column="48" lean-forward="false" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
           <folding />
         </state>
       </provider>
