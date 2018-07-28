@@ -10,6 +10,7 @@
 .author-picture{
   display: table;
   margin: auto;
+  margin-top: 25px;
 }
 
 .author-name{
@@ -42,3 +43,10 @@ button:hover{
 .author-posts{
   text-align: center;
 }
+
+.back-button{
+  float: left;
+  font-size: 20px;
+}
+
+

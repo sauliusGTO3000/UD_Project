@@ -5,6 +5,7 @@
 {% block body %}
     <div class="author-show-body">
         <button onclick="goBack()" class="back-button">atgal</button>
+        <br>
         <div class="author-picture"><img class="author-picture" src="{{ author.profilePicture }}" style="border-radius: 100px"> </div>
         <div class="author-name">{{ author.username }}</div>
         <div class="author-real-name">{{ author.firstName }} {{ author.lastName }}</div>
@@ -12,7 +13,7 @@
         <br>
 
         <div class="author-posts">
-            <div style="font-weight: bold">{{ author.username }} straipsniai: </div>
+            <div style="font-weight: bold">{{ author.username }} parašė: </div>
             {% for post in posts %}
                 <a href="/post/{{ post.id }}">{{ post.title }}</a>
                 <br>

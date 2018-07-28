@@ -216,7 +216,7 @@ class AuthorController extends Controller
         $image_url = '/uploads/authorprofileimages/'.$filename;
 
         $author->setProfilePicture($image_url);
-        $this->resizeAuthorImage($this->getParameter("uploaded_author_images_directory")."/".$filename,200);
+        $this->resizeAuthorImage($this->getParameter("uploaded_author_images_directory")."/".$filename,200 );
 
     }
 
@@ -226,10 +226,12 @@ class AuthorController extends Controller
         $imageWidth = $resizedIMG->getWidth();
 
         if ($imageWidth<$maxWidth){
+
+            $resizedIMG->resizeImage(200, 200, 'crop');
+            $resizedIMG->greyScale();
             $resizedIMG->saveImage($imageURL);
-            $resizedIMG->resizeImage($maxWidth, 200, 'crop');
         }else{
-            $resizedIMG->resizeImage($maxWidth, 200, 'crop');
+            $resizedIMG->resizeImage(200, 200, 'crop');
             $resizedIMG->greyScale();
             $resizedIMG->saveImage($imageURL);
         }

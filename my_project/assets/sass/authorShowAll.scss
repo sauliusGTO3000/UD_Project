@@ -7,3 +7,16 @@
   background-color: white;
   text-align: center;
 }
+
+.author-box{
+  display: table;
+  float: left;
+  margin: 15px;
+
+  }
+.author-box:hover{
+  background-color: black;
+  a{
+    color: white;
+  }
+}

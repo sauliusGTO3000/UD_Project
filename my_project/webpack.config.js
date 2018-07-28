@@ -23,6 +23,7 @@ Encore
     .addStyleEntry('css/showPost', './assets/sass/showPost.scss')
     .addStyleEntry('css/authorShow', './assets/sass/authorShow.scss')
     .addStyleEntry('css/authorShowAll', './assets/sass/authorShowAll.scss')
+    .addStyleEntry('css/authoredit', './assets/sass/authoredit.scss')
 
     // uncomment if you use Sass/SCSS files
     .enableSassLoader()
