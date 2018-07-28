@@ -25,10 +25,16 @@ function browseImages() {
             if (variable == "logosmallnavbar"){
 
             }else {
-                $(window.parent.document).find('#post_coverImage')["0"].value = $(this).attr('src');
+                variable = ($(this).parent().attr('class'));
+                console.log(variable);
                 overlay();
-                document.body.scrollTop = 0; // For Safari
-                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera}
+                if(variable == 'images-thumbnails'){
+                    $(window.parent.document).find('#post_coverImage')["0"].value = $(this).attr('src');
+
+                    document.body.scrollTop = 0; // For Safari
+                    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera}
+                    document.post.submit();
+                }
             }
 
 

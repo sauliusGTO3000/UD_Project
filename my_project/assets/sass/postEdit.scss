@@ -1,0 +1,53 @@
+.post-edit-body{
+  font-family: 'HeadlandOne-Regular';
+  max-width: 800px;
+  margin: auto;
+  img:hover{
+    cursor: pointer;
+  }
+}
+
+#post_posted{
+  margin-bottom: 10px;
+}
+
+#cke_post_content{
+  margin-bottom: 20px;
+}
+
+#post_publishDate{
+  font-family: 'HeadlandOne-Regular';
+  margin-left: 5px;
+  margin-bottom: -30px;
+}
+
+#post_dateCreated{
+  display: none;
+}
+
+#post_coverImage{
+  display: none;
+}
+
+.file-upload-insstruction{
+  font-size: 12px;
+  margin-top: 0;
+}
+
+.fielupload{
+  padding: 5px;
+  display: table;
+}
+
+#post_CoverImageFile:hover{
+  cursor: pointer;
+}
+#post_title{
+
+  font-size: 40px;
+  font-family: 'HeadlandOne-Regular';
+}
+
+.btn{
+  float: right;
+}

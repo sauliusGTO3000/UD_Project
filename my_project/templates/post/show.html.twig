@@ -19,7 +19,7 @@
 
         <div class="author-image-holder"><a href="/author/{{ post.author.id }}"><img src="{{ post.author.profilePicture }}" class="author-image"></a></div>
         <div class="author-name"><a href="/author/{{ post.author.id }}">{{ post.author.username }}</a> </div>
-        <div class="back-button"><a href="{{ path('homepage') }}" style="font-size: 14px, margin-bottom:20px">atgal</a></div>
+        <div class="back-button-post-show"><a href="{{ path('homepage') }}" style="font-size: 14px, margin-bottom:20px">atgal</a></div>
         <script>
             var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
             var day = ({{ post.publishDate|date('d') }});
@@ -32,13 +32,13 @@
             document.getElementById('post-date').innerHTML = date;
         </script>
           {% if app.user %}
+              <br>
             <hr>
             <div class="post-author-section">
                 <a href="{{ path('post_edit', {'id': post.id}) }}">redaguoti</a>
                 <br>
                 <a href="{{ path('post_edit', {'id': post.id}) }}">straipsnių lentelė</a>
                 <div class="delete-post">{{ include('post/_delete_form.html.twig') }}</div>
-
             </div>
         {% endif %}
 

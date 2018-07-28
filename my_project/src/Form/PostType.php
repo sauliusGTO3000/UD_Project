@@ -43,7 +43,6 @@ class PostType extends AbstractType
             ->add('content', CKEditorType::class, array(
                 'config'=>array(
                     'filebrowserUploadRoute'=>'uploadImage',
-
                 )))
         ;
     }

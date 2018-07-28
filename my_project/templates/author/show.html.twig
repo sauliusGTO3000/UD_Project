@@ -4,10 +4,16 @@
 
 {% block body %}
     <div class="author-show-body">
-        <button onclick="goBack()" class="back-button">atgal</button>
+        <button onclick="goBack()" class="back-button-author">atgal</button>
         <br>
-        <div class="author-picture"><img class="author-picture" src="{{ author.profilePicture }}" style="border-radius: 100px"> </div>
+        <br>
+        <div class="all-authors-link">
+            <a href="{{ path('author_list') }}">visi autoriai</a>
+        </div>
+        <br>
+        <br>
         <div class="author-name">{{ author.username }}</div>
+        <div class="author-picture"><img class="author-picture" src="{{ author.profilePicture }}" style="border-radius: 100px"> </div>
         <div class="author-real-name">{{ author.firstName }} {{ author.lastName }}</div>
         <div class="author-bio">{{ author.bio }}</div>
         <br>
@@ -18,7 +24,9 @@
                 <a href="/post/{{ post.id }}">{{ post.title }}</a>
                 <br>
             {% endfor %}
-        </div>
+            <button onclick="goBack()" class="back-button-author">atgal</button>
+
+
     </div>
     <script>
         function goBack() {
@@ -75,9 +83,12 @@
         {#</tbody>#}
     {#</table>#}
 
-    <a href="{{ path('author_index') }}">back to list</a>
-
-    <a href="{{ path('author_edit', {'id': author.id}) }}">edit</a>
-
-    {{ include('author/_delete_form.html.twig') }}
+    {% if app.user %}
+        <br>
+        <br>
+        <hr>
+        <a href="{{ path('author_edit', {'id': author.id}) }}">redaguoti autorių</a>
+        <div class="delete-author"><a>{{ include('author/_delete_form.html.twig') }} </a></div>
+    {% endif %}
+    </div>
 {% endblock %}

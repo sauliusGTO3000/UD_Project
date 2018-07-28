@@ -1,11 +1,41 @@
+
+<a>saugoti</a>
+<a>atgal</a>
+<a>trinti</a>
+
 {{ form_start(form) }}
-    {{ form_row(form.posted) }}
-    {{ form_row(form.publishDate) }}
-    {{ form_row(form.coverImage) }}
-    {{ form_row(form.CoverImageFile) }}
-    <div><a href='#' onclick='overlay()'>Click here to show uploaded pictures</a></div>
-    {{ form_widget(form) }}
+<br>
+    <label>skelbiamas</label>
+    {{ form_widget(form.posted) }}
+    <br>
+    <label>paskelbimo laikas:</label>
+    {{ form_widget(form.publishDate) }}
+    <br>
+    {{ form_widget(form.dateCreated) }}
+
+    {% if post.coverImage is null %}
+        <img src="/uploads/images/noCover.png" style="border: 8px solid rgb(248,248,248)">
+    {% endif %}
+    {{ form_widget(form.coverImage) }}
+    <br>
+    <label>straipsnio nuotrauka:</label>
+    <br>
+    <div class="fielupload">
+        <label>įkelti nuotrauką iš kompiuterio:</label>
+        <p class="file-upload-insstruction" style="margin: 0">(ji atsiras tik išsaugojus straipsnį)</p>
+        {{ form_widget(form.CoverImageFile) }}
+        <div style="margin-top: 5px; border: 1px solid black; background-color: rgb(229, 229, 229); height:25px; text-align: center"><a href='#' onclick='overlay()' style="font-size: 16px">rodyti anksčiau įkeltas nuotraukas</a></div>
+    </div>
+
+    <img src="{{ post.coverImage }}" style="border: 8px solid rgb(248,248,248)">
+    {{ form_widget(form.title) }}
+   {{ form_widget(form.content) }}
+    <label>Hashtag'ai:</label>
+<br>
+   {{ form_widget(form.hashtags) }}
+
 {{ form_end(form) }}
+
 <script type="text/javascript" src="{{ asset("build/js/coverImageBrowser.js") }}"></script>
 
 
@@ -17,10 +47,7 @@
         <a href='#' onclick='overlay()'>Click here to show the overlay</a>
     </div>
 </div>
-{% if post.coverImage is null %}
-    <img src="/uploads/images/noCover.png" style="border: 8px solid rgb(248,248,248)">
-{% endif %}
-<img src="{{ post.coverImage }}" style="border: 8px solid rgb(248,248,248)">
+
 
 
 
