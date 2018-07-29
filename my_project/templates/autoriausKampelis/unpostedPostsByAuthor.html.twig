@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="author-posts">
+    {% for post in postRepository.findUnpostedByAuthor(author) %}
+        <a href="/post/{{ post.id }}">{{ post.title }}</a>
+        <br>
+    {% endfor %}
+{% endblock %}

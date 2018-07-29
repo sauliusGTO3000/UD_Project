@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="author-show-body">
+        <h1>autoriaus kampelis</h1>
+        <h2>labas, {{ author.username }}</h2>
+        <a href="{{ path('post_new') }}">rašyti naują įrašą</a>
+        <br>
+        <a href="{{ path('author_show', {'id': author.id}) }}">mano profilis</a>
+        <br>
+        <a href="{{ path('editauthordetails') }}">keisti profilį</a>
+        <br>
+        <a href="{{ path('editauthorpassword') }}">keisti slaptažodį</a>
+        <br>
+        <a href="{{ path('authorPostsForAuthor',{'author': author}) }}">mano paskelbti įrašai</a>
+        <br>
+        <a href="{{ path('unpostedPostsByAuthor',{'author': author}) }}">mano nepaskelbti įrašai</a>
+        <br>
+        <a href="{{ path('logout')}}">atsijungti</a>
+    </div>
+{% endblock %}

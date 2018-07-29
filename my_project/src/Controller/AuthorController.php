@@ -32,6 +32,30 @@ class AuthorController extends Controller
     }
 
     /**
+     * @Route("/autoriausKampelis", name="autoriausKampelis", methods="GET")
+     */
+    public function autoriausKampelis(AuthorRepository $authorRepository, UserInterface $author): Response
+    {
+        return $this->render('autoriausKampelis/autoriausKampelis.html.twig', ['author' => $author]);
+    }
+
+    /**
+     * @Route("/authorPostsForAuthor", name="authorPostsForAuthor", methods="GET")
+     */
+    public function authorPostsForAuthor(AuthorRepository $authorRepository, UserInterface $author): Response
+    {
+        return $this->render('autoriausKampelis/authorPosts.html.twig', ['author' => $author]);
+    }
+
+    /**
+     * @Route("/unpostedPostsByAuthor", name="unpostedPostsByAuthor", methods="GET")
+     */
+    public function unpostedPostsByAuthor(AuthorRepository $authorRepository, UserInterface $author): Response
+    {
+        return $this->render('autoriausKampelis/unpostedPostsByAuthor.html.twig', ['author' => $author]);
+    }
+
+    /**
      * @Route("/editauthorpassword", name="editauthorpassword", methods="GET|POST")
      * @param Request $request
      * @param UserInterface $author

@@ -77,6 +77,19 @@ class PostRepository extends ServiceEntityRepository
             ->getResult();
     }
 
+    public function findUnpostedByAuthor($author){
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.author=:author')
+            ->andWhere('p.posted = :val')
+            ->andWhere('p.publishDate<:now')
+            ->setParameter('author', $author)
+            ->setParameter('val', false)
+            ->setParameter('now', new \DateTime() )
+            ->orderBy('p.publishDate', 'DESC')
+            ->getQuery()
+            ->getResult();
+    }
+
 //    /**
 //     * @return Post[] Returns an array of Post objects
 //     */

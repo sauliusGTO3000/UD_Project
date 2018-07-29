@@ -120,6 +120,7 @@ class PostController extends Controller
 
     }
 
+
     /**
      * @Route("/homepage", name="homepage", methods="GET")
      */
