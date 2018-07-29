@@ -10,7 +10,13 @@
 #post_posted{
   margin-bottom: 10px;
 }
+.post-top-menu{
+  display: block;
+}
 
+.post-top-menu:hover{
+  cursor: pointer;
+}
 #cke_post_content{
   margin-bottom: 20px;
 }

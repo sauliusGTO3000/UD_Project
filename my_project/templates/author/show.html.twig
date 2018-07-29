@@ -34,55 +34,6 @@
         }
     </script>
 
-
-
-    {#<h1>Author</h1>#}
-
-    {#<table class="table">#}
-        {#<tbody>#}
-            {#<tr>#}
-                {#<th>Id</th>#}
-                {#<td>{{ author.id }}</td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>FirstName</th>#}
-                {#<td>{{ author.firstName }}</td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>LastName</th>#}
-                {#<td>{{ author.lastName }}</td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>Birthday</th>#}
-                {#<td>{{ author.birthday ? author.birthday|date('Y-m-d H:i:s') : '' }}</td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>Username</th>#}
-                {#<td>{{ author.username }}</td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>Email</th>#}
-                {#<td>{{ author.email }}</td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>ProfilePicture</th>#}
-                {#<td><img src="{{ author.profilePicture }}" style="border-radius:100px"></td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>Password</th>#}
-                {#<td>{{ author.password }}</td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>Roles</th>#}
-                {#<td>{{ author.roles ? author.roles|join(', ') : '' }}</td>#}
-            {#</tr>#}
-            {#<tr>#}
-                {#<th>Bio</th>#}
-                {#<td>{{ author.bio }}</td>#}
-            {#</tr>#}
-        {#</tbody>#}
-    {#</table>#}
-
     {% if app.user %}
         <br>
         <br>

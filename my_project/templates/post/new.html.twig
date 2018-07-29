@@ -5,7 +5,10 @@
 {% block body %}
     <div class="post-edit-body">
     <h1>Create new Post</h1>
-
+        <div class="post-top-menu"><a href="{{ path('homepage') }}"> atgal</a></div>
+        <br>
+        <div class="post-top-menu"><a onclick="saveMe()">saugoti</a></div>
+        <br>
     {{ include('post/_form.html.twig') }}
     </div>
 {% endblock %}
