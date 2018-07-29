@@ -55,11 +55,14 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-         - { path: ^/hashtag, roles: ROLE_AUTHOR }
+
+         - { path: ^/hashtag/showall, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/hashtag/showallbig, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+         - { path: ^/hashtag/posts, roles: IS_AUTHENTICATED_ANONYMOUSLY }
          - { path: ^/post/new, roles: ROLE_AUTHOR }
          - { path: ^/author/editauthordetails, roles: ROLE_AUTHOR }
          - { path: ^/author/editauthorpassword, roles: ROLE_AUTHOR }
          - { path: ^/author/new, roles: ROLE_SUPERUSER }
          - { path: ^/author/edit, roles: ROLE_SUPERUSER }
          - { path: ^/author/list, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-
+         - { path: ^/hashtag, roles: ROLE_AUTHOR }

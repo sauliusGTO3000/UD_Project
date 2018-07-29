@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="author-show-body">
+        <div id="container">
+            {#$hashtagRepository->findAllActiveHashtags()#}
+            {% for hashtag in hashtagRepository.findAllActiveHashtags() %}
+                <a href="/hashtag/posts/{{ hashtag.id }}"> #{{ hashtag }} </a>
+            {% endfor %}
+            <br>
+            <br>
+            <a href="{{ path('showallBig') }}" style="font-size: 14px; font-weight: bold">visi Hashtag'ai</a>
+        </div>
+    </div>
+{% endblock %}

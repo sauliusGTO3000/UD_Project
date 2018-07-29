@@ -26,6 +26,20 @@ class HashtagController extends Controller
     }
 
     /**
+     * @Route("/showall", name="showallhashtags", methods="GET")
+     */
+    public function showAll(HashtagRepository $hashtagRepository){
+        return $this->render('hashtag/showAll.html.twig', ['hashtag' => $hashtagRepository->findAllActiveHashtags()]);
+    }
+
+    /**
+     * @Route("/showallBig", name="showallBig", methods="GET")
+     */
+    public function showAllBig(HashtagRepository $hashtagRepository){
+        return $this->render('hashtag/hashtagsShowAllbig.html.twig', ['hashtag' => $hashtagRepository->findAllActiveHashtags()]);
+    }
+
+    /**
      * @Route("/new", name="hashtag_new", methods="GET|POST")
      */
     public function new(Request $request): Response
@@ -113,4 +127,8 @@ class HashtagController extends Controller
         return $this->render('post/byhashtag.html.twig', ['posts' => $postRepository->findByTags($hashtagid),'hashtag'=>$hashtagRepository->find($hashtagid)]);
 
     }
+
+
+
+
 }

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div class="author-show-body">
+        <button onclick="goBack()" class="back-button-author">atgal</button>
+        <br>
+        <br>
+        <div id="container">
+            {#$hashtagRepository->findAllActiveHashtags()#}
+            {% for hashtag in hashtagRepository.findAll() %}
+                <a href="/hashtag/posts/{{ hashtag.id }}"> #{{ hashtag }} </a>
+            {% endfor %}
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+{% endblock %}
