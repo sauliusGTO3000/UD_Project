@@ -1,4 +1,64 @@
 {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <label>vardas</label>
+    {{ form_widget(form.firstName) }}
+    <br>
+    <br>
+
+    <label>pavardė</label>
+    {{ form_widget(form.lastName) }}
+    <br>
+    <br>
+
+    <label>parašas</label>
+    {{ form_widget(form.username) }}
+    <br>
+    <br>
+
+    <label>email</label>
+    {{ form_widget(form.email) }}
+    <br>
+    <br>
+
+    <label>bio</label>
+    <br>
+    {{ form_widget(form.bio) }}
+    <br>
+    <br>
+
+
+    <label>gimtadienis</label>
+    <br>
+    <br>
+    {{ form_widget(form.birthday) }}
+    <br>
+    <br>
+
+    <label>profilio nuotrauka</label>
+    <br>
+    {{ form_widget(form.profilePicture) }}
+    {{ form_widget(form.profilePictureFile) }}
+    <br>
+    <br>
+
+    <label>slaptažodis</label>
+    <br>
+    {{ form_widget(form.password.first) }}
+    <br>
+    <br>
+    <label>pakartoti slaptažodį</label>
+    <br>
+    {{ form_widget(form.password.second) }}
+    <br>
+    <br>
+
+    <label>aktyvus?</label>
+    {{ form_widget(form.isactive) }}
+    <br>
+    <br>
+    <div id="author-roles">
+    {{ form_widget(form.roles) }}
+    </div>
+    <div>
+        <button class="btn" id="save-new-author">{{ button_label|default('Saugoti') }}</button>
+    </div>
 {{ form_end(form) }}

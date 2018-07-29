@@ -12,7 +12,7 @@ class HashtagType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('hastagName')
+            ->add('hashtagName')
             ->add('readCount')
         ;
     }

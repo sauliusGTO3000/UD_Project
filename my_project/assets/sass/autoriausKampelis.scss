@@ -1,3 +1,28 @@
 .author-show-body{
   font-size: 14px;
+  input{
+    font-family: 'HeadlandOne-Regular';
+  }
+  .btn{
+    float:none;
+  }
+}
+
+#author_profilePictureFile{
+  margin-top: 14px;
+}
+
+#author_bio{
+  min-width: 250px;
+  max-width: 35%;
+  height: 150px;
+  font-family: 'HeadlandOne-Regular';
+}
+
+#author_profilePicture{
+  display: none;
+}
+
+#author-roles{
+  display: none;
 }
