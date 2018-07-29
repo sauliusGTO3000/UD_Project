@@ -1,4 +1,7 @@
 import 'select2';
+
+
+
 var parallax_height = $('.logoSection').css('height');
 console.log(parallax_height);
 if (parallax_height == null){

@@ -110,7 +110,7 @@ class HashtagController extends Controller
     public function showPostsByHashtag($hashtagid, HashtagRepository $hashtagRepository,PostRepository $postRepository){
 //        $hashtagtobeshown = $hashtagRepository->find($hashtagid);
 
-        return $this->render('post/index.html.twig', ['posts' => $postRepository->findByTags($hashtagid)]);
+        return $this->render('post/byhashtag.html.twig', ['posts' => $postRepository->findByTags($hashtagid),'hashtag'=>$hashtagRepository->find($hashtagid)]);
 
     }
 }

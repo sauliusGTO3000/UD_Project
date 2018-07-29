@@ -8,15 +8,41 @@
   text-align: center;
 }
 
-.author-box{
-  display: table;
-  float: left;
-  margin: 15px;
+//.author-box{
+//  display: table;
+//  float: left;
+//  margin: 15px;
+//
+//  }
+//.author-box:hover{
+//  background-color: black;
+//  a{
+//    color: white;
+//  }
+//}
 
-  }
-.author-box:hover{
-  background-color: black;
-  a{
-    color: white;
-  }
+#container {
+  text-align: center;
+}
+#container > div {
+  margin: 5px;
+  display: inline-block;
+  vertical-align: top;
+
+  /* IE fix. */
+  *display: inline;
+  zoom: 1;
+}
+#container:after {
+  content: "";
+  width: 100%;
+  display: inline-block;
+}
+
+#container > div :hover{
+  background-color: #ff2800;
+}
+
+.author-show-all-name:hover{
+  background-color: white!important;
 }

@@ -1,12 +1,15 @@
 {% extends 'base.html.twig' %}
 {% block body %}
     <div class="author-show-body">
-        {% for author in authors %}
-            <div class="author-box">
+        <h2>Ubago duoną trupina:</h2>
+        <div id="container">
+        {% for author in authorRepository.findAll() %}
+            <div>
                 <a href="{{ path('author_show', {'id': author.id}) }}"><img src="{{ author.profilePicture }}"></a>
                 <br>
-                <a href="{{ path('author_show', {'id': author.id}) }}">{{ author.username }}</a>
+                <a href="{{ path('author_show', {'id': author.id}) }}" class="author-show-all-name">{{ author.username }}</a>
             </div>
         {% endfor %}
+        </div>
     </div>
 {% endblock %}

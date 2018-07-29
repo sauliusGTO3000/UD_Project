@@ -5,3 +5,4 @@ twig:
     globals:
         postRepository: '@App\Repository\PostRepository'
         archiveBuilder: '@App\Service\ArchiveBuilder'
+        authorRepository: '@App\Repository\AuthorRepository'
