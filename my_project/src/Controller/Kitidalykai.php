@@ -37,4 +37,10 @@ class Kitidalykai extends Controller
         return $this->render('kitidalykai/index.html.twig');
     }
 
+    /**
+     * @Route("/allPostsForSuperAuthor", name="allPostsForSuperAuthor", methods="GET")
+     */
+    public function findAllPostedForSuperuser(PostRepository $postRepository){
+        return $this->render('autoriausKampelis/allposts.html.twig');
+    }
 }

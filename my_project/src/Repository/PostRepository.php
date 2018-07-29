@@ -19,6 +19,16 @@ class PostRepository extends ServiceEntityRepository
         parent::__construct($registry, Post::class);
     }
 
+    public function findAllforSuperAuthor(){
+        $query =  $this->createQueryBuilder('p')
+             ->orderBy('p.publishDate', 'DESC');
+        $query = $query
+            ->getQuery()
+            ->getResult();
+
+        return $query;
+    }
+
     public function findPosted($maxResults=null){
 
         $query =  $this->createQueryBuilder('p')

@@ -44,6 +44,7 @@ class PostController extends Controller
     }
 
 
+
     /**
      * @Route("/coverimagebrowser", name="coverImageBrowser", methods="GET|POST")
      */
@@ -81,8 +82,10 @@ class PostController extends Controller
     public function index(PostRepository $postRepository): Response
     {
 
-        return $this->render('post/index.html.twig', ['posts' => $postRepository->findPosted()]);
+        return $this->render('post/index.html.twig', ['posts' => $postRepository->findAll()]);
     }
+
+
 
     /**
      * @Route("/infiniteScrollJSON", name="infiniteScrollJSON", methods="GET")

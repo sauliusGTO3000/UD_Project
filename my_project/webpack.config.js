@@ -25,6 +25,7 @@ Encore
     .addStyleEntry('css/authorShowAll', './assets/sass/authorShowAll.scss')
     .addStyleEntry('css/authoredit', './assets/sass/authoredit.scss')
     .addStyleEntry('css/postEdit', './assets/sass/postEdit.scss')
+    .addStyleEntry('css/autoriausKampelis', './assets/sass/autoriausKampelis.scss')
 
     // uncomment if you use Sass/SCSS files
     .enableSassLoader()

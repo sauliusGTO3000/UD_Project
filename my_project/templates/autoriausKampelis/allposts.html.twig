@@ -1,0 +1,31 @@
+{%  extends 'base.html.twig' %}
+{% block body %}
+    <div class="author-show-body">
+        <table>
+            <tr>
+                <th>įrašo antraštė</th>
+                <th>pradėtas</th>
+                <th>paskelbimo data</th>
+                <th>paskelbtas?</th>
+                <th></th>
+                <th></th>
+            </tr>
+        {% for post in postRepository.findAllforSuperAuthor() %}
+                <tr>
+                    <td>{{ post.title }}</td>
+                    <td>{{ post.dateCreated|date('Y-m-d') }}</td>
+                    <td>{{ post.publishDate|date('Y-m-d') }}</td>
+                    {% if post.posted == null %}
+                        <td>ne</td>
+                    {% else %}
+                        <td>taip</td>
+                    {% endif %}
+                    <td>
+                        <a href="{{ path('post_show', {'id': post.id}) }}">rodyti</a>
+                        <a href="{{ path('post_edit', {'id': post.id}) }}">redaguoti</a>
+                    </td>
+                </tr>
+        {% endfor %}
+        </table>
+    </div>
+{% endblock %}

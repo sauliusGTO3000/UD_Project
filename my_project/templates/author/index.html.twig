@@ -3,38 +3,30 @@
 {% block title %}Author index{% endblock %}
 
 {% block body %}
-    <h1>Author index</h1>
+    <div class="author-show-body">
+    <h1>visi autoriai</h1>
 
-    <table class="table">
+    <table class="author-table">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>FirstName</th>
-                <th>LastName</th>
-                <th>Birthday</th>
-                <th>Username</th>
-                <th>Email</th>
-                <th>ProfilePicture</th>
-                <th>Password</th>
-                <th>Roles</th>
-                <th>actions</th>
+                <th>vardas</th>
+                <th>pavardė</th>
+                <th>gimtadienis</th>
+                <th>parašas</th>
+                <th>email</th>
             </tr>
         </thead>
         <tbody>
         {% for author in authors %}
             <tr>
-                <td>{{ author.id }}</td>
                 <td>{{ author.firstName }}</td>
                 <td>{{ author.lastName }}</td>
-                <td>{{ author.birthday ? author.birthday|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ author.birthday ? author.birthday|date('Y-m-d') : '' }}</td>
                 <td>{{ author.username }}</td>
                 <td>{{ author.email }}</td>
-                <td>{{ author.profilePicture }}</td>
-                <td>{{ author.password }}</td>
-                <td>{{ author.roles ? author.roles|join(', ') : '' }}</td>
                 <td>
-                    <a href="{{ path('author_show', {'id': author.id}) }}">show</a>
-                    <a href="{{ path('author_edit', {'id': author.id}) }}">edit</a>
+                    <a href="{{ path('author_show', {'id': author.id}) }}">rodyti</a>
+                    <a href="{{ path('author_edit', {'id': author.id}) }}">redaguoti</a>
                 </td>
             </tr>
         {% else %}
@@ -45,7 +37,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('author_new') }}">Create new</a>
+    <a href="{{ path('author_new') }}">pridėti autorių</a>
     <script src="/path/to/infinite-scroll.pkgd.min.js"></script>
-
+    </div>
 {% endblock %}

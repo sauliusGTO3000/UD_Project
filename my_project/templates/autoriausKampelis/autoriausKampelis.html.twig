@@ -16,5 +16,19 @@
         <a href="{{ path('unpostedPostsByAuthor',{'author': author}) }}">mano nepaskelbti įrašai</a>
         <br>
         <a href="{{ path('logout')}}">atsijungti</a>
+
+        {% if is_granted('ROLE_SUPERUSER') %}
+            <br>
+            <h1>super autoriaus kampelis</h1>
+            <br>
+            <a href="{{ path('author_index') }}">visi autoriai</a>
+            <br>
+            <a href="{{ path('author_new') }}">naujas autorius</a>
+            <br>
+            <a href="{{ path('allPostsForSuperAuthor') }}">visi irasai</a>
+            <br>
+            <a href="{{ path('hashtag_index') }}">hashtag'ai</a>
+        {% endif %}
+
     </div>
 {% endblock %}

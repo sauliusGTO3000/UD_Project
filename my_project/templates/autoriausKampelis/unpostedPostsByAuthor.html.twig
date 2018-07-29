@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <div class="author-posts">
+    <div class="author-show-body">
     {% for post in postRepository.findUnpostedByAuthor(author) %}
         <a href="/post/{{ post.id }}">{{ post.title }}</a>
         <br>
