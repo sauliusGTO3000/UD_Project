@@ -25,9 +25,6 @@ use App\Service\ArchiveBuilder;
  */
 class PostController extends Controller
 {
-
-
-
     /**
      * @Route("/browseImages", name="browseImages")
      */
@@ -35,7 +32,7 @@ class PostController extends Controller
         $listofimages = $imageRepository->findAll();
         $imageArray = [];
         foreach ($listofimages as $image){
-            $imageURL= $_SERVER["DOCUMENT_ROOT"].'\uploads\images\\'.$image->getFilename();
+            $imageURL= $_SERVER["DOCUMENT_ROOT"].'/uploads/images/'.$image->getFilename();
             if (file_exists($imageURL)){
                 $imageArray[]=["image"=>"/uploads/images/".$image->getFilename()];
             }
