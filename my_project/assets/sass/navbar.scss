@@ -42,7 +42,7 @@
   #menu-list{
     position: absolute;
     bottom: 0;
-    @media screen and (max-width: 630px){
+    @media screen and (max-width: 800px){
       visibility: hidden;
       li{
         visibility: hidden;
@@ -111,7 +111,7 @@
   height: 80px;
   background-color: orange;
   float: right;
-  @media screen and (min-width: 631px){
+  @media screen and (min-width: 800px){
     visibility: hidden;
   }
   button{
