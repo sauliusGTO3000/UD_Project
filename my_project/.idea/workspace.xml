@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11f4dc39-0f3c-4450-9c70-e7c5fc077701" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/sidebar.html.twig" afterPath="$PROJECT_DIR$/templates/sidebar.html.twig" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" afterPath="$PROJECT_DIR$/templates/base.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,11 +53,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sidebar.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sidebar.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/sidebar.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="45" lean-forward="false" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+            <state relative-caret-position="300">
+              <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="78" lean-forward="false" selection-start-line="5" selection-start-column="78" selection-end-line="5" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -105,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/author/_delete_form.html.twig" />
         <option value="$PROJECT_DIR$/assets/sass/authorShow.scss" />
         <option value="$PROJECT_DIR$/assets/js/infiniteScroll.js" />
         <option value="$PROJECT_DIR$/templates/hashtag/new.html.twig" />
@@ -136,7 +165,6 @@
         <option value="$PROJECT_DIR$/templates/autoriausKampelis/unpostedPostsByAuthor.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/Kitidalykai.php" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/templates/author/index.html.twig" />
         <option value="$PROJECT_DIR$/templates/author/new.html.twig" />
         <option value="$PROJECT_DIR$/templates/author/_form.html.twig" />
@@ -156,6 +184,8 @@
         <option value="$PROJECT_DIR$/assets/sass/autoriausKampelis.scss" />
         <option value="$PROJECT_DIR$/src/Controller/AuthorController.php" />
         <option value="$PROJECT_DIR$/templates/sidebar.html.twig" />
+        <option value="$USER_HOME$/Desktop/.env" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
       </list>
     </option>
   </component>
@@ -276,8 +306,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="459" />
-    <option name="y" value="201" />
+    <option name="x" value="19" />
+    <option name="y" value="31" />
     <option name="width" value="1275" />
     <option name="height" value="763" />
   </component>
@@ -535,12 +565,12 @@
       <workItem from="1532813013490" duration="16032000" />
       <workItem from="1532865465267" duration="9009000" />
       <workItem from="1532891605519" duration="18211000" />
-      <workItem from="1532947009078" duration="30000" />
+      <workItem from="1532947009078" duration="2119000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="338590000" />
+    <option name="totallyTimeSpent" value="340679000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -616,20 +646,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/sass/sidebar.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/authoredit.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/hashtag/hashtagsShowAllbig.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -711,13 +727,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="46" column="41" lean-forward="false" selection-start-line="46" selection-start-column="41" selection-end-line="46" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -936,6 +945,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="35" column="47" lean-forward="true" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -981,8 +991,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/sidebar.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="45" lean-forward="false" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+        <state relative-caret-position="300">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="78" lean-forward="false" selection-start-line="5" selection-start-column="78" selection-end-line="5" selection-end-column="78" />
           <folding />
         </state>
       </provider>
