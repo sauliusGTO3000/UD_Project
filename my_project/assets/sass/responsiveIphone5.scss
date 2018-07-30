@@ -7,6 +7,9 @@
     .subtitle {
       position: initial;
       margin-left: 0;
+      bottom: 0;
+      line-height: initial;
+
       p {
         visibility: initial !important;
         margin: auto;
@@ -16,6 +19,7 @@
       }
       #todays-date-line {
         margin-top: 0;
+        margin-bottom: auto;
         font-weight: lighter;
       }
     }
