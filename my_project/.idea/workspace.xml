@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11f4dc39-0f3c-4450-9c70-e7c5fc077701" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/assets/sass/responsive_iphone5SE.scss" afterPath="$PROJECT_DIR$/assets/sass/responsive_iphone5se.scss" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" afterPath="$PROJECT_DIR$/templates/base.html.twig" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" afterPath="$PROJECT_DIR$/webpack.config.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -43,27 +45,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="responsive_iphone5SE.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/assets/sass/responsive_iphone5SE.scss">
+      <file leaf-file-name="responsive_iphone5se.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sass/responsive_iphone5se.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
-              <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+              <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="339">
-              <caret line="34" column="100" lean-forward="false" selection-start-line="34" selection-start-column="100" selection-end-line="34" selection-end-column="100" />
+              <caret line="34" column="101" lean-forward="false" selection-start-line="34" selection-start-column="101" selection-end-line="34" selection-end-column="101" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="419">
@@ -173,9 +175,9 @@
         <option value="$PROJECT_DIR$/assets/sass/postEdit.scss" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/assets/sass/navbar.scss" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/assets/sass/responsive_iphone5SE.scss" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
       </list>
     </option>
   </component>
@@ -496,12 +498,12 @@
       <workItem from="1532865465267" duration="9009000" />
       <workItem from="1532891605519" duration="18211000" />
       <workItem from="1532947009078" duration="4978000" />
-      <workItem from="1532957933277" duration="1570000" />
+      <workItem from="1532957933277" duration="1705000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="345108000" />
+    <option name="totallyTimeSpent" value="345243000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -920,14 +922,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="28" column="82" lean-forward="false" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/navbar.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -936,10 +930,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/responsive_iphone5SE.scss">
+    <entry file="file://$PROJECT_DIR$/assets/sass/responsive_iphone5se.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+          <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -947,7 +941,15 @@
     <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
-          <caret line="34" column="100" lean-forward="false" selection-start-line="34" selection-start-column="100" selection-end-line="34" selection-end-column="100" />
+          <caret line="34" column="101" lean-forward="false" selection-start-line="34" selection-start-column="101" selection-end-line="34" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="28" column="82" lean-forward="false" selection-start-line="28" selection-start-column="82" selection-end-line="28" selection-end-column="82" />
           <folding />
         </state>
       </provider>
