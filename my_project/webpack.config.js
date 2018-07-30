@@ -27,6 +27,7 @@ Encore
     .addStyleEntry('css/postEdit', './assets/sass/postEdit.scss')
     .addStyleEntry('css/autoriausKampelis', './assets/sass/autoriausKampelis.scss')
     .addStyleEntry('css/responsive_iphone5ss', './assets/sass/responsive_iphone5se.scss')
+    .addStyleEntry('css/responsiveIphone5', './assets/sass/responsiveIphone5.scss')
 
     // uncomment if you use Sass/SCSS files
     .enableSassLoader()
