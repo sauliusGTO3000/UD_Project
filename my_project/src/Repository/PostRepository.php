@@ -29,6 +29,18 @@ class PostRepository extends ServiceEntityRepository
         return $query;
     }
 
+    public function findAllforAuthor($author){
+        $query =  $this->createQueryBuilder('p')
+            ->andWhere('p.author = :author')
+            ->setParameter('author', $author)
+            ->orderBy('p.publishDate', 'DESC');
+        $query = $query
+            ->getQuery()
+            ->getResult();
+
+        return $query;
+    }
+
     public function findPosted($maxResults=null){
 
         $query =  $this->createQueryBuilder('p')

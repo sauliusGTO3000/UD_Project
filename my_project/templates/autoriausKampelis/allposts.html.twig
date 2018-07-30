@@ -4,17 +4,20 @@
         <table>
             <tr>
                 <th>įrašo antraštė</th>
+                <th>autorius</th>
                 <th>pradėtas</th>
-                <th>paskelbimo data</th>
+                <th>paskelbimo data ir laikas</th>
                 <th>paskelbtas?</th>
                 <th></th>
                 <th></th>
             </tr>
         {% for post in postRepository.findAllforSuperAuthor() %}
-                <tr>
+
+                <tr class="border_bottom">
                     <td>{{ post.title }}</td>
+                    <td>{{ post.author.username }}</td>
                     <td>{{ post.dateCreated|date('Y-m-d') }}</td>
-                    <td>{{ post.publishDate|date('Y-m-d') }}</td>
+                    <td>{{ post.publishDate|date('Y-m-d h:i') }}</td>
                     {% if post.posted == null %}
                         <td>ne</td>
                     {% else %}
@@ -25,6 +28,7 @@
                         <a href="{{ path('post_edit', {'id': post.id}) }}">redaguoti</a>
                     </td>
                 </tr>
+
         {% endfor %}
         </table>
     </div>

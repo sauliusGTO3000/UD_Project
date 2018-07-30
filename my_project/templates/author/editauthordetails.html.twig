@@ -3,15 +3,45 @@
 {% block body %}
     <div class="author-show-body">
     {{ form_start(form) }}
-        {{ form_row(form.firstName) }}
-        {{ form_row(form.lastName) }}
-        {{ form_row(form.birthday) }}
-        {{ form_row(form.username) }}
-        {{ form_row(form.email) }}
-        {{ form_row(form.profilePicture) }}
-        {{ form_row(form.profilePictureFile) }}
-        {{ form_row(form.bio) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+        <label>vardas</label>
+        {{ form_widget(form.firstName) }}
+        <br>
+        <br>
+
+        <label>pavardė</label>
+        {{ form_widget(form.lastName) }}
+        <br>
+        <br>
+
+        <label>gimtadienis</label>
+        {{ form_widget(form.birthday) }}
+        <br>
+        <br>
+
+        <label>parašas</label>
+        {{ form_widget(form.username) }}
+        <br>
+        <br>
+
+        <label>email</label>
+        {{ form_widget(form.email) }}
+        <br>
+        <br>
+
+        {{ form_widget(form.profilePicture) }}
+
+        <label>profilio nuotrauka:</label>
+        {{ form_widget(form.profilePictureFile) }}
+        <br>
+        <br>
+
+        <label>bio:</label>
+        <br>
+
+        {{ form_widget(form.bio) }}
+        <br>
+
+    <button class="btn">{{ button_label|default('Saugoti') }}</button>
     {{ form_end(form) }}
     </div>
 {% endblock %}

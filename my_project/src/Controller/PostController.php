@@ -140,6 +140,7 @@ class PostController extends Controller
 
 
         $post->setDateCreated(new \DateTime());
+        $post->setPublishDate(new \DateTime());
         $post->setAuthor($author);
         $post->setReadCount(0);
 

@@ -117,7 +117,7 @@ class AuthorController extends Controller
             }
 
             $this->getDoctrine()->getManager()->flush();
-            return $this->redirectToRoute('homepage');
+            return $this->redirectToRoute('autoriausKampelis');
         }
 
         return $this->render('author/editauthordetails.html.twig', [

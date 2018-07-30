@@ -6,12 +6,24 @@
   .btn{
     float:none;
   }
+  .border_bottom{
+    border-bottom: 1px solid black;
+    font-size: 11px;
+  }
+  a{
+    font-size: 18px;
+  }
 }
 
 #author_profilePictureFile{
   margin-top: 14px;
 }
-
+#author_front_bio{
+  min-width: 250px;
+  max-width: 35%;
+  height: 150px;
+  font-family: 'HeadlandOne-Regular';
+}
 #author_bio{
   min-width: 250px;
   max-width: 35%;
@@ -24,5 +36,22 @@
 }
 
 #author-roles{
+  display: none;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: left;
+}
+th {
+  height: 50px;
+
+}
+tr {
+  width: 100%;
+
+}
+
+#author_front_profilePicture{
   display: none;
 }

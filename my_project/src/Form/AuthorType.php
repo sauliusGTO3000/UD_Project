@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Author;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -20,7 +21,9 @@ class AuthorType extends AbstractType
         $builder
             ->add('firstName')
             ->add('lastName')
-            ->add('birthday')
+            ->add('birthday', DateType::class, array(
+                'widget' => 'single_text',
+            ))
             ->add('username')
             ->add('email')
             ->add('profilePicture')
