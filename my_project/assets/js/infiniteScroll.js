@@ -89,8 +89,13 @@ $(document).ready(function () {
             $( ".container" ).append( "<div class='post-title' >"+data['pages'][post].title +"</div>");
 
             var date = new Date(data['pages'][post].publishedDate.date);
-
+            var day = date.getDate();
+            var month = date.getMonth()+1;
+            var year = date.getFullYear();
+            var date = new Date(Date.UTC(year, month, day));;
             date = date.toLocaleDateString('lt-LT', options);
+
+
 
 
 
@@ -99,6 +104,10 @@ $(document).ready(function () {
             $( ".container" ).append( "<div class='post-shortcontent'>"+data['pages'][post].shortContent +"</div>");
             $( ".container" ).append( '<div class="post-readMore"><a href="/post/'+data['pages'][post].id+'" >skaityti</a></div>');
             $( ".container" ).append( "<hr>");
+
+
+
+
         }
     });
 
