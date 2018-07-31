@@ -3,7 +3,7 @@ import 'select2';
 
 
 var parallax_height = $('.logoSection').css('height');
-console.log(parallax_height);
+// console.log(parallax_height);
 if (parallax_height == null){
     document.getElementById("sidebar-section").classList.remove('fadeInlong');
 
@@ -11,12 +11,12 @@ if (parallax_height == null){
     $('.sidebar-section').css('display','block');
 }else{$(window).scroll(function() {
     parallax_height= parseInt(parallax_height)
-    console.log(parallax_height);
+    // console.log(parallax_height);
     var windscroll = $(window).scrollTop();
 
     if (windscroll >= parallax_height-150) {
         $('.sidebar-section').css('display','block');
-        console.log("scrolled");
+        // console.log("scrolled");
 
     } else {
 
@@ -41,17 +41,17 @@ $(document).ready(function() {
         var data = ($('.js-example-basic-multiple').find("option[value='" + e.params.args.data.id+ "']"));
         var value = data[0].value;
         if (isNaN(parseInt(value)) ){
-            console.log("this is new");
+            // console.log("this is new");
             e.preventDefault();
             $.ajax({
                 url:"/hashtag/newhashtag/"+e.params.args.data.text,
 
                 success: function (data) {
-                    console.log(data);
+                    // console.log(data);
                     e.params.args.data.id = data.id;
                     var newOption = new Option(e.params.args.data.text, e.params.args.data.id, true, true);
                     $('.js-example-basic-multiple').append(newOption).trigger('change');
-                    console.log(e.params.args.data);
+                    // console.log(e.params.args.data);
                 }
             });
             $('.js-example-basic-multiple').select2({
@@ -59,7 +59,9 @@ $(document).ready(function() {
 
             });
             $(".js-example-basic-multiple").select2()
-        }else {console.log("this is old");}
+        }else {
+            // console.log("this is old");
+        }
 
     });
 

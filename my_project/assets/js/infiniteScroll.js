@@ -88,23 +88,43 @@ $(document).ready(function () {
             $( ".container" ).append( '<img src="'+ data['pages'][post].coverImage +'">');
             $( ".container" ).append( "<div class='post-title' >"+data['pages'][post].title +"</div>");
 
-            var date = new Date(data['pages'][post].publishedDate.date);
+            var date = (data['pages'][post].publishedDate.date);
+            date = date.substr(0,date.indexOf(" "));
+            var dateToConvert = date;
+            dateToConvert = Date.parse(dateToConvert);
+            dateToConvert = new Date(dateToConvert);
+            dateToConvert = dateToConvert.toLocaleDateString('lt-LT', options);
 
-            // var day = date.getDay();
+
+            console.log(dateToConvert);
+
+
+            date = date.replace(/-/gi,",");
+            date = date.replace(/,0/gi,", ");
+            console.log(date);
+
+
+            var year = date.substr(0,4);
+            var month = date.substr(6,1);
+            var day = date.substr(8,2);
+
+            console.log(year);
+            console.log(month);
+            console.log(day);
             // var monthday = date.getDate();
             // var month = date.getMonth();
             // var year = date.getFullYear();
             //
-            // var months=["sausio", "vasario", "kovo", "balandžio", "gegužės", "birželio", "liepos", "rugpjūčio", "rugsėjo", "spalio", "lapkričio", "gruodžio"];
-            // var weekdays=["sekmadienis", "pirmadienis", "antradienis", "trečiadienis", "ketvirtadienis", "penktadienis", "šeštadienis" ];
-            // var monthtext = months[month];
-            // var daytext = weekdays[day];
+            var months=["sausio", "vasario", "kovo", "balandžio", "gegužės", "birželio", "liepos", "rugpjūčio", "rugsėjo", "spalio", "lapkričio", "gruodžio"];
+            var weekdays=["sekmadienis", "pirmadienis", "antradienis", "trečiadienis", "ketvirtadienis", "penktadienis", "šeštadienis" ];
+            var monthtext = months[month];
+            var daytext = weekdays[day];
             //
-            // // var date = new Date(Date.UTC(year, month, day));;
-            // // date = date.toLocaleDateString('lt-LT', options);
-            // date = year + " m. "+ monthtext + ", "+monthday+" d., "+daytext ;
+            // var date = new Date(Date.UTC(date));;
+            // date = date.toLocaleDateString('lt-LT', options);
+            date = year + " m. "+ monthtext + ", "+day+" d., "+daytext ;
 
-            $( ".container" ).append( "<div class='post-date'>"+ date +"</div>");
+            $( ".container" ).append( "<div class='post-date'>"+ dateToConvert +"</div>");
             $( ".container" ).append( "<div class='post-shortcontent'>"+data['pages'][post].shortContent +"</div>");
             $( ".container" ).append( '<div class="post-readMore"><a href="/post/'+data['pages'][post].id+'" >skaityti</a></div>');
             $( ".container" ).append( "<hr>");
