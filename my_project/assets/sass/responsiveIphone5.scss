@@ -1,15 +1,18 @@
 @media screen and (max-width: 800px) {
   .logoSection {
-    background-size: 0vh;
+    background-size: 100vh;
     position: initial;
     margin-left: 0;
+
+    background-repeat: repeat;
+
 
     .subtitle {
       position: initial;
       margin-left: 0;
       bottom: 0;
       line-height: initial;
-      margin-top: 45vh;
+      padding-top: 45vh;
 
       p {
         visibility: initial !important;
@@ -22,5 +25,7 @@
     }
   }
 }
+
+
 
 

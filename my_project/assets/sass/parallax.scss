@@ -1,9 +1,23 @@
+//html{
+//  background-image:url("/styleelements/background-tile.png");
+//  background-repeat: repeat;
+//}
+
+#logoTop{
+  z-index: -9999999;
+  position: fixed;
+  bottom: 30%;
+  left: 50%;
+  margin-left: -100px;
+  color: black;
+  line-height: 0px;
+  display: block;
+}
 .logoSection{
   height:100vh;
-  background-image:url("/styleelements/logoTop.png");
+
   background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: 50vh;
 
   @media screen and (max-width: 320px){
