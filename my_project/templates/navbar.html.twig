@@ -26,8 +26,12 @@
         <hr>
         <a href="{{ path('archive') }}">archyvas</a>
         <hr>
-        <a href="{{ path('login') }}">kiti daykai</a>
+        <a href="{{ path('kitidalykai') }}">kiti daykai</a>
         <hr>
+        {% if app.user %}
+           <a href="{{ path('autoriausKampelis') }}">autoriaus kampelis</a>
+
+        {%  endif %}
     </div>
     <script>
         function dropdownMenu() {
