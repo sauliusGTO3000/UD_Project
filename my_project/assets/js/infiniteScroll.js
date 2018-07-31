@@ -89,16 +89,20 @@ $(document).ready(function () {
             $( ".container" ).append( "<div class='post-title' >"+data['pages'][post].title +"</div>");
 
             var date = new Date(data['pages'][post].publishedDate.date);
-            var day = date.getDate();
-            var month = date.getMonth()+1;
+
+            var day = date.getDay();
+            var monthday = date.getDate();
+            var month = date.getMonth();
             var year = date.getFullYear();
-            var date = new Date(Date.UTC(year, month, day));;
-            date = date.toLocaleDateString('lt-LT', options);
 
+            var months=["sausio", "vasario", "kovo", "balandžio", "gegužės", "birželio", "liepos", "rugpjūčio", "rugsėjo", "spalio", "lapkričio", "gruodžio"];
+            var weekdays=["sekmadienis", "pirmadienis", "antradienis", "trečiadienis", "ketvirtadienis", "penktadienis", "šeštadienis" ];
+            var monthtext = months[month];
+            var daytext = weekdays[day];
 
-
-
-
+            // var date = new Date(Date.UTC(year, month, day));;
+            // date = date.toLocaleDateString('lt-LT', options);
+            date = year + " m. "+ monthtext + ", "+monthday+" d., "+daytext ;
 
             $( ".container" ).append( "<div class='post-date'>"+ date +"</div>");
             $( ".container" ).append( "<div class='post-shortcontent'>"+data['pages'][post].shortContent +"</div>");
