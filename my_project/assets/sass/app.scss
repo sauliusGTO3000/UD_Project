@@ -15,7 +15,6 @@
 }
 .container{
   font-family: "HeadlandOne-Regular";
-  word-break: break-word;
   width: 800px;
   img{
     margin-bottom:-40px;
@@ -29,11 +28,6 @@
     display: table;
     padding: 15px;
     max-width: 600px;
-    a{
-      color: white!important;
-      font-size: 33px!important;
-      text-decoration: none!important;
-    }
   }
   .post-date{
     padding-left: 15px;
@@ -42,7 +36,6 @@
   .post-shortcontent{
     p {
       padding-left: 15px;
-      padding-right: 15px;
     }
     }
   .post-readMore{

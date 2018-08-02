@@ -86,8 +86,7 @@ $(document).ready(function () {
 
         for (post=0;post<data['pages'].length;post++){
             $( ".container" ).append( '<img src="'+ data['pages'][post].coverImage +'">');
-            $( ".container" ).append( '<div class="post-title"><a href="/post/'+data['pages'][post].id+'" >'+data['pages'][post].title+'</a></div>');
-
+            $( ".container" ).append( "<div class='post-title' >"+data['pages'][post].title +"</div>");
 
             var date = (data['pages'][post].publishedDate.date);
             date = date.substr(0,date.indexOf(" "));
