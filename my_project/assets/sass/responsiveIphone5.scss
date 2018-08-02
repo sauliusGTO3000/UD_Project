@@ -4,9 +4,6 @@
     position: initial;
     margin-left: 0;
     background-color: transparent;
-    .scrollDownInstruction{
-      display: none!important;
-    }
 
 
 
@@ -29,7 +26,9 @@
       }
     }
   }
-
+  .scrollDownInstruction{
+    display: none;
+  }
 }
 
 @media screen and (max-width: 800px) and (orientation:landscape) {
