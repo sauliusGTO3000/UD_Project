@@ -380,7 +380,7 @@ class PostController extends Controller
         }
         if ($post->getCoverImage() == null)
         {
-            $stockImageNumber=rand(1,20);
+            $stockImageNumber=rand(1,26);
             $post->setCoverImage("/uploads/images/".$stockImageNumber.".png");
         }
 
