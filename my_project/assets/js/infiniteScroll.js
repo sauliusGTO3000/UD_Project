@@ -85,8 +85,8 @@ $(document).ready(function () {
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
         for (post=0;post<data['pages'].length;post++){
-            $( ".container" ).append( '<img src="'+ data['pages'][post].coverImage +'">');
-            $( ".container" ).append( "<div class='post-title' >"+data['pages'][post].title +"</div>");
+            $( ".container" ).append( '<a href="/post/'+data['pages'][post].id+'"><img src="'+ data['pages'][post].coverImage +'"></a>');
+            $( ".container" ).append( "<a href='/post/"+data['pages'][post].id+"'><div class='post-title' >"+data['pages'][post].title +"</div></a>");
 
             var date = (data['pages'][post].publishedDate.date);
             date = date.substr(0,date.indexOf(" "));
