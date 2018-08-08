@@ -26,9 +26,9 @@ use App\Service\ArchiveBuilder;
 class PostController extends Controller
 {
     /**
-     * @Route("/browseImages", name="browseImages")
+     * @Route("/browseimages", name="browseimages")
      */
-    public function browseImages(ImageRepository $imageRepository){
+    public function browseimages(ImageRepository $imageRepository){
         $listofimages = $imageRepository->findAll();
         $imageArray = [];
         foreach ($listofimages as $image){

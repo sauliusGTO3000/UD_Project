@@ -1,7 +1,7 @@
 function browseImages() {
    console.log(window.location.host);
 
-   var imagesJsonURL =  "http://"+window.location.host+"/post/browseImages";
+   var imagesJsonURL =  "http://"+window.location.host+"/post/browseimages";
    var imagesJSON=[];
    var imageURL;
 
