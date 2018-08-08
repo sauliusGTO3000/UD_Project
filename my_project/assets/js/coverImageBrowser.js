@@ -1,7 +1,7 @@
 function browseimages() {
    console.log(window.location.host);
 
-   var imagesJsonURL =  "http://"+window.location.host+"/post/browseimages";
+   var imagesJsonURL =  "https://"+window.location.host+"/post/browseimages";
    var imagesJSON=[];
    var imageURL;
 
@@ -12,7 +12,7 @@ function browseimages() {
                 item.folder = 'Images';
             }
             if (typeof(item.thumb) === 'undefined') {
-                imageURL = "http://" + window.location.host+item.image;
+                imageURL = "https://" + window.location.host+item.image;
 
                 $( ".images-thumbnails" ).append( '<img src='+imageURL+'>' );
             }
