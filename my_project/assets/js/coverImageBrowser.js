@@ -51,7 +51,7 @@ function browseimages() {
 }
 
 
-browseImages();
+browseimages();
 
 // $('.images-thumbnails img').click(function()
 // {
