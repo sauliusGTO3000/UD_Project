@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/assets/js/infiniteScroll.js" description="var elem = document.querySelector('.container');" line="56" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11f4dc39-0f3c-4450-9c70-e7c5fc077701" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/js/coverImageBrowser.js" afterPath="$PROJECT_DIR$/assets/js/coverImageBrowser.js" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/PostController.php" afterPath="$PROJECT_DIR$/src/Controller/PostController.php" />
-    </list>
+    <list default="true" id="11f4dc39-0f3c-4450-9c70-e7c5fc077701" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,41 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PostType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Form/PostType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="45" column="19" lean-forward="false" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="coverImageBrowser.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/assets/js/coverImageBrowser.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="coverImageBrowser.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/build/js/coverImageBrowser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="76" column="20" lean-forward="false" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/PostController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+            <state relative-caret-position="260">
+              <caret line="112" column="13" lean-forward="true" selection-start-line="112" selection-start-column="13" selection-end-line="112" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -168,8 +135,8 @@
         <option value="$USER_HOME$/Desktop/.env" />
         <option value="$PROJECT_DIR$/public/bundles/fosckeditor/config.js" />
         <option value="$PROJECT_DIR$/src/Controller/PostController.php" />
-        <option value="$PROJECT_DIR$/public/build/js/coverImageBrowser.js" />
         <option value="$PROJECT_DIR$/assets/js/coverImageBrowser.js" />
+        <option value="$PROJECT_DIR$/public/build/js/coverImageBrowser.js" />
       </list>
     </option>
   </component>
@@ -290,8 +257,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="152" />
-    <option name="y" value="188" />
+    <option name="x" value="1038" />
+    <option name="y" value="431" />
     <option name="width" value="1275" />
     <option name="height" value="765" />
   </component>
@@ -425,7 +392,7 @@
     <property name="settings.editor.selected.configurable" value="settings.javascript.linters.jscs" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="SearchEverywhereHistoryKey" value="browseimages&#9;null&#9;null&#10;browseImages&#9;null&#9;null&#10;browse&#9;FILE&#9;file://C:/xampp/htdocs/UDafterGoLive/rugpjucio8/UD_Project/my_project/public/build/css/coverImageBrowser.css&#10;post-shortcontent&#9;null&#9;null&#10;@media&#9;null&#9;null&#10;hashtagName&#9;null&#9;null&#10;hastag&#9;null&#9;null&#10;paginati&#9;null&#9;null&#10;select2&#9;null&#9;null&#10;select2-search__field&#9;null&#9;null&#10;php.ini&#9;FILE&#9;file://C:/xampp/htdocs/namu_darbai/liepos9/UD_Project/my_project/vendor/doctrine/doctrine-cache-bundle/Tests/travis/php.ini&#10;uploadImage&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="cover&#9;FILE&#9;file://C:/xampp/htdocs/UDafterGoLive/rugpjucio8/UD_Project/my_project/public/build/js/coverImageBrowser.js&#10;browseimages&#9;null&#9;null&#10;browseImages&#9;null&#9;null&#10;browse&#9;FILE&#9;file://C:/xampp/htdocs/UDafterGoLive/rugpjucio8/UD_Project/my_project/public/build/css/coverImageBrowser.css&#10;post-shortcontent&#9;null&#9;null&#10;@media&#9;null&#9;null&#10;hashtagName&#9;null&#9;null&#10;hastag&#9;null&#9;null&#10;paginati&#9;null&#9;null&#10;select2&#9;null&#9;null&#10;select2-search__field&#9;null&#9;null&#10;php.ini&#9;FILE&#9;file://C:/xampp/htdocs/namu_darbai/liepos9/UD_Project/my_project/vendor/doctrine/doctrine-cache-bundle/Tests/travis/php.ini&#10;uploadImage&#9;null&#9;null" />
     <property name="node.js.path.for.package.jscs" value="project" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.selected.package.jscs" value="" />
@@ -513,12 +480,12 @@
       <workItem from="1533039323445" duration="7311000" />
       <workItem from="1533052272630" duration="5217000" />
       <workItem from="1533209814490" duration="26000" />
-      <workItem from="1533699895351" duration="2859000" />
+      <workItem from="1533699895351" duration="3239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="380238000" />
+    <option name="totallyTimeSpent" value="380618000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -913,6 +880,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/coverImageBrowser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/PostController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -923,16 +898,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/build/js/coverImageBrowser.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="76" column="20" lean-forward="false" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/coverImageBrowser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        <state relative-caret-position="260">
+          <caret line="112" column="13" lean-forward="true" selection-start-line="112" selection-start-column="13" selection-end-line="112" selection-end-column="13" />
           <folding />
         </state>
       </provider>
