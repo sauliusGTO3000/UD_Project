@@ -79,7 +79,7 @@ class PostController extends Controller
     public function index(PostRepository $postRepository): Response
     {
 
-        return $this->render('post/index.html.twig', ['posts' => $postRepository->findAll()]);
+        return $this->render('post/homepage.html.twig');
     }
 
 
