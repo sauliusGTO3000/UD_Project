@@ -43,7 +43,7 @@ class PostController extends Controller
 
 
     /**
-     * @Route("/coverimagebrowser", name="coverImageBrowser", methods="GET|POST")
+     * @Route("/coverimagebrowser", name="coverimageBrowser", methods="GET|POST")
      */
     public function coverImageBrowser(){
         return $this->render('post/coverImageBrowser.html.twig');
