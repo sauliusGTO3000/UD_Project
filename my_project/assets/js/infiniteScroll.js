@@ -3,7 +3,7 @@ import InfiniteScroll from 'infinite-scroll';
 var todaysDateOptions = { weekday: 'long', month: 'long', day: 'numeric' };
 var todaysDate = new Date();
 todaysDate = todaysDate.toLocaleDateString('lt-LT', todaysDateOptions);
-$( ".subtitle" ).append( "<p id='todays-date-line'>"+ todaysDate +"</p>");
+$( ".wrapper" ).append( "<p id='todays-date-line'>"+ todaysDate +"</p>");
 
 $('a[href*="#"]')
 

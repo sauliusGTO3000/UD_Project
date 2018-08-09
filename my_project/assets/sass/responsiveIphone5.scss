@@ -1,9 +1,25 @@
 @media screen and (max-width: 800px) {
   .logoSection {
-
     position: initial;
     margin-left: 0;
     background-color: transparent;
+
+    .wrapper{
+      display: inline-block;
+      background-color: white;
+      box-shadow: 5px 10px red;
+      padding: 50px;
+      max-width: 295px;
+
+      overflow: hidden;
+      #small-crop-title{
+        padding-bottom: 10px;
+      }
+
+      #small-logo-title{
+        display: none;
+      }
+    }
 
 
 
@@ -13,17 +29,21 @@
       margin-left: 0;
       bottom: 0;
       line-height: initial;
-      padding-top: 45vh;
+      display: inline-block;
 
       p {
+        font-weight: lighter;
         visibility: initial !important;
         margin: auto;
         text-align: center;
-        background-color: white;
+
       }
       #todays-date-line {
         font-weight: lighter;
+        font-size: 15px;
       }
+
+
     }
   }
   .scrollDownInstruction{

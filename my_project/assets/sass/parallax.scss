@@ -7,6 +7,13 @@ html{
   font-size: 4vh;
 }
 
+.wrapper{
+  display: inline-block;
+  box-shadow: 5px 10px red;
+  padding: 50px;
+  background-color: white;
+}
+
 #logoTop{
   z-index: -9999999;
   position: fixed;
@@ -21,33 +28,32 @@ html{
   height:100vh;
   background-image:url("/styleelements/background2.png");
   background-attachment: fixed;
-  background-repeat: repeat;
-  background-size: 50vh;
-
-  @media screen and (max-width: 320px){
-    background-size: 40%;
-  };
+  background-position: center;
 
   .subtitle{
-    padding-top: 45vh;
-    z-index: -9999999;
-    position:initial;
-    bottom:40%;
+    margin-top: 25vh;
+    z-index: 99;
+    position:absolute;
     text-align: center;
-    background-color: transparent;
-    color:black;
-    width: 100%;
-    line-height:0px;
     display:block;
+    width: 100%;
+    line-height: 0px;
     p{
       font-family: "HeadlandOne-Regular";
-      font-weight: bold;
-      background-color: white;
-      border: 15px solid white;
-      border-collapse: collapse;
+      font-weight: lighter;
       font-size: 20px;
     }
+
+    #todays-date-line{
+      font-size: 15px;
+    }
+    #small-logo-title{
+      height: 200px;
+      padding-bottom: 10px;
+    }
   }
+
+
 
   .todays-date{
 
