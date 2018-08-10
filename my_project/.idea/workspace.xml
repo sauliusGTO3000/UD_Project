@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11f4dc39-0f3c-4450-9c70-e7c5fc077701" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/sass/navbar.scss" afterPath="$PROJECT_DIR$/assets/sass/navbar.scss" />
-      <change beforePath="$PROJECT_DIR$/assets/sass/parallax.scss" afterPath="$PROJECT_DIR$/assets/sass/parallax.scss" />
-      <change beforePath="$PROJECT_DIR$/templates/navbar.html.twig" afterPath="$PROJECT_DIR$/templates/navbar.html.twig" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/showPost.scss" afterPath="$PROJECT_DIR$/assets/sass/showPost.scss" />
+      <change beforePath="$PROJECT_DIR$/templates/post/show.html.twig" afterPath="$PROJECT_DIR$/templates/post/show.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -75,11 +74,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="navbar.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="navbar.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sass/navbar.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
               <caret line="84" column="33" lean-forward="false" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showPost.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/sass/showPost.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/post/show.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="7" column="127" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="127" />
               <folding />
             </state>
           </provider>
@@ -130,7 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/sass/sidebar.scss" />
         <option value="$PROJECT_DIR$/src/Controller/HashtagController.php" />
         <option value="$PROJECT_DIR$/templates/hashtag/hashtagsShowAllbig.html.twig" />
         <option value="$PROJECT_DIR$/templates/kitidalykai/index.html.twig" />
@@ -172,7 +190,6 @@
         <option value="$PROJECT_DIR$/src/Controller/PostController.php" />
         <option value="$PROJECT_DIR$/.env.dist" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/templates/post/show.html.twig" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/assets/js/infiniteScroll.js" />
         <option value="$PROJECT_DIR$/templates/post/homepage.html.twig" />
@@ -181,6 +198,8 @@
         <option value="$PROJECT_DIR$/assets/sass/parallax.scss" />
         <option value="$PROJECT_DIR$/templates/navbar.html.twig" />
         <option value="$PROJECT_DIR$/assets/sass/navbar.scss" />
+        <option value="$PROJECT_DIR$/assets/sass/showPost.scss" />
+        <option value="$PROJECT_DIR$/templates/post/show.html.twig" />
       </list>
     </option>
   </component>
@@ -541,12 +560,12 @@
       <workItem from="1533723665939" duration="3023000" />
       <workItem from="1533788922756" duration="2417000" />
       <workItem from="1533808190330" duration="7837000" />
-      <workItem from="1533906811715" duration="3795000" />
+      <workItem from="1533906811715" duration="4440000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="400260000" />
+    <option name="totallyTimeSpent" value="400905000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -670,13 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/showPost.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -845,13 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/post/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -944,6 +949,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="84" column="33" lean-forward="false" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/showPost.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="14" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/post/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="127" lean-forward="true" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="127" />
           <folding />
         </state>
       </provider>
