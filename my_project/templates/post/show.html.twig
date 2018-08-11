@@ -28,8 +28,8 @@
             var year = ({{ post.publishDate|date('Y') }});
             var date = new Date(Date.UTC(year, month, day));;
 
-            var months = ['empty','sausio', 'vasario', 'kovo', 'balandžio', 'gegužės', "birželio", "rugpjūčio", "rugsėjo", "spalio", "lapkričio", "gruodžio", "sausio" ];
-            var weekdays = ['pirmadienis', "antradienis", "trečiadienis", "ketvirtadienis", "penktadienis", "šeštadienis", "sekmadienis"];
+            var months = ['sausio', 'vasario', 'kovo', 'balandžio', 'gegužės', "birželio","liepos", "rugpjūčio", "rugsėjo", "spalio", "lapkričio", "gruodžio"];
+            var weekdays = ['empty','pirmadienis', "antradienis", "trečiadienis", "ketvirtadienis", "penktadienis", "šeštadienis", "sekmadienis"];
 
             date = months[month]+" "+day+" d., "+weekdays[weekday];
             // console.log(weekday);
