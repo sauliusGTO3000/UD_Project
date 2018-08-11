@@ -1,8 +1,21 @@
+@media screen and (max-height: 555px){
+  .logoSection{
+    display: none;
+  }
+
+}
 @media screen and (max-width: 800px) {
+  .post-title{
+    font-size: 20px;
+  }
+
   .logoSection {
     position: initial;
     margin-left: 0;
     background-color: transparent;
+    background-position-y: center;
+    background-position-x: left;
+    background-attachment: fixed;
 
     .wrapper{
       display: inline-block;
@@ -52,9 +65,6 @@
 }
 
 @media screen and (max-width: 800px) and (orientation:landscape) {
-  .post-title{
-    font-size: 20px;
-  }
   .scrollDownInstruction{
     display: none;
   }
