@@ -2,7 +2,19 @@ import InfiniteScroll from 'infinite-scroll';
 
 var todaysDateOptions = { weekday: 'long', month: 'long', day: 'numeric' };
 var todaysDate = new Date();
-todaysDate = todaysDate.toLocaleDateString('lt-LT', todaysDateOptions);
+
+var month = todaysDate.getMonth();
+var weekday = todaysDate.getUTCDay();
+var monthday = todaysDate.getUTCDate();
+console.log(monthday);
+// var weekday = ({{ post.publishDate|date('N') }});
+// var month = ({{ post.publishDate|date('m') }})-1;
+// var year = ({{ post.publishDate|date('Y') }});
+
+
+var months = ['sausio', 'vasario', 'kovo', 'balandžio', 'gegužės', "birželio","liepos", "rugpjūčio", "rugsėjo", "spalio", "lapkričio", "gruodžio"];
+var weekdays = ["sekmadienis",'pirmadienis', "antradienis", "trečiadienis", "ketvirtadienis", "penktadienis", "šeštadienis" ];
+todaysDate = months[month] + " "+monthday+" d., "+weekdays[weekday];
 $( ".wrapper" ).append( "<p id='todays-date-line'>"+ todaysDate +"</p>");
 
 $('a[href*="#"]')

@@ -21,12 +21,11 @@
         <div class="author-name"><a href="/author/{{ post.author.id }}">{{ post.author.username }}</a> </div>
         <div class="back-button-post-show"><a href="{{ path('homepage') }}" style="font-size: 14px, margin-bottom:20px">atgal</a></div>
         <script>
-            var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            // var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
             var day = ({{ post.publishDate|date('j') }});
             var weekday = ({{ post.publishDate|date('N') }});
             var month = ({{ post.publishDate|date('m') }})-1;
             var year = ({{ post.publishDate|date('Y') }});
-            var date = new Date(Date.UTC(year, month, day));;
 
             var months = ['sausio', 'vasario', 'kovo', 'balandžio', 'gegužės', "birželio","liepos", "rugpjūčio", "rugsėjo", "spalio", "lapkričio", "gruodžio"];
             var weekdays = ['empty','pirmadienis', "antradienis", "trečiadienis", "ketvirtadienis", "penktadienis", "šeštadienis", "sekmadienis"];
