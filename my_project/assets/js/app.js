@@ -1,6 +1,6 @@
 import 'select2';
 
-
+$('.logoSection').css({ height: window.innerHeight });
 
 var parallax_height = $('.logoSection').css('height');
 // console.log(parallax_height);
