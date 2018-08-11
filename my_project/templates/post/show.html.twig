@@ -8,7 +8,7 @@
         {#<div class="back-button"><a href="{{ path('homepage') }}" style="font-size: 14px, margin-bottom:20px">atgal</a></div>#}
         <a href="{{ post.coverImage }}"><img src="{{ post.coverImage }}" class="post-cover-image"></a>
         <div class='post-title' style='font-size: xx-large'>{{ post.title }}</div>
-        <div class="post-date" id="post-date">fuck you</div>
+        <div class="post-date" id="post-date">date does not work</div>
         <div class="hashtags">
             {% for hashtag in post.hashtags %}
                 <a href="/hashtag/posts/{{ hashtag.getID }}"> #{{ hashtag }}</a>
@@ -22,13 +22,17 @@
         <div class="back-button-post-show"><a href="{{ path('homepage') }}" style="font-size: 14px, margin-bottom:20px">atgal</a></div>
         <script>
             var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            var day = ({{ post.publishDate|date('d') }});
+            var day = ({{ post.publishDate|date('j') }});
+            var weekday = ({{ post.publishDate|date('N') }});
             var month = ({{ post.publishDate|date('m') }})-1;
-            console.log(month)
             var year = ({{ post.publishDate|date('Y') }});
             var date = new Date(Date.UTC(year, month, day));;
 
-            date = date.toLocaleDateString('lt-LT', options);
+            var months = ['empty','sausio', 'vasario', 'kovo', 'balandžio', 'gegužės', "birželio", "rugpjūčio", "rugsėjo", "spalio", "lapkričio", "gruodžio", "sausio" ];
+            var weekdays = ['pirmadienis', "antradienis", "trečiadienis", "ketvirtadienis", "penktadienis", "šeštadienis", "sekmadienis"];
+
+            date = months[month]+" "+day+" d., "+weekdays[weekday];
+            // console.log(weekday);
             document.getElementById('post-date').innerHTML = date;
         </script>
           {% if app.user %}
