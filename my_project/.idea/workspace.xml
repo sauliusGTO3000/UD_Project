@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11f4dc39-0f3c-4450-9c70-e7c5fc077701" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/js/app.js" afterPath="$PROJECT_DIR$/assets/js/app.js" />
+      <change beforePath="$PROJECT_DIR$/assets/sass/responsiveIphone5.scss" afterPath="$PROJECT_DIR$/assets/sass/responsiveIphone5.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,21 +63,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="responsiveIphone5.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="responsiveIphone5.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/sass/responsiveIphone5.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            <state relative-caret-position="260">
+              <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -206,9 +206,9 @@
         <option value="$PROJECT_DIR$/assets/sass/navbar.scss" />
         <option value="$PROJECT_DIR$/assets/sass/showPost.scss" />
         <option value="$PROJECT_DIR$/templates/post/show.html.twig" />
-        <option value="$PROJECT_DIR$/assets/sass/responsiveIphone5.scss" />
         <option value="$PROJECT_DIR$/assets/sass/parallax.scss" />
         <option value="$PROJECT_DIR$/assets/js/app.js" />
+        <option value="$PROJECT_DIR$/assets/sass/responsiveIphone5.scss" />
       </list>
     </option>
   </component>
@@ -329,8 +329,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="793" />
-    <option name="y" value="21" />
+    <option name="x" value="230" />
+    <option name="y" value="105" />
     <option name="width" value="1547" />
     <option name="height" value="916" />
   </component>
@@ -570,12 +570,12 @@
       <workItem from="1533788922756" duration="2417000" />
       <workItem from="1533808190330" duration="7837000" />
       <workItem from="1533906811715" duration="4658000" />
-      <workItem from="1533983147406" duration="3388000" />
+      <workItem from="1533983147406" duration="3998000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="404511000" />
+    <option name="totallyTimeSpent" value="405121000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -587,7 +587,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="793" y="21" width="1547" height="916" extended-state="0" />
+    <frame x="230" y="105" width="1547" height="916" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.49779493" order="6" side_tool="false" content_ui="tabs" />
@@ -958,18 +958,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/responsiveIphone5.scss">
+    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        <state relative-caret-position="240">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/app.js">
+    <entry file="file://$PROJECT_DIR$/assets/sass/responsiveIphone5.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="260">
+          <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
           <folding />
         </state>
       </provider>
