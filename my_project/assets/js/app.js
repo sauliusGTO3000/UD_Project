@@ -34,7 +34,7 @@ if (parallax_height == null){
 // In your Javascript (external .js resource or <script> tag)
 $(document).ready(function() {
     $('.logoSection').css({ height: window.innerHeight });
-    $('.subtitle').css({ margin-top: (window.innerHeight/4) });
+    $('.subtitle').css({ 'margin-top': (window.innerHeight/4) });
     $('.js-example-basic-multiple').select2({
         tags:true,
 
