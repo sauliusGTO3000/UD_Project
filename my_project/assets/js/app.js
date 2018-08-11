@@ -1,6 +1,6 @@
 import 'select2';
 
-$('.logoSection').css({ height: window.innerHeight });
+
 
 var parallax_height = $('.logoSection').css('height');
 // console.log(parallax_height);
@@ -33,6 +33,8 @@ if (parallax_height == null){
 
 // In your Javascript (external .js resource or <script> tag)
 $(document).ready(function() {
+    $('.logoSection').css({ height: window.innerHeight });
+    $('.subtitle').css({ margin-top: (window.innerHeight/4) });
     $('.js-example-basic-multiple').select2({
         tags:true,
 
