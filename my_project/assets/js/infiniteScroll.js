@@ -105,9 +105,18 @@ $(document).ready(function () {
             var dateToConvert = date;
             dateToConvert = Date.parse(dateToConvert);
             dateToConvert = new Date(dateToConvert);
-            dateToConvert = dateToConvert.toLocaleDateString('lt-LT', options);
             console.log(dateToConvert);
-            $( ".container" ).append( "<div class='post-date'>"+ dateToConvert +"</div>");
+
+            var month = dateToConvert.getMonth();
+            var weekday = dateToConvert.getUTCDay();
+            var monthday = dateToConvert.getUTCDate();
+
+            var months = ['sausio', 'vasario', 'kovo', 'balandžio', 'gegužės', "birželio","liepos", "rugpjūčio", "rugsėjo", "spalio", "lapkričio", "gruodžio"];
+            var weekdays = ["sekmadienis",'pirmadienis', "antradienis", "trečiadienis", "ketvirtadienis", "penktadienis", "šeštadienis" ];
+            var postDate = months[month] + " "+monthday+" d., "+weekdays[weekday];
+
+            console.log(dateToConvert);
+            $( ".container" ).append( "<div class='post-date'>"+ postDate +"</div>");
             $( ".container" ).append( "<div class='post-shortcontent'>"+data['pages'][post].shortContent +"</div>");
             $( ".container" ).append( '<div class="post-readMore"><a href="/post/'+data['pages'][post].id+'" >skaityti</a></div>');
             $( ".container" ).append( "<hr>");
