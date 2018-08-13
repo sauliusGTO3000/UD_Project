@@ -45,6 +45,7 @@
                 <link rel="stylesheet" type="text/css" href="{{ asset("build/css/postEdit.css") }}">
                 <link rel="stylesheet" type="text/css" href="{{ asset("build/css/autoriausKampelis.css") }}">
                 <link rel="stylesheet" type="text/css" href="{{ asset("build/css/responsiveIphone5.css") }}">
+                <link rel="stylesheet" type="text/css" href="{{ asset("build/css/footer.css") }}">
 
             {% endblock %}
 
@@ -67,9 +68,14 @@
             {% block body %}
                 <div class="after-navbar"></div>
             {% endblock %}
+
+            {% block footer %}
+
+            {% endblock %}
+
+
         </div>
-        {% block footer %}
-        {% endblock %}
+
 
         {% block javascripts %}
             <script src="{{ asset('build/js/app.js') }}"></script>
