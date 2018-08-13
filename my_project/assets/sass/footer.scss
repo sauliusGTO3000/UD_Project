@@ -1,7 +1,22 @@
+@font-face {
+  font-family: "Quicksand-Light";
+  src: url( /fonts/Quicksand-Light.ttf); /* IE */
+  src: local("Quicksand-Light"), url("/fonts/Quicksand-Light.ttf"); /*non-IE*/
+}
 .footer{
-  font-size: 8px;
+  max-width: 800px;
+  margin: auto;
+  color: darkcyan;
+  font-size: 11px;
   height: 50px;
-  font-family: 'HeadlandOne-Regular';
+  font-family: 'Quicksand-Light';
   text-align: center;
-  width: 100%;
+
+  a{
+    font-family: 'Quicksand-Light';
+    font-size: 11px;
+  }
+  a:hover{
+    cursor: pointer;
+  }
 }
