@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11f4dc39-0f3c-4450-9c70-e7c5fc077701" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/assets/sass/parallax.scss" afterPath="$PROJECT_DIR$/assets/sass/parallax.scss" />
       <change beforePath="$PROJECT_DIR$/assets/sass/responsiveIphone5.scss" afterPath="$PROJECT_DIR$/assets/sass/responsiveIphone5.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parallax.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="parallax.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/sass/parallax.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="36" column="12" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+            <state relative-caret-position="400">
+              <caret line="38" column="16" lean-forward="true" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -105,11 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="responsiveIphone5.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="responsiveIphone5.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sass/responsiveIphone5.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="106" column="60" lean-forward="false" selection-start-line="106" selection-start-column="60" selection-end-line="106" selection-end-column="60" />
+            <state relative-caret-position="540">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -209,8 +210,8 @@
         <option value="$PROJECT_DIR$/templates/login/index.html.twig" />
         <option value="$PROJECT_DIR$/templates/post/homepage.html.twig" />
         <option value="$PROJECT_DIR$/assets/sass/navbar.scss" />
-        <option value="$PROJECT_DIR$/assets/sass/parallax.scss" />
         <option value="$PROJECT_DIR$/assets/sass/responsiveIphone5.scss" />
+        <option value="$PROJECT_DIR$/assets/sass/parallax.scss" />
       </list>
     </option>
   </component>
@@ -586,12 +587,12 @@
       <workItem from="1533906811715" duration="4658000" />
       <workItem from="1533983147406" duration="7334000" />
       <workItem from="1534063794116" duration="444000" />
-      <workItem from="1534131775477" duration="21283000" />
+      <workItem from="1534131775477" duration="21924000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="430184000" />
+    <option name="totallyTimeSpent" value="430825000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1040,18 +1041,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/parallax.scss">
+    <entry file="file://$PROJECT_DIR$/assets/sass/responsiveIphone5.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="36" column="12" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+        <state relative-caret-position="540">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/responsiveIphone5.scss">
+    <entry file="file://$PROJECT_DIR$/assets/sass/parallax.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="106" column="60" lean-forward="false" selection-start-line="106" selection-start-column="60" selection-end-line="106" selection-end-column="60" />
+        <state relative-caret-position="400">
+          <caret line="38" column="16" lean-forward="true" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
           <folding />
         </state>
       </provider>
