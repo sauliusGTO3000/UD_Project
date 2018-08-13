@@ -129,6 +129,13 @@ class PostController extends Controller
     }
 
     /**
+     * @Route("/false", name="false", methods="GET|POST")
+     */
+    public function nothing(){
+        return $this->render('post/nothing.html.twig');
+    }
+
+    /**
      * @Route("/new", name="post_new", methods="GET|POST")
      */
     public function new(Request $request, UserInterface $author): Response
