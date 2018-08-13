@@ -3,7 +3,7 @@
         <p class="sidebar-title">skaitomiausi</p>
         {% include 'post/topfive.html.twig' %}
 
-        <p class="sidebar-title">mažasis arcyhvas</p>
+        <p class="sidebar-title">mažasis archyvas</p>
         <div class="small-archive-body">
             {% for year,month in archiveBuilder.getArchiveData(10) %}
                 <div class="small-archive-year">- {{ year }} -</div>
