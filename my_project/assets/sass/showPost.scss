@@ -5,7 +5,8 @@
   font-family: "HeadlandOne-Regular";
   word-wrap: break-word;
   img{
-    width: 100%;
+    max-width: 100%;
+    height: auto!important;
   }
   .post-date{
     margin-left: 5px;
@@ -15,6 +16,8 @@
 }
 .post-content{
   padding-left: 15px;
+  padding-right: 15px;
+
 }
 
 .post-title{
