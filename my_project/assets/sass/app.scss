@@ -103,9 +103,10 @@
 
 .loader-ellips__dot {
   display: block;
+  background-image: "https://image.shutterstock.com/image-vector/vector-isolated-donut-modern-flat-260nw-487051210.jpg";
   width: 1em;
   height: 1em;
-  border-radius: 0.5em;
+
   background: #555; /* change color here */
   position: absolute;
   animation-duration: 0.5s;
@@ -248,7 +249,7 @@
   .login-section{
 
     -webkit-appearance: none;
-    margin-top: 50vh;
+    margin-top: 0;
     .label{
       font-size: 25px;
       color: black;
