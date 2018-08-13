@@ -108,8 +108,8 @@
       <file leaf-file-name="responsiveIphone5.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/sass/responsiveIphone5.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="106" column="57" lean-forward="false" selection-start-line="106" selection-start-column="57" selection-end-line="106" selection-end-column="57" />
+            <state relative-caret-position="105">
+              <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="2" selection-end-line="117" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -586,12 +586,12 @@
       <workItem from="1533906811715" duration="4658000" />
       <workItem from="1533983147406" duration="7334000" />
       <workItem from="1534063794116" duration="444000" />
-      <workItem from="1534131775477" duration="19407000" />
+      <workItem from="1534131775477" duration="19945000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="428308000" />
+    <option name="totallyTimeSpent" value="428846000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1050,8 +1050,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/responsiveIphone5.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="106" column="57" lean-forward="false" selection-start-line="106" selection-start-column="57" selection-end-line="106" selection-end-column="57" />
+        <state relative-caret-position="105">
+          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="2" selection-end-line="117" selection-end-column="5" />
           <folding />
         </state>
       </provider>
