@@ -1,5 +1,9 @@
 @import "~select2/src/scss/core";
-
+.last-page{
+  text-align: center;
+  font-family: 'HeadlandOne-Regular';
+  font-size: 14px;
+}
 .about-content{
   margin-right: 15px;
   margin-left: 15px;
@@ -274,5 +278,6 @@
       font-size: 15px;
     }
 
-  }}
+  }
+}
 
