@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11f4dc39-0f3c-4450-9c70-e7c5fc077701" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/assets/sass/authorShowAll.scss" afterPath="$PROJECT_DIR$/assets/sass/authorShowAll.scss" />
       <change beforePath="$PROJECT_DIR$/assets/sass/responsiveIphone5.scss" afterPath="$PROJECT_DIR$/assets/sass/responsiveIphone5.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -105,11 +106,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="responsiveIphone5.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="responsiveIphone5.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sass/responsiveIphone5.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+            <state relative-caret-position="200">
+              <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="authorShowAll.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/sass/authorShowAll.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -160,7 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Controller/HashtagController.php" />
         <option value="$PROJECT_DIR$/templates/hashtag/hashtagsShowAllbig.html.twig" />
         <option value="$PROJECT_DIR$/src/Repository/HashtagRepository.php" />
         <option value="$PROJECT_DIR$/templates/hashtag/showAll.html.twig" />
@@ -211,6 +221,7 @@
         <option value="$PROJECT_DIR$/templates/kitidalykai/index.html.twig" />
         <option value="$PROJECT_DIR$/assets/sass/app.scss" />
         <option value="$PROJECT_DIR$/assets/sass/responsiveIphone5.scss" />
+        <option value="$PROJECT_DIR$/assets/sass/authorShowAll.scss" />
       </list>
     </option>
   </component>
@@ -580,12 +591,12 @@
       <workItem from="1533906811715" duration="4658000" />
       <workItem from="1533983147406" duration="7334000" />
       <workItem from="1534063794116" duration="444000" />
-      <workItem from="1534131775477" duration="2681000" />
+      <workItem from="1534131775477" duration="3433000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="411582000" />
+    <option name="totallyTimeSpent" value="412334000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -701,13 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/sass/authorShowAll.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -985,8 +989,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/responsiveIphone5.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+        <state relative-caret-position="200">
+          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/sass/authorShowAll.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
           <folding />
         </state>
       </provider>
