@@ -14,6 +14,9 @@
     }
   }
 
+  .after-parallax{
+    padding-top: 20px;
+  }
   .post-shortcontent{
     margin-right: 15px;
 
@@ -24,10 +27,11 @@
   }
 
   .logoSection {
+    background-image: url(/styleelements/background2-smaller.png);
     position: initial;
     margin-left: 0;
     background-color: transparent;
-    background-position-y: center;
+    background-position-y: bottom;
     background-position-x: left;
     background-attachment: scroll;
 
@@ -36,6 +40,8 @@
       background-color: rgba(255,255,255,0.95);
       box-shadow: 5px 10px red;
       padding: 50px;
+      padding-top: 20px;
+      padding-bottom: 20px;
       max-width: 295px;
 
       overflow: hidden;
