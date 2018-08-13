@@ -103,11 +103,9 @@
 
 .loader-ellips__dot {
   display: block;
-  background-image: "https://image.shutterstock.com/image-vector/vector-isolated-donut-modern-flat-260nw-487051210.jpg";
   width: 1em;
   height: 1em;
-
-  background: #555; /* change color here */
+  background-image:url("/styleelements/smallcrops.png");
   position: absolute;
   animation-duration: 0.5s;
   animation-timing-function: ease;
