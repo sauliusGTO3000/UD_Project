@@ -90,33 +90,33 @@
   }
 }
 
-@media screen and (max-width: 800px) and (min-height:750px) {
-  .logoSection {
-    background-image: url(/styleelements/background2-tablet.png);
-    background-position-y: bottom;
-    background-repeat-x: repeat ;
-  }
-
-  #small-logo-title{
-    display: block!important;
-    max-width: 300px!important;
-    height: auto!important;
-  }
-}
-
-@media screen and (max-width: 1024px) and (min-height:750px) and (orientation: landscape) {
-  .logoSection {
-    background-image: url(/styleelements/background2-tablet.png);
-    background-position-y: bottom;
-    background-repeat-x: repeat ;
-  }
-
-  #small-logo-title{
-    display: block!important;
-    max-width: 300px!important;
-    height: auto!important;
-  }
-}
+//@media screen and (max-width: 800px) and (min-height:750px) {
+//  .logoSection {
+//    background-image: url(/styleelements/background2-tablet.png);
+//    background-position-y: bottom;
+//    background-repeat-x: repeat ;
+//  }
+//
+//  #small-logo-title{
+//    display: block!important;
+//    max-width: 300px!important;
+//    height: auto!important;
+//  }
+//}
+//
+//@media screen and (max-width: 1024px) and (min-height:750px) and (orientation: landscape) {
+//  .logoSection {
+//    background-image: url(/styleelements/background2-tablet.png);
+//    background-position-y: bottom;
+//    background-repeat-x: repeat ;
+//  }
+//
+//  #small-logo-title{
+//    display: block!important;
+//    max-width: 300px!important;
+//    height: auto!important;
+//  }
+//}
 
 
 
