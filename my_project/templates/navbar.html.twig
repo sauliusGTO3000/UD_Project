@@ -17,7 +17,7 @@
         </div>
 
         <div class="ending-block">
-            <button onclick="dropdownMenu()">meniu</button>
+            <button>meniu</button>
         </div>
     </div>
     <div class="dropdown-menu" id="dropdown-menu" hidden >
@@ -31,17 +31,6 @@
 
         {%  endif %}
     </div>
-    <script>
-        function dropdownMenu() {
-            console.log("commencing");
-            if (document.getElementById("dropdown-menu").hidden == false){
-                document.getElementById("dropdown-menu").hidden = true;
 
-            }else {
-                document.getElementById("dropdown-menu").hidden = false;
-            }
-
-        }
-    </script>
 
 {% endblock %}

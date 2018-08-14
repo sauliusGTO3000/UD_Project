@@ -14,6 +14,7 @@ Encore
     .addEntry('js/app', './assets/js/app.js')
     .addEntry('js/coverImageBrowser', './assets/js/coverImageBrowser.js')
     .addEntry('js/infiniteScroll', './assets/js/infiniteScroll.js')
+    .addEntry('js/dropdownmenu', './assets/js/dropdownmenu.js')
     .addStyleEntry('css/app', './assets/sass/app.scss')
     .addStyleEntry('css/coverImageBrowser', './assets/sass/coverImageBrowser.scss')
     .addStyleEntry('css/parallax', './assets/sass/parallax.scss')
