@@ -6,7 +6,7 @@
         <br>
         <h2>visos grotžymės/hashtag'ai arba temos:</h2>
         <div id="container" class="hashtags-showall">
-            {#$hashtagRepository->findAllActiveHashtags()#}
+
             {% for hashtag in hashtagRepository.findAll() %}
                 <a href="/hashtag/posts/{{ hashtag.id }}"> #{{ hashtag }} </a>
             {% endfor %}
