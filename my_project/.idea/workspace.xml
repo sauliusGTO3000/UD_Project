@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11f4dc39-0f3c-4450-9c70-e7c5fc077701" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/sass/archive.scss" afterPath="$PROJECT_DIR$/assets/sass/archive.scss" />
-      <change beforePath="$PROJECT_DIR$/templates/hashtag/hashtagsShowAllbig.html.twig" afterPath="$PROJECT_DIR$/templates/hashtag/hashtagsShowAllbig.html.twig" />
-      <change beforePath="$PROJECT_DIR$/templates/post/byhashtag.html.twig" afterPath="$PROJECT_DIR$/templates/post/byhashtag.html.twig" />
+      <change beforePath="$PROJECT_DIR$/templates/author/show.html.twig" afterPath="$PROJECT_DIR$/templates/author/show.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,12 +45,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="archive.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="archive.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/sass/archive.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
-              <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+              <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editauthordetails.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/author/editauthordetails.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="show.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/author/show.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <element signature="e#12#26#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,7 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/author/_form.html.twig" />
         <option value="$PROJECT_DIR$/templates/hashtag/index.html.twig" />
         <option value="$PROJECT_DIR$/config/packages/security.yaml" />
         <option value="$PROJECT_DIR$/vendor/symfony/dependency-injection/Definition.php" />
@@ -163,6 +184,7 @@
         <option value="$PROJECT_DIR$/templates/hashtag/hashtagsShowAllbig.html.twig" />
         <option value="$PROJECT_DIR$/templates/post/byhashtag.html.twig" />
         <option value="$PROJECT_DIR$/assets/sass/archive.scss" />
+        <option value="$PROJECT_DIR$/templates/author/show.html.twig" />
       </list>
     </option>
   </component>
@@ -527,12 +549,12 @@
       <workItem from="1534063794116" duration="444000" />
       <workItem from="1534131775477" duration="25153000" />
       <workItem from="1534186634992" duration="465000" />
-      <workItem from="1534252358751" duration="3568000" />
+      <workItem from="1534252358751" duration="3746000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="438087000" />
+    <option name="totallyTimeSpent" value="438265000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -613,20 +635,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/bundles/fosckeditor/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/PostController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/bundles/fosckeditor/plugins/imagebrowser/browser/browser.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -981,8 +989,28 @@
     <entry file="file://$PROJECT_DIR$/assets/sass/archive.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/author/editauthordetails.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="15" column="34" lean-forward="true" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/author/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
