@@ -44,7 +44,9 @@
                 <div class="delete-post">{{ include('post/_delete_form.html.twig') }}</div>
             </div>
         {% endif %}
-        <div class="fb-comments" data-href="https://ubagoduona.lt/post/{{ post.id }}" data-numposts="5"></div>
-
+        <hr style="width: 80%">
+        <div class="fbcomments-wrapper">
+            <div class="fb-comments" data-href="https://ubagoduona.lt/post/{{ post.id }}" data-numposts="5" colorscheme="dark"></div>
+        </div>
     </div>
 {% endblock %}
