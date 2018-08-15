@@ -43,4 +43,12 @@ class Kitidalykai extends Controller
     public function findAllPostedForSuperuser(PostRepository $postRepository){
         return $this->render('autoriausKampelis/allposts.html.twig');
     }
+
+    /**
+     * @Route("/privacy", name="privacy", methods="GET")
+     */
+    public function showprivacypolicy(){
+        return $this->render('kitidalykai/privacypolicy.html.twig');
+    }
+
 }
