@@ -5,6 +5,13 @@
 
 }
 @media screen and (max-width: 800px) {
+  .post-shortcontent{
+    img{
+      max-width: 100%;
+      height: auto!important;
+    }
+  }
+
   .login-body{
     .login-section{
       margin:auto;
