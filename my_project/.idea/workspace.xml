@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="11f4dc39-0f3c-4450-9c70-e7c5fc077701" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/assets/sass/responsiveIphone5.scss" afterPath="$PROJECT_DIR$/assets/sass/responsiveIphone5.scss" />
-      <change beforePath="$PROJECT_DIR$/templates/post/show.html.twig" afterPath="$PROJECT_DIR$/templates/post/show.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,8 +60,8 @@
       <file leaf-file-name="responsiveIphone5.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/sass/responsiveIphone5.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="31" column="22" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+            <state relative-caret-position="560">
+              <caret line="28" column="3" lean-forward="true" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -182,8 +181,8 @@
         <option value="$PROJECT_DIR$/src/Controller/Kitidalykai.php" />
         <option value="$PROJECT_DIR$/templates/kitidalykai/privacypolicy.html.twig" />
         <option value="$PROJECT_DIR$/templates/kitidalykai/index.html.twig" />
-        <option value="$PROJECT_DIR$/assets/sass/responsiveIphone5.scss" />
         <option value="$PROJECT_DIR$/templates/post/show.html.twig" />
+        <option value="$PROJECT_DIR$/assets/sass/responsiveIphone5.scss" />
       </list>
     </option>
   </component>
@@ -550,12 +549,12 @@
       <workItem from="1534186634992" duration="465000" />
       <workItem from="1534252358751" duration="3976000" />
       <workItem from="1534341411213" duration="1121000" />
-      <workItem from="1534362993680" duration="6201000" />
+      <workItem from="1534362993680" duration="6435000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="445817000" />
+    <option name="totallyTimeSpent" value="446051000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -992,8 +991,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/responsiveIphone5.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="31" column="22" lean-forward="false" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
+        <state relative-caret-position="560">
+          <caret line="28" column="3" lean-forward="true" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
           <folding />
         </state>
       </provider>

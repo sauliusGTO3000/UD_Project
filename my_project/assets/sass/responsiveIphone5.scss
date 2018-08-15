@@ -3,9 +3,6 @@
   margin: auto;
 }
 
-._5lm5{
-  display: none;
-}
 @media screen and (max-height: 555px) and (min-width: 800px){
   .logoSection{
     display: none;
@@ -25,6 +22,12 @@
     margin-left: 10px;
     margin-right: 10px;
   }
+
+  .fbcomments-wrapper{
+    display: block;
+    margin: auto;
+  }
+
   .back-button-author{
     margin-left: 5px;
   }
