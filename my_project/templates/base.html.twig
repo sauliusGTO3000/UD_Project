@@ -25,7 +25,14 @@
             <meta property="og:url" content="https://www.ubagoduona.lt" />
             <meta property="og:title" content="Ubago Duona" />
             <meta property="og:description" content="Ubago Duona kultūros/absurdo trupiniai" />
-            <meta property="og:image" content="https://ubagoduona.lt/styleelements/messengerShare.png" />
+            {% if post.coverImage is defined %}
+                <meta property="og:image" content="https://ubagoduona.lt{{ post.coverImage }}" />
+            {% else %}
+                <meta property="og:image" content="https://ubagoduona.lt/styleelements/messengerShare.png" />
+
+            {%  endif %}
+
+
             <meta property="og:type" content="website" />
 
         <title>
