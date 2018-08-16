@@ -32,7 +32,14 @@
 
             {%  endif %}
 
-            <meta property="og:description" content="Ubago Duona kultūros/absurdo trupiniai" />
+
+            {% if post.content is defined %}
+                <meta property="og:description" content="{{ post.content|striptags }}" />
+            {% else %}
+                <meta property="og:description" content="Ubago Duona kultūros/absurdo trupiniai" />
+
+            {%  endif %}
+
             {% if post.coverImage is defined %}
                 <meta property="og:image" content="https://ubagoduona.lt{{ post.coverImage }}" />
             {% else %}
