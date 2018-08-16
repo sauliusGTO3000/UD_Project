@@ -22,8 +22,16 @@
         <link rel="icon" href="https://ubagoduona.lt/styleelements/favicon.png">
             <meta property="fb:app_id" content="2064495207212947" />
             <meta property="fb:admins" content="saulius.usonis" />
-            <meta property="og:url" content="https://www.ubagoduona.lt" />
-            <meta property="og:title" content="Ubago Duona" />
+            <meta property="og:url" content="{{ app.request.uri }}" />
+
+
+            {% if post.title is defined %}
+                <meta property="og:title" content="{{ post.title }}" />
+            {% else %}
+                <meta property="og:title" content="Ubago Duona" />
+
+            {%  endif %}
+
             <meta property="og:description" content="Ubago Duona kultūros/absurdo trupiniai" />
             {% if post.coverImage is defined %}
                 <meta property="og:image" content="https://ubagoduona.lt{{ post.coverImage }}" />
