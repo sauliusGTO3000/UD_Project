@@ -34,7 +34,7 @@
 
 
             {% if post.content is defined %}
-                <meta property="og:description" content="{{ post.content|striptags }}" />
+                <meta property="og:description" content="{{ post.shortcontent|striptags }}" />
             {% else %}
                 <meta property="og:description" content="Ubago Duona kultūros/absurdo trupiniai" />
 
