@@ -206,11 +206,12 @@
     margin: auto;
   }
 
-
-
-
 }
 
-
+@media screen and (min-height: 800px){
+  .logoSection {
+    background-image: url(/styleelements/background2.png);
+  }
+}
 
 
