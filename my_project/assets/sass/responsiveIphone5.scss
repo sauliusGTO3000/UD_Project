@@ -185,6 +185,23 @@
     height: 50px;
     margin: auto;
   }
+
+  .mobilelogo{
+    display: block;
+    background-image: url(/styleelements/logo-small50x123.png);
+    height: 50px;
+    width: 123px;
+    margin: auto;
+    background-repeat: no-repeat;
+    padding-bottom: 5px;
+  }
+
+  .logoSection .subtitle #todays-date-line{
+    padding-top: 5px;
+  }
+  .logoSection .wrapper #small-crop-title{
+    padding-bottom: 5px;
+  }
 }
 
 
