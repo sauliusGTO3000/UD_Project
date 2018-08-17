@@ -29,6 +29,30 @@
     margin-right: 15px;
   }
 
+  .logoSection .subtitle #todays-date-line{
+    font-size: 12px;
+  }
+
+  .logoSection .subtitle p{
+    font-size: 15px;
+  }
+
+  .mobilelogo{
+    display: block;
+    background-image: url(/styleelements/logo-small50x123.png);
+    height: 50px;
+    width: 123px;
+    margin: auto;
+    background-repeat: no-repeat;
+    padding-bottom: 5px;
+  }
+
+  .logoSection .subtitle #todays-date-line{
+    padding-top: 5px;
+  }
+  .logoSection .wrapper #small-crop-title{
+    padding-bottom: 5px;
+  }
 
   .back-button-author{
     margin-left: 5px;
@@ -87,7 +111,7 @@
       padding: 50px;
       padding-top: 20px;
       padding-bottom: 20px;
-      max-width: 295px;
+      max-width: 50%;
 
       overflow: hidden;
       #small-crop-title{
@@ -176,32 +200,15 @@
     font-size: 15px;
   }
 
-  .logoSection .wrapper{
-    max-width: 150px;
-  }
-
   #small-logo-title{
     display: block;
     height: 50px;
     margin: auto;
   }
 
-  .mobilelogo{
-    display: block;
-    background-image: url(/styleelements/logo-small50x123.png);
-    height: 50px;
-    width: 123px;
-    margin: auto;
-    background-repeat: no-repeat;
-    padding-bottom: 5px;
-  }
 
-  .logoSection .subtitle #todays-date-line{
-    padding-top: 5px;
-  }
-  .logoSection .wrapper #small-crop-title{
-    padding-bottom: 5px;
-  }
+
+
 }
 
 

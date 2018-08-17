@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="11f4dc39-0f3c-4450-9c70-e7c5fc077701" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/assets/sass/responsiveIphone5.scss" afterPath="$PROJECT_DIR$/assets/sass/responsiveIphone5.scss" />
-      <change beforePath="$PROJECT_DIR$/templates/post/homepage.html.twig" afterPath="$PROJECT_DIR$/templates/post/homepage.html.twig" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,8 +36,8 @@
       <file leaf-file-name="responsiveIphone5.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/sass/responsiveIphone5.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="195" column="24" lean-forward="false" selection-start-line="195" selection-start-column="24" selection-end-line="195" selection-end-column="24" />
+            <state relative-caret-position="160">
+              <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -88,7 +87,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>rand</find>
       <find>https</find>
       <find>http</find>
       <find>browseim</find>
@@ -118,6 +116,7 @@
       <find>app</find>
       <find>app_id</find>
       <find>og:image</find>
+      <find>wrapper</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -300,8 +299,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="332" />
-    <option name="y" value="368" />
+    <option name="x" value="259" />
+    <option name="y" value="278" />
     <option name="width" value="1554" />
     <option name="height" value="916" />
   </component>
@@ -548,12 +547,12 @@
       <workItem from="1534341411213" duration="1121000" />
       <workItem from="1534362993680" duration="10108000" />
       <workItem from="1534414565735" duration="3833000" />
-      <workItem from="1534483178938" duration="3351000" />
+      <workItem from="1534483178938" duration="5428000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="456908000" />
+    <option name="totallyTimeSpent" value="458985000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -565,7 +564,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="332" y="368" width="1554" height="916" extended-state="0" />
+    <frame x="259" y="278" width="1554" height="916" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.49779493" order="6" side_tool="false" content_ui="tabs" />
@@ -976,8 +975,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/sass/responsiveIphone5.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="195" column="24" lean-forward="false" selection-start-line="195" selection-start-column="24" selection-end-line="195" selection-end-column="24" />
+        <state relative-caret-position="160">
+          <caret line="26" column="19" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
           <folding />
         </state>
       </provider>
