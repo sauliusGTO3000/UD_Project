@@ -81,7 +81,7 @@ class PostRepository extends ServiceEntityRepository
             ->setParameter('id', $tagID)
             ->setParameter('val', true)
             ->setParameter('now', new \DateTime() )
-            ->orderBy('p.publishDate', 'ASC')
+            ->orderBy('p.publishDate', 'DESC')
             ->getQuery()
             ->getResult();
     }

@@ -43,6 +43,16 @@ button:hover{
 
 .author-posts{
   text-align: center;
+  a{
+      box-shadow: 10px 0 0 black, -10px 0 0 black;
+      background-color: black;
+      color: white;
+      padding: 15px;
+      max-width: 600px;
+      text-decoration: none;
+      line-height: 40px;
+      font-size: 15px!important;
+  }
 }
 
 .back-button-author{

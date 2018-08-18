@@ -20,10 +20,13 @@
 
         <div class="author-posts">
             <div style="font-weight: bold">{{ author.username }} parašė: </div>
+            <br>
             {% for post in posts %}
                 <a href="/post/{{ post.id }}">{{ post.title }}</a>
                 <br>
+                <br>
             {% endfor %}
+            <button onclick="goBack()" class="back-button-author">atgal</button>
 
 
 

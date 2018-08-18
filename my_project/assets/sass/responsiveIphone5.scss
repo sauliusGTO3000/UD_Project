@@ -44,11 +44,11 @@
     width: 123px;
     margin: auto;
     background-repeat: no-repeat;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
   }
 
   .logoSection .subtitle #todays-date-line{
-    padding-top: 5px;
+    padding-top: 0px;
   }
   .logoSection .wrapper #small-crop-title{
     padding-bottom: 5px;
@@ -107,19 +107,21 @@
     .wrapper{
       display: inline-block;
       background-color: rgba(255,255,255,0.95);
-      box-shadow: 5px 10px red;
+      box-shadow: 5px 10px rgba(255, 40, 0, 0.75);
       padding: 50px;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px;
       max-width: 50%;
 
       overflow: hidden;
       #small-crop-title{
-        padding-bottom: 10px;
+        padding-bottom: 5px;
+        padding-top: 5px;
       }
 
       #small-logo-title{
         display: none;
+
       }
     }
 
@@ -214,4 +216,38 @@
   }
 }
 
+@media screen and (max-width: 800px){
+  .mobilelogo{
+    display: block;
+    background-image: url(/styleelements/logo-small70x175.png);
+    height: 70px;
+    width: 175px;
+    margin: auto;
+    background-repeat: no-repeat;
+    padding-bottom: 10px;
+  }
+}
 
+@media screen and (max-width: 380px){
+  .mobilelogo{
+    display: block;
+    background-image: url(/styleelements/logo-small62x155.png);
+    height: 62px;
+    width: 155px;
+    margin: auto;
+    background-repeat: no-repeat;
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 438px) {
+  #todays-date-line{
+    font-size: 13px!important;
+  }
+}
+
+@media screen and (max-width: 382px) {
+  #todays-date-line{
+    font-size: 12px!important;
+  }
+}

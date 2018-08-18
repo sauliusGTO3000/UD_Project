@@ -29,6 +29,7 @@ Encore
     .addStyleEntry('css/autoriausKampelis', './assets/sass/autoriausKampelis.scss')
     .addStyleEntry('css/responsiveIphone5', './assets/sass/responsiveIphone5.scss')
     .addStyleEntry('css/footer', './assets/sass/footer.scss')
+    .addStyleEntry('css/hashtagPosts', './assets/sass/hashtagPosts.scss')
 
     // uncomment if you use Sass/SCSS files
     .enableSassLoader()
